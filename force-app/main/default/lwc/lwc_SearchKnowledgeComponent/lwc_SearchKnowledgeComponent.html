@@ -1,0 +1,49 @@
+<template>
+
+    <div class="slds-p-around_medium searchbox">
+        <br/>
+        <div class="slds-form-element slds-form-element_stacked" onkeyup={handleKeyUp}>
+            <label for="text-input-id-1" class="slds-form-element__label slds-align_absolute-center slds-p-around_medium labelStyle" >How can we help?</label>
+            <div class="slds-form-element__control">
+                <div class="slds-size_7-of-12 slds-align_absolute-center">
+                    <div class="slds-combobox_container slds-size_5-of-12">
+                        <div id="box" class={boxClass} aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                            <div class="slds-combobox__form-element" role="none"> <!-- slds-input-has-icon slds-input-has-icon_right -->
+                                <template if:true={isValueSelected}>
+                                    <div id="lookup-pill" class="slds-pill-container">
+                                        <lightning-pill class="pillSize" label={selectedName} name={selectedName} onremove={handleRemovePill} href={href}>
+                                        </lightning-pill>
+                                    </div>
+                                </template>
+                                <template if:false={isValueSelected}>
+                                    <div class="slds-p-top_none">
+                                        <lightning-input class={inputClass} id="input" value={searchTerm}
+                                                        onclick={handleClick} onblur={onBlur} onchange={onChange}
+                                                        variant="label-hidden" autocomplete="off" placeholder={searchPlaceholder}>
+                                        </lightning-input> <!-- type="search" -->
+                                    </div>
+                                </template>
+                            </div>
+
+
+                            <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                                <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                    <template for:each={records} for:item="record">
+                                        <li key={record.articleId} class="slds-listbox__item" onclick={onSelect} data-id={record.urlName} id={record.urlName} role="presentation" data-name={record.title}>
+                                                <div id={record.articleId} class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-listbox__option_has-meta" role="option">
+                                                    <span title={record.title} class="slds-truncate slds-media__body">
+                                                        {record.title}
+                                                        <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">Knowledge  •  {record.lastPublishedDate}  •  {record.articleTotalViewCount}</span>
+                                                    </span>
+                                                </div>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

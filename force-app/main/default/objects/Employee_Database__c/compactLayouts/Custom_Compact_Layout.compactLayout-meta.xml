@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Person_Category__c</fields>
+    <fields>ERN__c</fields>
+    <fields>Last_Name__c</fields>
+    <fields>Initial__c</fields>
+    <fields>Employee__c</fields>
+    <fields>Has_Remote_Token__c</fields>
+    <fields>Manager__c</fields>
+    <fields>Employer__c</fields>
+    <label>Custom Compact Layout</label>
+</CompactLayout>

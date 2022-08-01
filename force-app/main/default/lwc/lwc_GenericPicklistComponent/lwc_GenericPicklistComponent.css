@@ -1,0 +1,23 @@
+.comboBoxStyle {
+    margin-top:-24px;
+    max-width:695px;
+    padding-bottom:10px;
+    height:65px;
+    margin-left:2px;
+}
+
+.requiredChk{
+     display:inline;
+} 
+
+.notRequiredChk{
+    display:none;
+}
+
+.divBlock{
+    border-color: red;
+    box-shadow: var(--lwc-colorBorderError,rgb(194, 57, 52)) 0 0 0 var(--lwc-borderWidthThin,1px);
+    max-width: 695px;
+    border-style: solid;
+    border-width: thin;
+}

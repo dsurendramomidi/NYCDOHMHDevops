@@ -1,0 +1,8 @@
+<!-- Used in Flow to navigate to a record/URL, currently only supports SObject Record -->
+<aura:component implements="lightning:availableForFlowScreens,lightning:availableForFlowActions">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="url" type="string" default=""/>
+    <aura:attribute name="navigateto" type="string" default="sObject"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:navigation aura:id="navService"/>
+</aura:component>

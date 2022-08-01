@@ -1,0 +1,39 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,force:hasRecordId" 
+                controller="EmployeeDetailsCustom"
+                access="global" >	
+    <!-- call doInit method on component load -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="employeeData" type="object" />
+    <aura:if isTrue="{!v.employeeData}">
+        <section style="background:#333333">
+            <aura:iteration items="{!v.employeeData}" var="emp">
+                <div class="slds-grid slds-grid_vertical" style="align-items: center;">
+                    <br/>
+                    <div class="slds-col">
+                        <span><img class="imgStyle" alt="{!emp.User.Name}" src="{!emp.User.FullPhotoUrl}" /></span>
+                    </div>
+                    <div class="slds-col">
+                        <span class="txtStyle">
+                            <p style="font-size:18px;padding-left:50px;"><strong>{!emp.User.Name}</strong></p>
+                            <p style="color: white;padding-left:10px;padding-top:15px;">&#9990;&nbsp;&nbsp;&nbsp;<lightning:formattedPhone value="{!emp.User.Phone}" style="color:white"></lightning:formattedPhone></p>
+                            <p class="ppadding">&#9993;&nbsp;&nbsp;&nbsp;<a href="{!'mailto:' + emp.User.Email}"  style="color:white">{!emp.User.Email}</a></p>  
+                            <p class="ppadding">&#8226;&nbsp;&nbsp;&nbsp;Employment Status: {!emp.EmployeeStatus}</p>  
+                            <p class="ppadding">&#8226;&nbsp;&nbsp;&nbsp;Employee Id: {!emp.EmployeeNumber}</p>  
+                            <hr color="white" size="1"/>
+                            <p class="ppadding"><strong>&#8226;&nbsp;&nbsp;&nbsp;Healthnet Training Courses</strong></p>
+                            <p class="ppadding"><strong>&#8226;&nbsp;&nbsp;&nbsp;LinkedIn Learning</strong></p>
+                            <hr color="white" size="1"/>
+                            <p class="ppadding"><strong>&#8226;&nbsp;&nbsp;&nbsp;Worksite Wellness</strong></p>
+                            <p class="ppadding"><strong>&#8226;&nbsp;&nbsp;&nbsp;Peer Support Network</strong></p>
+                            <hr color="white" size="1"/>
+                            <p class="ppadding"><strong>&#8226;&nbsp;&nbsp;&nbsp;DOHMH Jobs</strong></p>
+                            <p class="ppadding"><strong>&#8226;&nbsp;&nbsp;&nbsp;Employee Resource Groups</strong></p>
+
+                        </span>
+                    </div>
+                    <br/>
+                </div>
+            </aura:iteration>
+        </section>
+    </aura:if>
+</aura:component>

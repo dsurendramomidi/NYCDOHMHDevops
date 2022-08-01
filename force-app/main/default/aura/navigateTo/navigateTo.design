@@ -1,0 +1,5 @@
+<design:component>
+	<design:attribute name="recordId" label="Record ID" />
+    <design:attribute name="url" label="URL" />
+    <design:attribute name="navigateto" label="Navigate To" description="Used to tell the component where to navigate to, currently supports sObject and URL, please follow the casing"/>
+</design:component>

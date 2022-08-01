@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hardware_and_Data_Plan__c</fullName>
+    <externalId>false</externalId>
+    <label>Hardware and Data Plan</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>What_mobile_device_are_you_requesting__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hardware cost: $199.99. monthly plan: $34.99. MDM cost: $24.40 (Price is subject to change without notice)</fullName>
+                <default>false</default>
+                <label>Hardware cost: $199.99. monthly plan: $34.99. MDM cost: $24.40 (Price is subject to change without notice)</label>
+            </value>
+            <value>
+                <fullName>Hardware cost: Please use IT Purchase Request. monthly data plan: $39.99. MDM cost: $24.40 (Price is subject to change without notice)</fullName>
+                <default>false</default>
+                <label>Hardware cost: Please use IT Purchase Request. monthly data plan: $39.99. MDM cost: $24.40 (Price is subject to change without notice)</label>
+            </value>
+            <value>
+                <fullName>Hardware cost: $0. monthly plan: $39.99. MDM cost: $0 (Price is subject to change without notice)</fullName>
+                <default>false</default>
+                <label>Hardware cost: $0. monthly plan: $39.99. MDM cost: $0 (Price is subject to change without notice)</label>
+            </value>
+            <value>
+                <fullName>Hardware cost: $0. monthly plan: $16.99 w/Push-To-Talk, $14.99 voice, MDM cost: $0 (Price is subject to change without notice)</fullName>
+                <default>false</default>
+                <label>Hardware cost: $0. monthly plan: $16.99 w/Push-To-Talk, $14.99 voice, MDM cost: $0 (Price is subject to change without notice)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>iPhone (both device &amp; data plan)</controllingFieldValue>
+            <valueName>Hardware cost: $199.99. monthly plan: $34.99. MDM cost: $24.40 (Price is subject to change without notice)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>iPad (data plan only)</controllingFieldValue>
+            <controllingFieldValue>Samsung Tablet (data plan only)</controllingFieldValue>
+            <valueName>Hardware cost: Please use IT Purchase Request. monthly data plan: $39.99. MDM cost: $24.40 (Price is subject to change without notice)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCEWIN</controllingFieldValue>
+            <valueName>Hardware cost: $0. monthly plan: $39.99. MDM cost: $0 (Price is subject to change without notice)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Verizon Flip Phone (both device &amp; cell plan)</controllingFieldValue>
+            <controllingFieldValue>ISP AirCard (Both Device &amp; Data Plan)</controllingFieldValue>
+            <valueName>Hardware cost: $0. monthly plan: $16.99 w/Push-To-Talk, $14.99 voice, MDM cost: $0 (Price is subject to change without notice)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

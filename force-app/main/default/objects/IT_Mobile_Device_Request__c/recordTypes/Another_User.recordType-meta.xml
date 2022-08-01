@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Another_User</fullName>
+    <active>true</active>
+    <description>Please select this option when you are completing this request on behalf of other user</description>
+    <label>Another User</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Completing_this_request_on_behalf_of__c</picklist>
+        <values>
+            <fullName>Another User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myself</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hotspot__c</picklist>
+        <values>
+            <fullName>Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Internaltional_Roaming__c</picklist>
+        <values>
+            <fullName>Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mobile_Deivce_Ownership__c</picklist>
+        <values>
+            <fullName>Bring Your Own Device %28BYOD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOHMH Device</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mobile_Phone_Carrier__c</picklist>
+        <values>
+            <fullName>AT%26T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T-Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Wireless</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_the_Replacement__c</picklist>
+        <values>
+            <fullName>Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stolen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_Of_Request__c</picklist>
+        <values>
+            <fullName>Change in Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_Type_of_Phone__c</picklist>
+        <values>
+            <fullName>Android Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tablet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_mobile_device_are_you_requesting__c</picklist>
+        <values>
+            <fullName>CCEWIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samsung Tablet %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Flip Phone %28both device %26 cell plan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone %28both device %26 data plan%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

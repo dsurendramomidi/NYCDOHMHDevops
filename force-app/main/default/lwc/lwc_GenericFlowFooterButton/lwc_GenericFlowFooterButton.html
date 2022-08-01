@@ -1,0 +1,13 @@
+<template>
+<template if:true={showFooter}>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top slds-float_right" style="margin-top:20px">
+        <div class="slds-button-group" role="group">
+          <!--<button class="slds-button slds-button_neutral" onclick={handlePrevious}>Previous</button>&nbsp;-->
+          <button class="slds-button slds-button_brand" onclick={handleNext}>{nextAction}</button>&nbsp;
+          <button class="slds-button slds-button_neutral" onclick={handleReject}>{rejectAction}</button>
+
+        </div>
+    </div>
+</template>
+
+</template>

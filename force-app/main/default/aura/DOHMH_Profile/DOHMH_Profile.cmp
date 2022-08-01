@@ -1,0 +1,48 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"  access="global"  >
+    <ltng:require styles="{! $Resource.bootstrap520 }" />
+    <aura:attribute name="currentUser" type="User" />
+    <force:recordData
+                      fields="Name, Email, UserType, FullPhotoUrl "
+                      recordId="{!$SObjectType.CurrentUser.Id}"
+                      targetFields="{!v.currentUser}"
+                      mode="VIEW"
+                      />
+    <div style="background:#333333; color:white;" class="p-3 pt-4 fw-bold">
+        <ul style="padding-left:0px;font-size: 12px;margin-bottom: 16px;"  >   
+            <li style="text-align: center;" class="pb-2"> 
+                <img class="rounded-circle"  src="{!v.currentUser.FullPhotoUrl}"
+                      data-holder-rendered="true" width="92" style="width:92px;" /></li>
+            <li style="text-align: center;font-size: 15px;" class="pb-4">
+                {!v.currentUser.Name}
+            </li>
+            <li>
+                &#9632;  &nbsp; CityTime
+            </li>
+            <li>
+                &#9632;  &nbsp; CityShare
+            </li>
+            <hr/>
+            <li>
+                &#9632;  &nbsp; HealthNet Training Courses
+            </li>
+            <li>
+                &#9632;  &nbsp; Linkedin Learning
+            </li>
+            <hr/>
+            <li>
+                &#9632;  &nbsp; Worksite Wellness
+            </li>
+            <li>
+                &#9632;  &nbsp; Peer Support Network
+            </li>
+            <hr/>
+            <li>
+                &#9632; &nbsp;  DOHMH Jobs
+            </li>
+            <li>
+                &#9632; &nbsp;  Employee Resource Groups
+            </li>
+        </ul>
+    </div>
+    
+</aura:component>

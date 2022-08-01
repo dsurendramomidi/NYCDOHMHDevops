@@ -1,0 +1,142 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="showDOHMHCatalyst" type="Boolean" default="true"/>
+    <div class="nav-container" style="background:#FFFFFF;padding-bottom: 40px;padding-top:10px;font-family:HelveticaNeue">
+        <div class="nav-header"><p></p></div>
+        <div id="textbox">
+            <p class="alignleft">Service Requests</p>
+            <p class="alignright"><div><span style="float:right;font-size:16px;margin-top:-5px;"><b style="font-weight:normal;">Customer Service Desk</b>: 212-766-HELP (4357)</span><br/><span style="float:right;font-size:16px;margin-top:-8px"><b style="font-weight:normal;">Hours of Operation</b>: Monday - Friday 8 A.M. to 6 P.M.</span></div></p>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="slds-grid slds-wrap" style="padding-right: 10px;">
+            <aura:if isTrue="{!v.showDOHMHCatalyst}">
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="Service Request Center">
+                        <lightning:icon iconName="custom:custom45" alternativeText="Service Request Center" size="medium" title="Service Request Center" style="display:table-cell"/>
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Service Request Center</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Communication Project Request">
+                        <lightning:icon iconName="custom:custom112" alternativeText="Communication Project Request" title="Communication Project Request" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Communication Project Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Publication Tracking Request">
+                        <lightning:icon iconName="standard:drafts" alternativeText="Publication Tracking Request" title="Publication Tracking Request" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Publication Tracking Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Outside Position/Interest Waiver Form">
+                        <lightning:icon iconName="standard:form" alternativeText="Outside Position/Interest Waiver Form" title="Outside Position/Interest Waiver Form" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Outside Position/Interest Waiver</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Mobile Device Request">
+                        <lightning:icon iconName="custom:custom29" alternativeText="IT Mobile Device Request" size="medium" title="IT Mobile Device Request" style="display:table-cell"/>
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">IT Mobile Device Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Webpage Change Request">
+                        <lightning:icon iconName="custom:custom68" alternativeText="Webpage Change Request" title="Webpage Change Request" size="medium" style="display:table-cell"/>
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Webpage Change Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Transportation Request">
+                        <lightning:icon iconName="custom:custom36" alternativeText="Transportation Request" title="Transportation Request" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Transportation Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Post-Employment Waiver Form">
+                         <lightning:icon iconName="standard:form" alternativeText="Post-Employment Waiver Form" title="Post-Employment Waiver Form" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Post-Employment Waiver Form</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Project Request">
+                        <lightning:icon iconName="standard:record_lookup" alternativeText="IT Project Request" size="medium" title="IT Project Request" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span>IT Project Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Business Card Request">
+                        <lightning:icon iconName="standard:contact" alternativeText="Business Card Request" title="Business Card Request" size="medium" style="display:table-cell"/>
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Business Card Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Travel Request">
+                        <lightning:icon iconName="custom:custom20" alternativeText="Travel Request" title="Travel Request" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Travel Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="COI Waiver Request Form">
+                         <lightning:icon iconName="standard:form" alternativeText="COI Waiver Request Form" title="COI Waiver Request Form" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">COI Waiver Request Form</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Purchase Request">
+                        <lightning:icon iconName="standard:record_lookup" alternativeText="IT Purchase Request" size="medium" title="IT Purchase Request" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">IT Purchase Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Printing Requisition">
+                        <lightning:icon iconName="utility:print" alternativeText="Printing Requisition" title="Printing Requisition" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Printing Requisition</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Vital Statistics Request">
+                        <lightning:icon iconName="standard:metrics" alternativeText="Travel Request" title="Vital Statistics Request" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Vital Statistics Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Facilities Service Request">
+                         <lightning:icon iconName="standard:store_group" alternativeText="Facilities Service Request" title="Facilities Service Request" size="medium" style="display:table-cell"/>
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Facilities Service Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Asset Transfer Request">
+                        <lightning:icon iconName="standard:asset_action_source" alternativeText="IT Asset Transfer Request" size="medium" title="IT Asset Transfer Request" style="display:table-cell"/>
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">IT Asset Transfer Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Literature Ordering">
+                        <lightning:icon iconName="standard:article" alternativeText="Literature Ordering" title="Literature Ordering" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Literature Ordering</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Epidemiology Services Request">
+                        <lightning:icon iconName="custom:custom58" alternativeText="Travel Request" title="Epidemiology Services Request" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Epidemiology Services Request</span>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Work Location change Request">
+                         <lightning:icon iconName="standard:address" alternativeText="Work Location change Request" title="Work Location change Request" size="medium" style="display:table-cell" />
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Work Location change Request</span>
+                </div>                
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Digital Signature Project Request">
+                         <lightning:icon iconName="standard:record_signature_task" alternativeText="Digital Signature Project Request" title="Digital Signature Project Request" size="medium" style="display:table-cell"/>
+                    </a>
+                    &nbsp; &nbsp;<span style="display:table-cell">Digital Signature Project Request</span>
+                </div>     
+            </aura:if>
+        </div>
+    </div>
+    
+</aura:component>

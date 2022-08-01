@@ -1,0 +1,28 @@
+.THIS.slds-modal__container {
+    margin: 0 auto;
+    width: 92% !important;
+}
+.THIS .modal-height{
+    height:32rem;
+}
+.THIS .modal__container{
+    width:100%;
+    max-width: 80rem;
+    min-width: 20rem;
+}
+.THIS .modal__body{
+    height:100rem;
+}
+.THIS .modal_body{
+    width:100%;
+    height:100%;
+}
+.THIS .dohmh-c-button__label{
+    font-size:16px !important;
+}
+.THIS .dohmh-c-button--outlinedPrimary {
+    color: #d93d00;
+    background: 0 0;
+    border-color: #efb199;
+    box-shadow: none;
+}

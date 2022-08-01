@@ -1,0 +1,143 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="showDOHMHCatalyst" type="Boolean" default="true"/>
+    <div class="nav-container" style="background:#FFFFFF;padding-bottom:22px;padding-top:10px;">
+        <div id="textbox" style="padding-bottom: 0px;margin-top: 0px;">
+            <p class="alignleft" style="color:#2b96b8; font-size: 30px;font-weight: bold;text-align: left;" >Service Requests</p>
+            <p class="alignright"><div><span style="float:right;font-size:13px;margin-top:0px"><b style="font-weight:normal;">Customer Service Desk</b>: 212-766-HELP (4357)</span>
+            <br/>
+            <span style="float:right;font-size:13px;margin-top:-8px"><b style="font-weight:normal;">Hours of Operation</b>: Monday - Friday 8 A.M. to 6 P.M.</span></div></p>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="slds-grid slds-wrap" style="padding-right: 10px;">
+            <aura:if isTrue="{!v.showDOHMHCatalyst}">
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="Service Request Center" class="icons">
+ 						<img src="{!$Resource.icons + '/Service_Request_Center.png'}"   />
+                        <span>Service Request Center</span>                   
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Communication Project Request" class="icons">
+ 						<img src="{!$Resource.icons + '/Communications_Project_Request.png'}"    />
+                        <span>Communication Project Request</span>                  
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Publication Tracking Request" class="icons">
+ 						<img src="{!$Resource.icons + '/Publication_Tracking_Request.png'}"   />
+                        <span>Publication Tracking Request</span>                  
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Outside Position/Interest Waiver Form" class="icons">
+                        <img src="{!$Resource.icons + '/Outside_Position_Interest_Waiver_Form.png'}"   />
+                        <span>Outside Position/Interest Waiver</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Mobile Device Request" class="icons" >
+                        <img src="{!$Resource.icons + '/IT_Mobile_Device_Request.png'}"   />
+                        <span>IT Mobile Device Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Webpage Change Request" class="icons">
+                        <img src="{!$Resource.icons + '/Webpage_Change_Request.png'}"   />
+                        <span>Webpage Change Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Transportation Request" class="icons">
+                        <img src="{!$Resource.icons + '/Transportation_Request.png'}"   />
+                        <span>Transportation Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Post-Employment Waiver Form" class="icons">
+                        <img src="{!$Resource.icons + '/Post-Employment_Waiver_Form.png'}"   />
+                        <span>Post-Employment Waiver Form</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Project Request" class="icons">
+                        <img src="{!$Resource.icons + '/IT_Project_Request.png'}"   />
+                        <span>IT Project Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Business Card Request" class="icons">
+                        <img src="{!$Resource.icons + '/Business_Card_Request.png'}"   />
+                        <span>Business Card Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Travel Request" class="icons">
+                        <img src="{!$Resource.icons + '/Travel_Request.png'}"   />
+                        <span>Travel Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="COI Waiver Request Form" class="icons">
+                        <img src="{!$Resource.icons + '/COI_Waiver_Request_Form.png'}"   />
+                        <span>COI Waiver Request Form</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Purchase Request" class="icons">
+                        <img src="{!$Resource.icons + '/IT_Purchase_Request.png'}"   />
+                        <span>IT Purchase Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Printing Requisition" class="icons">
+                        <img src="{!$Resource.icons + '/Printing_Requisition.png'}"   />
+                        <span>Printing Requisition</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Vital Statistics Request" class="icons">
+                        <img src="{!$Resource.icons + '/Vital_Statistics_Request.png'}"   />
+                        <span>Vital Statistics Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Facilities Service Request" class="icons">
+                        <img src="{!$Resource.icons + '/Facilities_Service_Request.png'}"   />
+                        <span>Facilities Service Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-mobile-device-request" title="IT Asset Transfer Request" class="icons">
+                        <img src="{!$Resource.icons + '/IT_Asset_Transfer_Request.png'}"   />
+                        <span>IT Asset Transfer Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./transportationrequest" title="Literature Ordering" class="icons">
+                        <img src="{!$Resource.icons + '/Literature_Ordering.png'}"   />
+                        <span>Literature Ordering</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itprojectrequest" title="Epidemiology Services Request" class="icons">
+                        <img src="{!$Resource.icons + '/Epidemiology_Services-_Request.png'}"   />
+                        <span>Epidemiology Services Request</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Work Location change Request" class="icons">
+                        <img src="{!$Resource.icons + '/Work_Location_Change_Request.png'}"   />
+                        <span>Work Location change Request</span>
+                    </a>
+                </div>                
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./itpurchaserequest" title="Digital Signature Project Request" class="icons">
+                        <img src="{!$Resource.icons + '/Digital_Signature_Project_Request.png'}"   />
+                        <span>Digital Signature Project Request</span>
+                    </a>
+                </div>     
+            </aura:if>
+        </div>
+    </div>
+    
+</aura:component>

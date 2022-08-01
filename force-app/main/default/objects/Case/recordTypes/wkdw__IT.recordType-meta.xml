@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wkdw__IT</fullName>
+    <active>true</active>
+    <businessProcess>wkdw__IT Process</businessProcess>
+    <description>Tickets related to the operation of your company&apos;s technology environment. Use this record type to fix issues and resolve user requests related to technology, such as equipment problems, access requests, or application performance.</description>
+    <label>IT</label>
+    <picklistValues>
+        <picklist>MDR_Reason_for_the_Replacement__c</picklist>
+        <values>
+            <fullName>Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stolen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MDR_Type_oF_Request__c</picklist>
+        <values>
+            <fullName>Change in Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>MDR Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_mobile_device_are_you_requesting__c</picklist>
+        <values>
+            <fullName>CCEWIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samsung Tablet %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Flip Phone %28both device %26 cell plan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone %28both device %26 data plan%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>wkdw__TicketCategory__c</picklist>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

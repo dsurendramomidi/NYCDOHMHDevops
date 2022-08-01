@@ -1,0 +1,9 @@
+.THIS img {
+    max-height: 200px;
+    object-fit:contain;
+}
+
+.THIS .slds-carousel__content {
+    height: 0 !important;
+    padding-bottom: 0 !important;
+}

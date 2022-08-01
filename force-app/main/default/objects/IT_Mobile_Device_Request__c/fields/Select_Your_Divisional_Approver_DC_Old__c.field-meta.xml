@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select_Your_Divisional_Approver_DC_Old__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Select Your Divisional Approver/DC Old</label>
+    <referenceTo>Employee</referenceTo>
+    <relationshipLabel>IT Mobile Device Requests (Select Your Divisional Approver/DC)</relationshipLabel>
+    <relationshipName>IT_Mobile_Device_Requests1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

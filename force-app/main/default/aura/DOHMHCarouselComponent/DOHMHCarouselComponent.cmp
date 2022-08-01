@@ -1,0 +1,28 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <div class="slds-align_absolute-center" >
+        <div class="slds-size_3-of-3">
+               <lightning:carousel disableAutoRefresh="false" disableAutoScroll="true">
+                <!--<a href="/s/sfsites/c/resource/<resourcename>" target="_blank">
+                   <a href="./Home"> 
+                       <div style="background-color:#0080a9;padding:40px 20px;color:white;">
+                           <h1 style="font-size:28px;">&nbsp;COVID-19 Announcements and Updates</h1>
+                           <br/>
+                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</p>
+                       </div>
+                   </a>    
+				   -->	
+                   <lightning:carouselImage
+                    src = "{!$Resource.mobileLandingImage}"
+                    alternativeText = "Image 1 Test">
+                </lightning:carouselImage>
+                   <lightning:carouselImage
+                    src = "{!$Resource.carouselTest}"
+                    alternativeText = "Image 2 Test">
+                </lightning:carouselImage>
+                   
+                   carouselTest
+            </lightning:carousel>
+            </div>
+        </div>
+</aura:component>

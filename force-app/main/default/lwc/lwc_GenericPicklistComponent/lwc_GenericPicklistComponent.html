@@ -1,0 +1,12 @@
+<template>
+    <span data-id="spanblock" style="color:red;margin-left:-5px;">*</span>
+    <div data-id="brblock"><br /></div>
+    <div data-id="comboBlock">
+        <lightning-combobox label={picklistlabel} name={picklistlabel} onchange={handleValueChange} options={options}
+            placeholder="--None--" value={selectedValue} class="comboBoxStyle">
+        </lightning-combobox>
+    </div>
+    <div if:true={error}>
+        <b style="margin-top:-15px;margin-left:2px;padding-bottom:5px">{error}</b>
+    </div> 
+</template>

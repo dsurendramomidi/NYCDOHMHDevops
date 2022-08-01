@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__HomePage,lightning__RecordPage,lightning__FlowScreen,lightningCommunity__Default">
+            <property name="objAPIName" type="String" default="Account" label="Enter the Object Name"/>
+            <property name="fieldAPIName" type="String" default="" label="Enter Field API Name"/>
+            <property name="requiredVal" type="String" default="true" label="Required (Enter true or false)"/>
+            <property name="selectedValue" type="String" default="" label="Select a Value"/>
+            <property name="customStatusLabel" type="String" default="" label="Custom Status Label (leave blank to use default value)"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

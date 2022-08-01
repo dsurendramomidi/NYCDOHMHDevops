@@ -1,0 +1,94 @@
+.THIS.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+
+.THIS .custom-box {
+    text-align: center;
+    background-color: #f4f6f9;
+    padding: 1rem;
+    border: 1px solid #d8dde6;
+}
+.THIS .nav-header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.THIS .nav-header p{
+    font-weight: bold;
+    font-size: 26px;
+    color: #153767;
+}
+.THIS .slds-col{
+    text-align: center;
+    margin-top: 20px;
+}
+.THIS span{
+  /*  display: block;
+    text-align-last: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #153767;*/
+}
+
+.THIS img{
+    cursor: pointer;
+}
+.THIS .icons{
+    color:black;
+    font-weight: bold;
+    display: flex;
+    align-items:center;
+    text-align: left;
+    text-decoration: none;
+}
+
+
+.THIS .icons :hover{
+    text-decoration: underline;
+}
+
+.THIS .icons img{
+    width:50px;
+    height:50px;
+    margin-right:10px;
+}
+
+.THIS .slds-col {
+    margin-top: 12px;
+}
+
+.THIS #textbox {
+    width: 98%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 0px solid #cccccc;
+}
+
+.THIS .alignleft {
+    float: left;
+    font-weight: bold;
+    font-size: 22px;
+    color: #153767;
+}
+
+.THIS .alignright {
+    float: right;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+
+.THIS .horizontalAlign{
+    display:flex;
+    align-items:center;
+    padding-left:15px
+}
+
+@media (max-width: 600px) {
+   .THIS .slds-col{
+        text-align: center;
+        margin-top: 10px;
+	} 
+}

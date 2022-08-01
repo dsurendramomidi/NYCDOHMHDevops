@@ -1,0 +1,172 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"
+                controller="GetKnowledgeArticlesList" 
+                access="global">
+
+    <aura:attribute name="Categories" type="String" default="feature_articles" access="global"/> 
+    <aura:attribute name="featuredArticleLinks" type="List" default="" access="global" />
+    <aura:attribute name="userGuideLinks" type="List" default="" access="global" />
+    <aura:attribute name="trainingVideoLinks" type="List" default="" access="global" />
+    
+    <!-- initialize -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <ltng:require styles="{!$Resource.DOHMHPortalCSS}"/>
+    <!-- aura attributes to store data/values Load More Start-->
+    <aura:attribute name="listOfAllFeatureArticles" type="list" default="" access="global"/> 
+    <aura:attribute name="listOfAllUserGuides" type="list" default="" access="global"/> 
+    <aura:attribute name="listOfAllTrainingVideos" type="list" default="" access="global"/> 
+    <aura:attribute name="selectedCount" type="integer" default="0" description="selected Records Count"/>
+    <aura:attribute name="selectedCountUG" type="integer" default="0" description="selected Records Count"/>
+    <aura:attribute name="selectedCountTR" type="integer" default="0" description="selected Records Count"/>
+    <!-- Feature Arcticles -->
+    <aura:attribute name="startPage" type="Integer" />
+    <aura:attribute name="endPage" type="Integer"/>
+    <aura:attribute name="totalRecordsCount" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="5" description="number of records to be display on per page"/>
+    <aura:attribute name="currentPage" type="integer" default="1"/>
+    <aura:attribute name="totalPagesCount" type="integer"/>
+    <aura:attribute name="bNoRecordsFound" type="boolean"/>
+    <aura:attribute name="totalRecordsCountMax" type="Integer" default="16"/>
+    <!-- Feature Arcticles -->
+    <!-- User Guides Arcticles -->
+    <aura:attribute name="startPageUG" type="Integer" />
+    <aura:attribute name="endPageUG" type="Integer"/>
+    <aura:attribute name="totalRecordsCountUG" type="Integer"/>
+    <aura:attribute name="pageSizeUG" type="Integer" default="5" description="number of records to be display on per page"/>
+    <aura:attribute name="currentPageUG" type="integer" default="1"/>
+    <aura:attribute name="totalPagesCountUG" type="integer"/>
+    <aura:attribute name="bNoRecordsFoundUG" type="boolean"/>
+    <!-- User Guides Arcticles -->
+    <!-- Training Videos -->
+    <aura:attribute name="startPageTR" type="Integer" />
+    <aura:attribute name="endPageTR" type="Integer"/>
+    <aura:attribute name="totalRecordsCountTR" type="Integer"/>
+    <aura:attribute name="pageSizeTR" type="Integer" default="5" description="number of records to be display on per page"/>
+    <aura:attribute name="currentPageTR" type="integer" default="1"/>
+    <aura:attribute name="totalPagesCountTR" type="integer"/>
+    <aura:attribute name="bNoRecordsFoundTR" type="boolean"/>
+    
+    <aura:attribute name="modalHeader" type="String" default=""/>
+    <aura:attribute name="iframeSource" type="String" default=""/>
+    <!-- Training Videos -->
+      
+    <!-- - - - - - - - - - - 
+    FEATURED ARTICLES 
+    - - - - - - - - - - - -->
+    <section class="dohmh-c-section--commercial" style="padding:0 48px 0 48px">
+        <h3 class="dohmh-u-textColor--commercialPrimary" id="featuredarticles" style="font-size:30px;font-weight:900;margin:18px 0;">Featured Articles</h3>
+
+        <div class="dohmh-l-grid--@xl dohmh-u-padding__0 dohmh-c-buttonGrid--commercial">
+
+            <div class="dohmh-l-grid__row dohmh-l-grid__rowCols--2">
+                <aura:iteration items="{!v.featuredArticleLinks}" var="link">
+                    <div class="dohmh-l-grid__col">
+                        <button
+                                class="dohmh-c-button dohmh-c-button--outlined dohmh-c-button--fullWidth dohmh-c-button--minHeight84 dohmh-c-button--iconRight"
+                                onclick="{!c.gotoArticle}"
+                                data-id="{!link.objKnowledge.UrlName}">
+                            <!--<span class="dohmh-c-button__label">{!link.text}</span> -->
+                            <span class="dohmh-c-button__label">{!link.objKnowledge.Title}</span>
+                            <lightning:icon iconName="utility:chevronright" alternativeText="Chevron Right" title="Image"  size="small" />
+                        </button>
+                    </div>
+                </aura:iteration>
+            </div>
+
+        </div>
+        <aura:if isTrue="{!(v.endPage + 1) lt v.totalRecordsCount}">
+            <lightning:button label="Load More Articles"
+                              title="Load More Articles"
+                              disabled="{!(v.endPage + 1) >= v.totalRecordsCount}" 
+                              onclick="{!c.navigation}"
+                              variant="brand"
+                              class="dohmh-c-button--outlinedPrimary"
+                              name="loadmore"/>
+        </aura:if>    
+
+        <lightning:button variant="brand" label="Back to Top" title="Back to Top"
+            class="dohmh-c-button--outlinedPrimary" onclick="{!c.gotoTop}" />
+
+    </section>
+
+
+    <!-- - - - - - - - - - - 
+    USER GUIDES 
+    - - - - - - - - - - - -->
+    <section class="dohmh-c-section--commercial" style="padding:0 48px 0 48px">
+        <h3 class="dohmh-u-textColor--commercialPrimary" id="userguides" style="font-size:30px;font-weight:900;margin:18px 0;">User Guides</h3>
+
+        <div class="dohmh-l-grid--@xl dohmh-u-padding__0 dohmh-c-buttonGrid--commercial">
+            <div class="dohmh-l-grid__row dohmh-l-grid__rowCols--2">
+                <aura:iteration items="{!v.userGuideLinks}" var="link">
+                    <div class="dohmh-l-grid__col">
+                        <button
+                                class="dohmh-c-button dohmh-c-button--outlined dohmh-c-button--fullWidth dohmh-c-button--minHeight84 dohmh-c-button--iconRight"
+                                onclick="{!c.gotoArticle}"
+                                data-id="{!link.objKnowledge.UrlName}">
+                            <!--<span class="dohmh-c-button__label">{!link.text}</span> -->
+                            <span class="dohmh-c-button__label">{!link.objKnowledge.Title}</span>
+                            <lightning:icon iconName="utility:chevronright" alternativeText="Chevron Right" title="Image"  size="small" />
+                        </button>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+        <aura:if isTrue="{!(v.endPageUG + 1) lt v.totalRecordsCountUG}">
+            
+            <lightning:button label="Load More Articles"
+                              title="Load More Articles"
+                              disabled="{!(v.endPageUG + 1) >= v.totalRecordsCountUG}" 
+                              onclick="{!c.navigationUG}"
+                              variant="brand"
+                              class="dohmh-c-button--outlinedPrimary"
+                              name="loadmore"/>
+            
+        </aura:if>
+        <lightning:button variant="brand" label="Back to Top" title="Back to Top"
+            class="dohmh-c-button--outlinedPrimary" onclick="{!c.gotoTop}" />
+
+    </section>
+
+    <!-- - - - - - - - - - - 
+    TRAINING VIDEOS 
+    - - - - - - - - - - - -->
+    <section class="dohmh-c-section--commercial" style="padding:0 48px 0 48px">
+        <h3 class="dohmh-u-textColor--commercialPrimary" id="trainingvideos" style="font-size:30px;font-weight:900;margin:18px 0;">Training Videos</h3>
+
+        <div class="dohmh-l-grid--@xl dohmh-u-padding__0 dohmh-c-buttonGrid--commercial">
+            <div class="dohmh-l-grid__row dohmh-l-grid__rowCols--2">
+                <aura:iteration items="{!v.trainingVideoLinks}" var="link">
+                    <div class="dohmh-l-grid__col">
+                        <button
+                                class="dohmh-c-button dohmh-c-button--outlined dohmh-c-button--fullWidth dohmh-c-button--minHeight84 dohmh-c-button--iconRight"
+                                onclick="{!c.gotoArticle}" 
+                                data-id="{!link.objKnowledge.UrlName}"
+                                aura:id="{!link.objKnowledge.UrlName}"
+                                id="{!link.objKnowledge.UrlName}"
+                                name="{!link.objKnowledge.Training_Videos_Link__c}">
+                            <!-- onclick="{!c.display}" -->
+                            <!--<span class="dohmh-c-button__label">{!link.text}</span> -->
+                            <span class="dohmh-c-button__label">{!link.objKnowledge.Title}</span>
+                            <lightning:icon iconName="utility:chevronright" alternativeText="Chevron Right" title="Image"  size="small" />
+                        </button>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+        <aura:if isTrue="{!(v.endPageTR + 1) lt v.totalRecordsCountTR}">            
+            <lightning:button label="Load More Articles"
+                              title="Load More Articles"
+                              disabled="{!(v.endPageTR + 1) >= v.totalRecordsCountTR}" 
+                              onclick="{!c.navigationTR}"
+                              variant="brand"
+                              class="dohmh-c-button--outlinedPrimary"
+                              name="loadmore"/>
+        </aura:if>
+        
+        <lightning:button variant="brand" label="Back to Top" title="Back to Top"
+            class="dohmh-c-button--outlinedPrimary" onclick="{!c.gotoTop}" />
+
+    </section>
+    <br/><br/>  
+</aura:component>

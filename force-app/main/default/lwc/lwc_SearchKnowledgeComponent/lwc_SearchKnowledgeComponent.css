@@ -1,0 +1,30 @@
+.searchbox{
+    /*background-color:var(--lwc-colorBackgroundButtonBrand,rgb(7, 135, 110));
+    background: rgb(0, 115, 90);
+    padding: 10px;
+    width: 1280px;*/
+    width: auto;
+    height: 243px;
+    /*background: rgb(0, 100, 80); */
+    background: rgb(0, 90, 118); 
+    border-radius: 0px;
+}
+.labelStyle{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.inputcss{
+    height: fit-content;
+    font-size: large;
+    --slds-c-input-radius-border: 3rem;
+}
+.slds-input{
+    --slds-c-input-radius-border: 3rem;
+}
+.pillSize{
+    width : 100%
+}
+lightning-radio-group .slds-radio_faux {
+    margin-right: 10px;
+}

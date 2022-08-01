@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>IT Mobile Device Request</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>IT Mobile Device Request</label>
+    <navType>Standard</navType>
+    <tabs>standard-Case</tabs>
+    <tabs>IT_Mobile_Device_Request__c</tabs>
+    <tabs>ear__Approval_Requests</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>IT_Mobile_Device_Request_UtilityBar</utilityBar>
+</CustomApplication>

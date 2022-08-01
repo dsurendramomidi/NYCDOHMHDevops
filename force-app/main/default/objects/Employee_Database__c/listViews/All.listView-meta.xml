@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Staff_Type__c</columns>
+    <columns>Person_Category__c</columns>
+    <columns>ERN__c</columns>
+    <columns>Last_Name__c</columns>
+    <columns>Initial__c</columns>
+    <columns>Employee__c</columns>
+    <columns>Has_Remote_Token__c</columns>
+    <columns>Manager__c</columns>
+    <columns>Employer__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

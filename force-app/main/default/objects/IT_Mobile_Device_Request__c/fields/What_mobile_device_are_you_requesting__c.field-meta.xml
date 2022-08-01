@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_mobile_device_are_you_requesting__c</fullName>
+    <externalId>false</externalId>
+    <label>What mobile device are you requesting?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>iPhone (both device &amp; data plan)</fullName>
+                <default>false</default>
+                <label>iPhone (both device &amp; data plan)</label>
+            </value>
+            <value>
+                <fullName>iPad (data plan only)</fullName>
+                <default>false</default>
+                <label>iPad (data plan only)</label>
+            </value>
+            <value>
+                <fullName>Samsung Tablet (data plan only)</fullName>
+                <default>false</default>
+                <label>Samsung Tablet (data plan only)</label>
+            </value>
+            <value>
+                <fullName>CCEWIN</fullName>
+                <default>false</default>
+                <label>CCEWIN</label>
+            </value>
+            <value>
+                <fullName>Verizon Flip Phone (both device &amp; cell plan)</fullName>
+                <default>false</default>
+                <label>Verizon Flip Phone (both device &amp; cell plan)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>ISP AirCard (Both Device &amp; Data Plan)</fullName>
+                <default>false</default>
+                <label>ISP AirCard (Both Device &amp; Data Plan)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,179 @@
+<aura:component implements="forceCommunity:layout" description="Boostrap Home" access="global" >
+    <ltng:require styles="{! $Resource.bootstrap520 }" />
+    <aura:attribute name="currentUser" type="User" />
+    <force:recordData
+    fields="Name, Email, UserType, FullPhotoUrl "
+    recordId="{!$SObjectType.CurrentUser.Id}"
+    targetFields="{!v.currentUser}"
+    mode="VIEW"
+	/>
+	<div class="w-100 px-4 pt-5 pb-4" style="background-color: #0080A9;color:white;">
+    	<h1 class="mb-3">! COVID-19 Announcements and Updates</h1> 
+        <P>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</P>
+    </div>
+    <div class="w-100 px-4 py-4" style="background-color: #000000;color:white;">
+    	<ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Service Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Apps</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Mobile Device Request</a>
+          </li>
+		</ul>
+    </div>
+	<div  class="w-100 px-4 py-4" style="background-color: #E4E4E4;">
+    	<div class="container mt-2 px-0">
+          <div class="row g-2">
+            <div class="col-2"  >
+                <div class="p-3" style="background-color: #494949;color:white;">
+                  <ul class="" >       
+                  <img class="rounded-circle" alt="100x100" src="{!v.currentUser.FullPhotoUrl}"
+                     data-holder-rendered="true" />
+                  <li class="">
+                    {!v.currentUser.Name}
+                  </li>
+                    
+
+                  <li class="">
+                 	CityTime
+                  </li>
+                  <li class="">
+                    CityShare
+                  </li>
+                  <hr/>
+                  <li class="">
+                  HealthNet Training Courses
+                  </li>
+                  <li class="">
+                    Linkedin Learning
+                  </li>
+                  <hr/>
+                  <li class="">
+                      Worksite Wellness
+                  </li>
+                  <li class="">
+                    Peer Support Network
+                  </li>
+                  <hr/>
+                  <li class="">
+                      DOHMH Jobs
+                  </li>
+                  <li class="">
+                    Employee Resource Groups
+                  </li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-8" >
+                <div class="p-3" style="background-color: white;">
+                     <div class="row">
+                        <div class="col">
+                          <h2 style="color:#2B96B8;">Service Requests</h2>
+                        </div>
+                        <div class="col text-end">
+                          Customer Service Desk: <b>212-766-HELP (4357)</b>
+                            <br></br>
+                            Hours of Operation: <b>Monday - Friday 8 A.M. to 6 P.M.</b>
+                        </div>
+                    </div>
+                    <br></br>
+                   	<br></br>
+                    <div class="row" >
+                        <div class="col">
+                          Service Requests Center
+                        </div>
+                        <div class="col">
+                          Communications Project Request
+                        </div>
+                        <div class="col">
+                          Publication Tracking Request
+                        </div>
+                        <div class="col">
+                            Outside Position/Interest Waiver Form
+                        </div>
+                	</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="p-3" style="background-color: white;">
+              		<h5 style="color:#2B96B8;">Calendar</h5>
+                    <div class="d-flex">
+                      <div class="flex-shrink-0">
+                        <div class="badge text-wrap" style="background-color:#2B96B8;width: 50px;height: 50px;">
+                              <h4 style="margin:0px;" >12</h4>MAY
+                         </div>
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        Happy Day
+                      </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <div class="flex-shrink-0">
+                        <div class="badge text-wrap" style="background-color:#2B96B8;width: 50px;height: 50px;">
+                              <h4 style="margin:0px;" >12</h4>MAY
+                         </div>
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        Happy Day
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-2  px-0">
+          <div class="row g-2">
+   			<div class="col-4">
+               <div class="p-3" style="background-color: #2B96B8;color:white;"><h4>DOHMH Policies</h4></div>
+              </div>    
+            <div class="col-4">
+              <div class="p-3" style="background-color: white;color:#2B96B8;"><h4>DOHMH Policies</h4></div>
+              </div>   
+            <div class="col-4">
+              <div class="p-3" style="background-color: white;color:#2B96B8;"><h4>DOHMH Policies</h4></div>
+              </div>   
+          </div>
+        </div>
+        <div class="container mt-2  px-0">
+          <div class="row g-2">
+   			<div class="col-6">
+               <div class="p-3" style="background-color: white;color:#2B96B8;"><h4>Data and Research</h4></div>
+              </div>    
+            <div class="col-6">
+              <div class="p-3" style="background-color: white;color:#2B96B8;"><h4>My Collaboration Sites</h4></div>
+              </div>     
+          </div>
+        </div>
+    </div>
+    
+    
+    <!-- Header -->
+    <aura:attribute name="header" type="Aura.Component[]" required="false" />
+    <!-- Body -->
+    <aura:attribute name="body" type="Aura.Component[]" required="false" />
+	<!-- Footer -->
+    <aura:attribute name="footer" type="Aura.Component[]" required="false" />
+	<!--
+     <div class="container">
+        <div class="contentPanel">
+            <div class="header">
+                {!v.header}
+            </div>
+            <div class="body">
+                {!v.body}
+            </div>        
+             <div class="footer">
+                {!v.footer}
+            </div>
+        </div>
+    </div>
+    -->
+   
+    
+</aura:component>
