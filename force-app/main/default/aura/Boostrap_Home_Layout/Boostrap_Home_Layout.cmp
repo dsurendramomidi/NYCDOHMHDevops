@@ -38,8 +38,6 @@
                   <li class="">
                     {!v.currentUser.Name}
                   </li>
-                    
-
                   <li class="">
                  	CityTime
                   </li>
