@@ -21,6 +21,102 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
+        <name>standard__Community</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__ServiceConsole</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__LightningSales</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Sales_Leadership</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Lead_Generation</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Sales_Operations</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Relationship_Management</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__LightningSalesConsole</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__LightningBolt</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>CPQIntegrationUserApp</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__SalesforceCMS</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__AppLauncher</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__AllTabSet</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__OnlineSales</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__LightningService</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>OIQ_Integration</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Employee Service Community</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Agent_Desk</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>HR_Service_Center</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Agency Requests</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>DOHMH Employee</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Employee Service Community1</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Mobile_Device_Request</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Sales</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>Chatter_Desktop</name>
         <type>ConnectedApp</type>
     </appMenuItems>
@@ -37,80 +133,12 @@
         <type>ConnectedApp</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Salesforce_Chatterbox</name>
-        <type>ConnectedApp</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>SalesforceA</name>
         <type>ConnectedApp</type>
     </appMenuItems>
     <appMenuItems>
-        <name>standard__Community</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__ServiceConsole</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__LightningSales</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>Sales</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__LightningSalesConsole</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__LightningService</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__AppLauncher</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__LightningBolt</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__AllTabSet</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__SalesforceCMS</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>standard__OnlineSales</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>OIQ_Integration</name>
+        <name>Salesforce_Chatterbox</name>
         <type>ConnectedApp</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>Mobile_Device_Request</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>Agency Requests</name>
-        <type>Network</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>DOHMH Employee</name>
-        <type>Network</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>Employee Service Community1</name>
-        <type>Network</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>Agent_Desk</name>
-        <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
         <name>Dataloader_Bulk</name>
@@ -145,14 +173,6 @@
         <type>ConnectedApp</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Employee Service Community</name>
-        <type>Network</type>
-    </appMenuItems>
-    <appMenuItems>
-        <name>HR_Service_Center</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>IT_Mobile_Device_Request</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -161,15 +181,19 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Testing</name>
-        <type>Network</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>User</name>
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>CodeBuilder__CodeBuilder</name>
+        <name>Salesforce_Social_Customer_Service_SCS</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Publication_Tracking_Request</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Tigerface1__Tiger_Face_Systems</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>

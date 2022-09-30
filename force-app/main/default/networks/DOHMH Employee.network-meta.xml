@@ -28,18 +28,18 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
-        <permissionSet>Employee_Knowledge_User</permissionSet>
         <permissionSet>cases_Permisssion_Set</permissionSet>
-        <permissionSet>Employee_Concierge_User_Data_Access</permissionSet>
         <permissionSet>wkdw__workplace_user</permissionSet>
+        <permissionSet>Employee_Concierge_User_Data_Access</permissionSet>
+        <permissionSet>Employee_Knowledge_User</permissionSet>
         <permissionSet>Permission_Set_to_the_UsersObject</permissionSet>
-        <profile>admin</profile>
-        <profile>employee system admin</profile>
-        <profile>standardaul</profile>
-        <profile>employee service request</profile>
-        <profile>employee user profile</profile>
-        <profile>standard employee user profile</profile>
-        <profile>dohmh user employee profile</profile>
+        <profile>Admin</profile>
+        <profile>StandardAul</profile>
+        <profile>Employee User Profile</profile>
+        <profile>Employee System Admin</profile>
+        <profile>Employee Service Request</profile>
+        <profile>Standard Employee user Profile</profile>
+        <profile>DOHMH User Employee Profile</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>

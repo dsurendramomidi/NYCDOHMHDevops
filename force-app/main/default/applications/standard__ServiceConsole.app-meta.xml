@@ -180,10 +180,18 @@
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Knowledge</tabs>
-    <tabs>MobileLanding</tabs>
+    <tabs>Test_KSWData__c</tabs>
+    <tabs>COM_PTR_Reviewer__c</tabs>
+    <tabs>OEA_CPR_OneToMany__c</tabs>
     <workspaceConfig>
         <mappings>
-            <tab>MobileLanding</tab>
+            <tab>COM_PTR_Reviewer__c</tab>
+        </mappings>
+        <mappings>
+            <tab>OEA_CPR_OneToMany__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Test_KSWData__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>

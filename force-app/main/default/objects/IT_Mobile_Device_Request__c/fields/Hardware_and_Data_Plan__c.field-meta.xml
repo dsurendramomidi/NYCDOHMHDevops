@@ -10,7 +10,6 @@
     <type>Picklist</type>
     <valueSet>
         <controllingField>What_mobile_device_are_you_requesting__c</controllingField>
-        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>

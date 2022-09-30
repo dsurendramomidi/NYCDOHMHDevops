@@ -4,28 +4,16 @@
         <headerColor>#0070D2</headerColor>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
+    <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Sales</label>
     <navType>Standard</navType>
-    <tabs>standard-home</tabs>
-    <tabs>standard-Opportunity</tabs>
-    <tabs>standard-Lead</tabs>
     <tabs>standard-Account</tabs>
-    <tabs>standard-Contact</tabs>
-    <tabs>standard-Campaign</tabs>
-    <tabs>standard-Task</tabs>
-    <tabs>standard-ContentNote</tabs>
-    <tabs>standard-Event</tabs>
-    <tabs>standard-CollaborationGroup</tabs>
-    <tabs>standard-Dashboard</tabs>
-    <tabs>standard-report</tabs>
-    <tabs>standard-Feed</tabs>
-    <tabs>standard-File</tabs>
-    <tabs>standard-OtherUserProfile</tabs>
-    <tabs>standard-Case</tabs>
-    <tabs>standard-Product2</tabs>
-    <tabs>MobileLanding</tabs>
+    <tabs>Test_KSWData__c</tabs>
+    <tabs>COM_PTR_Reviewer__c</tabs>
+    <tabs>OEA_CPR_OneToMany__c</tabs>
     <uiType>Lightning</uiType>
+    <utilityBar>Sales_UtilityBar1</utilityBar>
 </CustomApplication>

@@ -3,8 +3,9 @@
     <fullName>IT</fullName>
     <fields>CaseNumber</fields>
     <fields>Type</fields>
-    <fields>Related_Record_ID__c</fields>
-    <fields>CreatedById</fields>
+    <fields>Reference_Number__c</fields>
+    <fields>Record_Category__c</fields>
     <fields>OwnerId</fields>
+    <fields>CreatedById</fields>
     <label>IT</label>
 </CompactLayout>

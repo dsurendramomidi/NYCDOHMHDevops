@@ -4,7 +4,15 @@
     <description>Process for logging Concierge IT cases</description>
     <isActive>true</isActive>
     <values>
+        <fullName>Acknowledged</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Escalated</fullName>
         <default>false</default>
     </values>
     <values>
@@ -12,11 +20,7 @@
         <default>true</default>
     </values>
     <values>
-        <fullName>Processing</fullName>
-        <default>false</default>
-    </values>
-    <values>
-        <fullName>Submitted for Approval</fullName>
+        <fullName>Resolved</fullName>
         <default>false</default>
     </values>
 </BusinessProcess>

@@ -9,8 +9,20 @@
     <tabs>standard-CmsChannel</tabs>
     <tabs>standard-CmsWorkspaces</tabs>
     <tabs>standard-CmsExperiences</tabs>
+    <tabs>Test_KSWData__c</tabs>
+    <tabs>COM_PTR_Reviewer__c</tabs>
+    <tabs>OEA_CPR_OneToMany__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>COM_PTR_Reviewer__c</tab>
+        </mappings>
+        <mappings>
+            <tab>OEA_CPR_OneToMany__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Test_KSWData__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-CmsAuthorHome</tab>
         </mappings>

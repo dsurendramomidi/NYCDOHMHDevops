@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Record Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>File &amp; Record Management</fullName>
+                <default>false</default>
+                <label>File &amp; Record Management</label>
+            </value>
+            <value>
+                <fullName>Software &amp; Licenses</fullName>
+                <default>false</default>
+                <label>Software &amp; Licenses</label>
+            </value>
+            <value>
+                <fullName>IT Equipment &amp; Infrastructure</fullName>
+                <default>false</default>
+                <label>IT Equipment &amp; Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Network, Voice and Connectivity</fullName>
+                <default>false</default>
+                <label>Network, Voice and Connectivity</label>
+            </value>
+            <value>
+                <fullName>Email, Calendar and Collaboration</fullName>
+                <default>false</default>
+                <label>Email, Calendar and Collaboration</label>
+            </value>
+            <value>
+                <fullName>Database Administration</fullName>
+                <default>false</default>
+                <label>Database Administration</label>
+            </value>
+            <value>
+                <fullName>Data Services and Systems</fullName>
+                <default>false</default>
+                <label>Data Services and Systems</label>
+            </value>
+            <value>
+                <fullName>IT Security</fullName>
+                <default>false</default>
+                <label>IT Security</label>
+            </value>
+            <value>
+                <fullName>Application Deployment</fullName>
+                <default>false</default>
+                <label>Application Deployment</label>
+            </value>
+            <value>
+                <fullName>DIT Enterprise Applications</fullName>
+                <default>false</default>
+                <label>DIT Enterprise Applications</label>
+            </value>
+            <value>
+                <fullName>DOHMH Applications</fullName>
+                <default>false</default>
+                <label>DOHMH Applications</label>
+            </value>
+            <value>
+                <fullName>Non-DOHMH Applications</fullName>
+                <default>false</default>
+                <label>Non-DOHMH Applications</label>
+            </value>
+            <value>
+                <fullName>Mobile Device Request</fullName>
+                <default>false</default>
+                <label>Mobile Device Request</label>
+            </value>
+            <value>
+                <fullName>Account &amp; Access</fullName>
+                <default>false</default>
+                <label>Account &amp; Access</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

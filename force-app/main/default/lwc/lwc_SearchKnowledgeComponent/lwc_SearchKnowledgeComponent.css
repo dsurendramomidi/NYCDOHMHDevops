@@ -28,3 +28,7 @@
 lightning-radio-group .slds-radio_faux {
     margin-right: 10px;
 }
+.labelStyleSmall{
+    color: white;
+    font-size: 14px;
+}

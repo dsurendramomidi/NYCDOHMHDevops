@@ -10,6 +10,7 @@
         <field>Type_Of_Request__c</field>
         <field>Reason_for_the_Replacement__c</field>
         <field>Reason_for_a_new_replacement_device__c</field>
+        <field>Owner</field>
     </approvalPageFields>
     <approvalStep>
         <allowDelegate>false</allowDelegate>
@@ -21,7 +22,7 @@
         </approvalActions>
         <assignedApprover>
             <approver>
-                <name>dsurendramomidi@health.nyc.gov.dohmhdev</name>
+                <name>dsurendramomidi@health.nyc.gov</name>
                 <type>user</type>
             </approver>
             <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>

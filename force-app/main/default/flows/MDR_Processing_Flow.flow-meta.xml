@@ -529,7 +529,6 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
             </fields>
             <isRequired>false</isRequired>
         </fields>
-        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>false</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -540,7 +539,7 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
             <targetReference>get_Case_Details</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>ApproveRejectVar</name>
         <dataType>String</dataType>

@@ -6,6 +6,9 @@
     <label>LightningBolt</label>
     <navType>Standard</navType>
     <tabs>standard-LightningBoltHome</tabs>
-    <tabs>MobileLanding</tabs>
+    <tabs>Test_KSWData__c</tabs>
+    <tabs>COM_PTR_Reviewer__c</tabs>
+    <tabs>OEA_CPR_OneToMany__c</tabs>
     <uiType>Lightning</uiType>
+    <utilityBar>LightningBolt_UtilityBar</utilityBar>
 </CustomApplication>

@@ -3,9 +3,10 @@
     <div class="slds-p-around_medium searchbox">
         <br/>
         <div class="slds-form-element slds-form-element_stacked" onkeyup={handleKeyUp}>
-            <label for="text-input-id-1" class="slds-form-element__label slds-align_absolute-center slds-p-around_medium labelStyle" >How can we help?</label>
+            <label for="text-input-id-1" class="slds-form-element__label slds-align_absolute-center slds-p-around_medium labelStyle" style="padding-bottom:0;padding-top:0">Employee Self-Help</label>
+            <label for="text-input-id-1" class="slds-align_absolute-center labelStyleSmall" style="padding-bottom:20px;padding-top:10px">Find the answers to your questions.</label>
             <div class="slds-form-element__control">
-                <div class="slds-size_7-of-12 slds-align_absolute-center">
+                <div class="slds-size_12-of-12 slds-align_absolute-center">
                     <div class="slds-combobox_container slds-size_5-of-12">
                         <div id="box" class={boxClass} aria-expanded="true" aria-haspopup="listbox" role="combobox">
                             <div class="slds-combobox__form-element" role="none"> <!-- slds-input-has-icon slds-input-has-icon_right -->
@@ -17,7 +18,7 @@
                                 </template>
                                 <template if:false={isValueSelected}>
                                     <div class="slds-p-top_none">
-                                        <lightning-input class={inputClass} id="input" value={searchTerm}
+                                        <lightning-input class={inputClass} id="input" value={searchTerm} type="search"
                                                         onclick={handleClick} onblur={onBlur} onchange={onChange}
                                                         variant="label-hidden" autocomplete="off" placeholder={searchPlaceholder}>
                                         </lightning-input> <!-- type="search" -->
@@ -44,6 +45,7 @@
                     </div>
                 </div>
             </div>
+            <label for="text-input-id-1" class="slds-align_absolute-center labelStyleSmall" style="padding-top:20px">Still can't find what you're looking for? Submit a ticket below.</label>
         </div>
     </div>
 </template>

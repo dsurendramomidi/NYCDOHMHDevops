@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default</fullName>
+    <active>true</active>
+    <businessProcess>wkdw__IT Process</businessProcess>
+    <label>Default</label>
+    <picklistValues>
+        <picklist>MDR_Reason_for_the_Replacement__c</picklist>
+        <values>
+            <fullName>Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stolen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MDR_Type_oF_Request__c</picklist>
+        <values>
+            <fullName>Change in Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Record_Category__c</picklist>
+        <values>
+            <fullName>Application Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIT Enterprise Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOHMH Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Services and Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email%2C Calendar and Collaboration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File %26 Record Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Equipment %26 Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network%2C Voice and Connectivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-DOHMH Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software %26 Licenses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Record_Division__c</picklist>
+        <values>
+            <fullName>ADM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EHS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IIT</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>MHY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OGC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Application Hosting Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDR Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_mobile_device_are_you_requesting__c</picklist>
+        <values>
+            <fullName>CCEWIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samsung Tablet %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Flip Phone %28both device %26 cell plan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone %28both device %26 data plan%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>wkdw__TicketCategory__c</picklist>
+        <values>
+            <fullName>HR - Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Employee Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

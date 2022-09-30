@@ -387,7 +387,8 @@
             <label>Another User Type</label>
         </rules>
     </decisions>
-    <description>Adding REGEX to the Phone field to accept only numeric values on Screen Element</description>
+    <description>Adding REGEX to the Phone field to accept only numeric values on Screen Element
+v7: Getting MDR Case RecordType ID and assign it to the case record</description>
     <formulas>
         <name>getEmployeeFullName</name>
         <dataType>String</dataType>
@@ -402,11 +403,6 @@
         <name>NewMDRLinkFormula</name>
         <dataType>String</dataType>
         <expression>LEFT({!$Api.Enterprise_Server_URL_260},FIND(&apos;/&apos;,{!$Api.Enterprise_Server_URL_260},9)) &amp; &apos;employees/s/detail/&apos; &amp; {!getMDRRecordDetailsVar}</expression>
-    </formulas>
-    <formulas>
-        <name>PhoneFieldRegex</name>
-        <dataType>String</dataType>
-        <expression>NOT(REGEX(MobilePhoneNumber, &quot;\\D*?(\\d\\D*?){10}&quot;))</expression>
     </formulas>
     <formulas>
         <name>PolicyLink</name>
@@ -451,7 +447,7 @@
         <name>Create_Case_for_MDR</name>
         <label>Create Case for MDR</label>
         <locationX>716</locationX>
-        <locationY>902</locationY>
+        <locationY>931</locationY>
         <assignRecordIdToReference>CaseRecordIdVar</assignRecordIdToReference>
         <connector>
             <targetReference>DeviceRequestCheck</targetReference>
@@ -466,6 +462,12 @@
             <field>OwnerId</field>
             <value>
                 <elementReference>EmployeeUserID.recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_MDR_Case_Record_Type.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -659,6 +661,34 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>Get_MDR_Case_Record_Type</name>
+        <label>Get MDR Case Record Type</label>
+        <locationX>904</locationX>
+        <locationY>833</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Case_for_MDR</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Case</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>IT Mobile Service Record Type</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>getMDRName</name>
         <label>getMDRName</label>
         <locationX>716</locationX>
@@ -748,7 +778,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Related_Record_ID__c</field>
+            <field>Reference_Number__c</field>
             <value>
                 <elementReference>getMDRName.Name</elementReference>
             </value>
@@ -869,7 +899,6 @@
                 </conditions>
             </visibilityRule>
         </fields>
-        <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
@@ -892,8 +921,8 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>I_am_completing_this_request_on_behalf_of1</name>
-                    <choiceReferences>Another_User</choiceReferences>
                     <choiceReferences>MySelf</choiceReferences>
+                    <choiceReferences>Another_User</choiceReferences>
                     <dataType>String</dataType>
                     <fieldText>I am completing this request on behalf of:</fieldText>
                     <fieldType>RadioButtons</fieldType>
@@ -967,27 +996,24 @@
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
-        <backButtonLabel>Back</backButtonLabel>
         <fields>
             <name>MDR_Record_Insert_Error</name>
             <fieldText>&lt;p&gt;We&apos;re sorry, but something went wrong. Please try again.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(234, 15, 15);&quot;&gt;{!$Flow.FaultMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
-        <nextOrFinishButtonLabel>Okay</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <screens>
         <name>Mobile_Device_Request</name>
         <label>Mobile Device Request</label>
-        <locationX>716</locationX>
-        <locationY>784</locationY>
+        <locationX>717</locationX>
+        <locationY>786</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
-        <backButtonLabel>Previous</backButtonLabel>
         <connector>
-            <targetReference>Create_Case_for_MDR</targetReference>
+            <targetReference>Get_MDR_Case_Record_Type</targetReference>
         </connector>
         <fields>
             <name>Mobile_Device_Request_Section1</name>
@@ -1197,8 +1223,8 @@
                 </fields>
                 <fields>
                     <name>Mobile_Device_Ownership</name>
-                    <choiceReferences>Bring_Your_Own_Device_BYOD</choiceReferences>
                     <choiceReferences>DOHMH_Device</choiceReferences>
+                    <choiceReferences>Bring_Your_Own_Device_BYOD</choiceReferences>
                     <dataType>String</dataType>
                     <fieldText>Mobile Device Ownership</fieldText>
                     <fieldType>RadioButtons</fieldType>
@@ -1520,12 +1546,6 @@
                             <booleanValue>true</booleanValue>
                         </value>
                     </inputParameters>
-                    <inputParameters>
-                        <name>pattern</name>
-                        <value>
-                            <elementReference>PhoneFieldRegex</elementReference>
-                        </value>
-                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -1719,7 +1739,7 @@
                 <fields>
                     <name>BYOD_Policies</name>
                     <dataType>Boolean</dataType>
-                    <fieldText>I Agree to the terms and conditions</fieldText>
+                    <fieldText>* I Agree to the terms and conditions</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
                     <validationRule>
@@ -1794,7 +1814,7 @@
                     <defaultValue>
                         <elementReference>VariableforSafeguardingITassets</elementReference>
                     </defaultValue>
-                    <fieldText>I Agree to the terms and conditions</fieldText>
+                    <fieldText>* I Agree to the terms and conditions</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
                     <validationRule>
@@ -1857,7 +1877,6 @@
                 </conditions>
             </visibilityRule>
         </fields>
-        <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
@@ -1884,7 +1903,7 @@
             <targetReference>IT_Mobile_Device_Request</targetReference>
         </connector>
     </start>
-    <status>InvalidDraft</status>
+    <status>Active</status>
     <variables>
         <name>CaseRecordIdVar</name>
         <dataType>String</dataType>

@@ -1,0 +1,1513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Default</fullName>
+    <active>true</active>
+    <businessProcess>DOHMH EE Default Support Process</businessProcess>
+    <label>Application Default</label>
+    <picklistValues>
+        <picklist>MDR_Reason_for_the_Replacement__c</picklist>
+        <values>
+            <fullName>Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stolen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MDR_Type_oF_Request__c</picklist>
+        <values>
+            <fullName>Change in Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eForm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Record_Category__c</picklist>
+        <values>
+            <fullName>Account %26 Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIT Enterprise Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOHMH Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Services and Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email%2C Calendar and Collaboration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File %26 Record Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Equipment %26 Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network%2C Voice and Connectivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-DOHMH Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software %26 Licenses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Record_Division__c</picklist>
+        <values>
+            <fullName>ADM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EHS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IIT</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>MHY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OGC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>AIDR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AOT Case Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ATDTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AX2%2FACL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account and Permission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Hosting Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Service Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Center of Health Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Disease Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Environmental Health Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Epidemiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Family and Child Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Mental Hygiene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under Division of Prevention and Primary Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under the Office of Commissioner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under the Office of Emergency Preparedness and Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under the Office of External Affairs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under the Office of First Deputy Commissioner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applications under the Office of General Council</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ArchiBus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Article 6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assisted Outpatient Treatment System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistive Technology Devices Tracking System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit Tracking System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automated Medication Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automation of MHy Audit Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BT Reporting Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup and Restore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biscom Access Request for Encrypt File Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breach Notification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bronx RHIO %2F Healthix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Card Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAPs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAaT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCATS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHI Online Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHI Tracker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHRMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CLERK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COI - Conflict of Interest for both Outside Positions and Post-Employment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COVID SAFE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COVID-19 Sick Leave Order System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Center Literature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capital Project Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cepheid 360 - User Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ChildCare Online Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ChildCare Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Children Single Point of Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Children with Special Health Care Needs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Citrix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City 311 %28Siebel%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CityShare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloud Review Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commissioners Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications Project Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Room IT Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Room Open Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contrak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contrak - Purchasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cooling Tower - Audit NOVs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordinated Intake and Referral System %E2%80%93 NowPow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covid Positive Case Tracking System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create New Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Create%2C Alter%2C or Delete a Database Object</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DB Account and Permission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DMAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOHMH Network Account and Login</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DPHO System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Catalog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Integration and Analytics Svcs %28Pentaho%2C Microsoft BI%2C Rhapsody%2C Sas Ebi - not installations%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Linkage and Matching Services%28Data Match processes%2C Quality Stage%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Processing Issues %28Jobs%2C Packages%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death Certificate Numbering System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deploy a Database from Non-Production to Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Signature Project Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dog Licensing System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECLRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDB - My DOHMH Assets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EEO Reasonable Accommodation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EH - Environmental Health Case Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EH Inventory Management System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EHACE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EI ESU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EI Transporation Billing Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EI Vital Statistics Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPI Services Data Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERRs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EVERS Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EZLobby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Archive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Evaluations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encrypt Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EpiQuery External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EpiQuery Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epic %2F Cerner User Provisioning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epidemiology Services Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment Lost Stolen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FACTS II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCMS Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FDOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOIL%2FSubpoenas%2FMedical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FYPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facility Request System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Backup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Restoration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial System User Access Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Episode Psychosis Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folder Access Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foodborne Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GCAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIS Services %28ESRI%2C ESRI Desktop%2C ARCGIS Online%2C GIS Server questions - not installations%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Database Policies and Procedures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geo Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HHS Accelerator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HICASTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIN%2FHCS%2FHPN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HRTP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Academy Online Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Insurance Services Enrollment Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HealthNet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare Facilities Directory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthy Bucks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthy Start Brooklyn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heath Screening Assessment %28HSA%29 Tool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IGA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IRB - Internal Review Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Asset Transfer Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Facility Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Project Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Purchase Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immunization Facilities Online Reg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informatics Management System %28IMS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insert%2C Update%2C Delete Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interaction Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Audit Time Tracker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Access Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JEMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LogiXML%2FLogiInfo Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAVEN-BCD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAVEN-STD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAVEN-TB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAVEN-VPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MCT Mobile Crisis Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MDR Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MHPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MHY Level Of Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIRH NFP CMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MIRH Newborn Home Visiting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MRC %28SelfReg %26 ADM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternal Mortality Review Information %28MMRIA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Microfilm Archive Writer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MoVIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device Request eForm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device Troubleshooting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosquito Surveillance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move IT Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multifactor Authentication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYC HealthMap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYC SAFE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYC START</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYCAPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYCEPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYCETrack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYCMED Account and Login</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYCMED%2FHAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYCPURS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYCWIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYEIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYEIS Data Mart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NYSAFE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Cabling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Family Home Visiting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New MS Teams Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEPR Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OGC CTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneDrive Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneDrive Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Food Protection Course</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OnlineRegistration-Water Tank Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operating System %26 Software Troubleshooting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outlook Performance and Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PASSPort</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAYRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PECO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PECOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POD Responder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRIMA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRISMS %28WMS and DMS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PRP ADM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent Coaching System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personnel Action Triggering System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physically Handicapped Childrens Program%3A Medical %28Fiscal%29 Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physically Handicapped Childrens Program%3A Orthondontics Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PowerBI Report Server %28Accounts%2FPermissions%2FNew Site%2FPublishing issues%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Preproduction Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Print Requisition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Oversight Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Licensing and Tracking System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Portal AOT Case Monitor Reporting System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Health Emergency Response Network Auxiliary Distribution Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Health Partners Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publication Tracking Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Python Server %28Jupyterhub%29 %28Accounts%2FPermissions%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quantros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RC Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RCMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REDCap On Premise %28DOHMH Internal %2F Vanderbilt%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radiological Equipment Inspection System %28RAD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record Retention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remote Access %28Virtual Desktop%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Email Distribution List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Laptop%2FTablet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Mobile Device</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request New Email Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Other Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request Software %26 Licenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requesting Finance Data or Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident Evaluation System%28RES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurant Inspection Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIMPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STD Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STDEMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Health Phone Call Logging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Health Promotion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secure Encrypted Drive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secured Folder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Assessment - AppScan Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Assessment - Server Scan Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Allocation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Request Center Access Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Request Center Modification Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shareport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Locator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StarLIMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Survey Tools and Services%28Survey Monkey%2C Survey Gizmo - not EDB or training%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFS%2FDevOPS permission%2FTemporary Installer Right</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tableau Server %28Accounts%2FPermissions%2FNew Site%2FPublishing issues%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeamMate - Audit Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teams Audio License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teen Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teens in NYC Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecom %28Phone Set%2FPhone Line%2FPhone Bill Issues%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VPN Request %28eForm App%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VREA - School Based Vaccine Related Expedited Exemptions Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VRVSS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor Invoice Processing System %28VIPS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vital Record Request Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vital Statistics Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vital Statistics Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vital Statistics eForm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Top</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webpage Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whitelisting Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Location Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eDRI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eFax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eHire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eOrder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eSHARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eTASK - Internal Audit Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eVital</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_mobile_device_are_you_requesting__c</picklist>
+        <values>
+            <fullName>CCEWIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samsung Tablet %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Flip Phone %28both device %26 cell plan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone %28both device %26 data plan%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>wkdw__TicketCategory__c</picklist>
+        <values>
+            <fullName>HR - Benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Employee Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR - Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

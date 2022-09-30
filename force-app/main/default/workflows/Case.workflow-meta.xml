@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
-        <fullName>Send_Email_to_the_Movbile_device_Requester</fullName>
+        <fullName>Send_Email_to_the_Requester1</fullName>
         <ccEmails>stalla@health.nyc.gov</ccEmails>
         <ccEmails>dsurendramomidi@health.nyc.gov</ccEmails>
-        <description>Send Email to the Mobile device Requester</description>
+        <description>Send Email to the Requester1</description>
         <protected>false</protected>
         <recipients>
             <type>creator</type>
@@ -14,7 +14,28 @@
             <type>userLookup</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Service_Request_Submitted_Case</template>
+        <template>unfiled$public/DOHMH_EE_Default_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_to_the_Requester2</fullName>
+        <description>Send Email to the Requester</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>gtaylor@health.nyc.gov</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>LastModifiedById</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/DOHMH_EE_Default_Request_Submitted</template>
     </alerts>
     <alerts>
         <fullName>Send_Email_to_the_requester</fullName>
@@ -27,26 +48,6 @@
         <template>unfiled$public/Service_Request_Submitted</template>
     </alerts>
     <alerts>
-        <fullName>Service_Request_Approved_Email</fullName>
-        <description>Service Request Approved Email</description>
-        <protected>false</protected>
-        <recipients>
-            <type>creator</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Service_Request_Approved</template>
-    </alerts>
-    <alerts>
-        <fullName>Service_Request_Rejected_Email</fullName>
-        <description>Service Request Rejected Email</description>
-        <protected>false</protected>
-        <recipients>
-            <type>creator</type>
-        </recipients>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Service_Request_Rejected</template>
-    </alerts>
-    <alerts>
         <fullName>Service_Request_Submitted_Email_to_the_requester</fullName>
         <description>Service Request Submitted Email to the requester</description>
         <protected>false</protected>
@@ -54,17 +55,47 @@
             <type>creator</type>
         </recipients>
         <recipients>
-            <recipient>dsurendramomidi@health.nyc.gov.dohmhdev</recipient>
+            <recipient>dsurendramomidi@health.nyc.gov</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/Service_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>eForm_Approved_Email</fullName>
+        <description>eForm Approved Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/DOHMH_EE_Default_Request_Approved</template>
+    </alerts>
+    <alerts>
+        <fullName>eForm_Rejected_Email</fullName>
+        <description>eForm Rejected Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/DOHMH_EE_Default_Request_Rejected</template>
     </alerts>
     <fieldUpdates>
         <fullName>ChangePriorityToHigh</fullName>
         <field>Priority</field>
         <literalValue>High</literalValue>
         <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Division_Approval</fullName>
+        <field>Status</field>
+        <literalValue>Division Approval</literalValue>
+        <name>Division  Approval</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -115,6 +146,16 @@
         <field>Status</field>
         <literalValue>Closed</literalValue>
         <name>Status Field Updated to Rejected Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Update_to_Completed</fullName>
+        <field>Status</field>
+        <literalValue>Completed</literalValue>
+        <name>Status Update to Completed</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -185,6 +226,17 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Update_Owner_To_BCR_Division_Approver</fullName>
+        <field>OwnerId</field>
+        <lookupValue>sgeorge11@health.nyc.gov</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Update Owner To BCR Division Approver</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Updating_Case_Owner_to_IT_MDT_approvers</fullName>
         <field>OwnerId</field>
         <lookupValue>IT_MDR_Approvers</lookupValue>
@@ -212,6 +264,17 @@
         <name>case Status Update to Closed</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>set_case_owner_to_jake</fullName>
+        <field>OwnerId</field>
+        <lookupValue>zzheng1@health.nyc.gov</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>set case owner to jake</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>

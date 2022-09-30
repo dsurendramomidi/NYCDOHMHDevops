@@ -11,6 +11,42 @@
     <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
     <label>Agent Desk</label>
     <navType>Console</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Case</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.wkdw__IT</recordType>
+        <type>Flexipage</type>
+        <profile>IT Agent</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Case</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.wkdw__IT</recordType>
+        <type>Flexipage</type>
+        <profile>IT Agent</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Case</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.wkdw__IT</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Case</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.wkdw__IT</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <setupExperience>service</setupExperience>
     <tabs>standard-Case</tabs>
     <tabs>standard-Account</tabs>
@@ -19,11 +55,25 @@
     <tabs>standard-Feed</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Test_KSWData__c</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-SocialPost</tabs>
+    <tabs>COM_PTR_Reviewer__c</tabs>
+    <tabs>OEA_CPR_OneToMany__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Agent_Desk_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
+            <tab>COM_PTR_Reviewer__c</tab>
+        </mappings>
+        <mappings>
             <tab>Knowledge__kav</tab>
+        </mappings>
+        <mappings>
+            <tab>OEA_CPR_OneToMany__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Test_KSWData__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>
@@ -39,6 +89,12 @@
         </mappings>
         <mappings>
             <tab>standard-Feed</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-SocialPost</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Task</tab>
         </mappings>
         <mappings>
             <tab>standard-report</tab>

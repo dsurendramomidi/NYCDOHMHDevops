@@ -8,7 +8,7 @@
     <approvalPageFields>
         <field>CaseNumber</field>
         <field>Owner</field>
-        <field>Related_Record_ID__c</field>
+        <field>Reference_Number__c</field>
         <field>Type</field>
         <field>What_mobile_device_are_you_requesting__c</field>
         <field>Description</field>
@@ -106,7 +106,7 @@
     </entryCriteria>
     <finalApprovalActions>
         <action>
-            <name>Service_Request_Approved_Email</name>
+            <name>eForm_Approved_Email</name>
             <type>Alert</type>
         </action>
         <action>
@@ -117,7 +117,7 @@
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
     <finalRejectionActions>
         <action>
-            <name>Service_Request_Rejected_Email</name>
+            <name>eForm_Rejected_Email</name>
             <type>Alert</type>
         </action>
         <action>
@@ -128,7 +128,7 @@
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <initialSubmissionActions>
         <action>
-            <name>Send_Email_to_the_Movbile_device_Requester</name>
+            <name>Send_Email_to_the_Requester1</name>
             <type>Alert</type>
         </action>
         <action>

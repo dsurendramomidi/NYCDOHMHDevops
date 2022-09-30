@@ -15,6 +15,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Processed - Awaiting Device Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Rejected</fullName>
             <default>false</default>
         </values>
@@ -35,6 +39,25 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Hardware_and_Data_Plan__c</picklist>
+        <values>
+            <fullName>Hardware cost%3A %240%2E monthly plan%3A %2416%2E99 w%2FPush-To-Talk%2C %2414%2E99 voice%2C MDM cost%3A %240 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware cost%3A %240%2E monthly plan%3A %2439%2E99%2E MDM cost%3A %240 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware cost%3A %24199%2E99%2E monthly plan%3A %2434%2E99%2E MDM cost%3A %2424%2E40 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware cost%3A Please use IT Purchase Request%2E monthly data plan%3A %2439%2E99%2E MDM cost%3A %2424%2E40 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Hotspot__c</picklist>
         <values>
             <fullName>Add</fullName>
@@ -46,6 +69,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Incident_Location__c</picklist>
+        <values>
+            <fullName>DOHMH Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non DOHMH Location</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Internaltional_Roaming__c</picklist>
         <values>
             <fullName>Add</fullName>
@@ -53,6 +87,17 @@
         </values>
         <values>
             <fullName>Remove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Migrated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
             <default>false</default>
         </values>
     </picklistValues>

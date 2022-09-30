@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_MDR_Approvers_IT_Mobile_Device_Request1</fullName>
+    <filterScope>Queue</filterScope>
+    <label>IT MDR Approvers</label>
+    <queue>IT_MDR_Approvers</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

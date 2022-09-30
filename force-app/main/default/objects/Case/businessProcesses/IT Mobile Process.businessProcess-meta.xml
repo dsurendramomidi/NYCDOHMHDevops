@@ -11,11 +11,23 @@
         <default>true</default>
     </values>
     <values>
+        <fullName>Processed - Awaiting Device Pickup</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Processing</fullName>
         <default>false</default>
     </values>
     <values>
         <fullName>Submitted for Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting DOHMH Police</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting IT Mobile Team</fullName>
         <default>false</default>
     </values>
 </BusinessProcess>

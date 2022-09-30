@@ -5,7 +5,7 @@ export default class Lwc_SearchKnowledgeComponent extends LightningElement {
     @api objName;
     @api iconName = 'knowledge_base';
     @api filter = '';
-    @api searchPlaceholder='Search Knowledge';
+    @api searchPlaceholder='Search by topic: from "Payroll" to "IT" issues';
     @track selectedName;
     @track records;
     @track isValueSelected;

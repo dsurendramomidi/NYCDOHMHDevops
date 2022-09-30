@@ -48,5 +48,6 @@
     </quickActionLayout>
     <standardLabel>SendEmail</standardLabel>
     <targetObject>OutgoingEmail</targetObject>
+    <targetParentField>RelatedTo</targetParentField>
     <type>SendEmail</type>
 </QuickAction>

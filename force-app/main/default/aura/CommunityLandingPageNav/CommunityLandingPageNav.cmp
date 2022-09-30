@@ -11,25 +11,25 @@
         <div class="slds-grid slds-wrap" style="padding-right: 10px;">
             <aura:if isTrue="{!v.showDOHMHCatalyst}">
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./it-mobile-device-request" title="Service Request Center" class="icons">
+                    <a href="./service-catalog-categories?name=All" title="Service Request Center" class="icons">
  						<img src="{!$Resource.icons + '/Service_Request_Center.png'}"   />
                         <span>Service Request Center</span>                   
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./transportationrequest" title="Communication Project Request" class="icons">
+                    <a href="./communication-project-request" title="Communication Project Request" class="icons">
  						<img src="{!$Resource.icons + '/Communications_Project_Request.png'}"    />
                         <span>Communication Project Request</span>                  
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itprojectrequest" title="Publication Tracking Request" class="icons">
+                    <a href="./publication-tracking-request" title="Publication Tracking Request" class="icons">
  						<img src="{!$Resource.icons + '/Publication_Tracking_Request.png'}"   />
                         <span>Publication Tracking Request</span>                  
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itpurchaserequest" title="Outside Position/Interest Waiver Form" class="icons">
+                    <a href="./assistive-technology-devices-tracking" title="Outside Position/Interest Waiver Form" class="icons">
                         <img src="{!$Resource.icons + '/Outside_Position_Interest_Waiver_Form.png'}"   />
                         <span>Outside Position/Interest Waiver</span>
                     </a>
@@ -41,13 +41,13 @@
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./transportationrequest" title="Webpage Change Request" class="icons">
+                    <a href="./webpage-change-request" title="Webpage Change Request" class="icons">
                         <img src="{!$Resource.icons + '/Webpage_Change_Request.png'}"   />
                         <span>Webpage Change Request</span>
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itprojectrequest" title="Transportation Request" class="icons">
+                    <a href="./transportation-request" title="Transportation Request" class="icons">
                         <img src="{!$Resource.icons + '/Transportation_Request.png'}"   />
                         <span>Transportation Request</span>
                     </a>
@@ -59,19 +59,19 @@
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./it-mobile-device-request" title="IT Project Request" class="icons">
+                    <a href="./it-project-request" title="IT Project Request" class="icons">
                         <img src="{!$Resource.icons + '/IT_Project_Request.png'}"   />
                         <span>IT Project Request</span>
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./transportationrequest" title="Business Card Request" class="icons">
+                    <a href="./business-card-request" title="Business Card Request" class="icons">
                         <img src="{!$Resource.icons + '/Business_Card_Request.png'}"   />
                         <span>Business Card Request</span>
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itprojectrequest" title="Travel Request" class="icons">
+                    <a href="./travel-request" title="Travel Request" class="icons">
                         <img src="{!$Resource.icons + '/Travel_Request.png'}"   />
                         <span>Travel Request</span>
                     </a>
@@ -83,19 +83,19 @@
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./it-mobile-device-request" title="IT Purchase Request" class="icons">
+                    <a href="./it-purchase-request" title="IT Purchase Request" class="icons">
                         <img src="{!$Resource.icons + '/IT_Purchase_Request.png'}"   />
                         <span>IT Purchase Request</span>
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./transportationrequest" title="Printing Requisition" class="icons">
+                    <a href="./printing-requisition" title="Printing Requisition" class="icons">
                         <img src="{!$Resource.icons + '/Printing_Requisition.png'}"   />
                         <span>Printing Requisition</span>
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itprojectrequest" title="Vital Statistics Request" class="icons">
+                    <a href="./vital-statistics-request" title="Vital Statistics Request" class="icons">
                         <img src="{!$Resource.icons + '/Vital_Statistics_Request.png'}"   />
                         <span>Vital Statistics Request</span>
                     </a>
@@ -107,7 +107,7 @@
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./it-mobile-device-request" title="IT Asset Transfer Request" class="icons">
+                    <a href="./it-asset-transfer-request" title="IT Asset Transfer Request" class="icons">
                         <img src="{!$Resource.icons + '/IT_Asset_Transfer_Request.png'}"   />
                         <span>IT Asset Transfer Request</span>
                     </a>
@@ -119,19 +119,19 @@
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itprojectrequest" title="Epidemiology Services Request" class="icons">
+                    <a href="./epi-services-data-request" title="Epidemiology Services Request" class="icons">
                         <img src="{!$Resource.icons + '/Epidemiology_Services-_Request.png'}"   />
                         <span>Epidemiology Services Request</span>
                     </a>
                 </div>
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itpurchaserequest" title="Work Location change Request" class="icons">
+                    <a href="./assistive-technology-devices-tracking" title="Work Location change Request" class="icons">
                         <img src="{!$Resource.icons + '/Work_Location_Change_Request.png'}"   />
                         <span>Work Location change Request</span>
                     </a>
                 </div>                
                 <div class="slds-col slds-size_1-of-4 horizontalAlign">
-                    <a href="./itpurchaserequest" title="Digital Signature Project Request" class="icons">
+                    <a href="./digital-signature-project-request" title="Digital Signature Project Request" class="icons">
                         <img src="{!$Resource.icons + '/Digital_Signature_Project_Request.png'}"   />
                         <span>Digital Signature Project Request</span>
                     </a>

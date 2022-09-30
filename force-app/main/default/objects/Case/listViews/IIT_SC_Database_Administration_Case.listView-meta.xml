@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IIT_SC_Database_Administration_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>IIT SC Database Administration</label>
+    <queue>IIT_SC_Database_Administration</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

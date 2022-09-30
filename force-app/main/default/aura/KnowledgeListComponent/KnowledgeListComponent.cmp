@@ -54,7 +54,7 @@
     FEATURED ARTICLES 
     - - - - - - - - - - - -->
     <section class="dohmh-c-section--commercial" style="padding:0 48px 0 48px">
-        <h3 class="dohmh-u-textColor--commercialPrimary" id="featuredarticles" style="font-size:30px;font-weight:900;margin:18px 0;">Featured Articles</h3>
+        <h3 class="dohmh-u-textColor--commercialPrimary" id="featuredarticles" style="font-size:25px;font-weight:900;margin:18px 0;color:#0080A9 !important">Featured Articles</h3>
 
         <div class="dohmh-l-grid--@xl dohmh-u-padding__0 dohmh-c-buttonGrid--commercial">
 
@@ -94,7 +94,7 @@
     USER GUIDES 
     - - - - - - - - - - - -->
     <section class="dohmh-c-section--commercial" style="padding:0 48px 0 48px">
-        <h3 class="dohmh-u-textColor--commercialPrimary" id="userguides" style="font-size:30px;font-weight:900;margin:18px 0;">User Guides</h3>
+        <h3 class="dohmh-u-textColor--commercialPrimary" id="userguides" style="font-size:25px;font-weight:900;margin:18px 0;color:#0080A9 !important">User Guides</h3>
 
         <div class="dohmh-l-grid--@xl dohmh-u-padding__0 dohmh-c-buttonGrid--commercial">
             <div class="dohmh-l-grid__row dohmh-l-grid__rowCols--2">
@@ -132,7 +132,7 @@
     TRAINING VIDEOS 
     - - - - - - - - - - - -->
     <section class="dohmh-c-section--commercial" style="padding:0 48px 0 48px">
-        <h3 class="dohmh-u-textColor--commercialPrimary" id="trainingvideos" style="font-size:30px;font-weight:900;margin:18px 0;">Training Videos</h3>
+        <h3 class="dohmh-u-textColor--commercialPrimary" id="trainingvideos" style="font-size:25px;font-weight:900;margin:18px 0;color:#0080A9 !important">Training Videos</h3>
 
         <div class="dohmh-l-grid--@xl dohmh-u-padding__0 dohmh-c-buttonGrid--commercial">
             <div class="dohmh-l-grid__row dohmh-l-grid__rowCols--2">

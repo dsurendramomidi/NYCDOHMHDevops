@@ -12,5 +12,7 @@
     <tabs>standard-Chatter</tabs>
     <tabs>standard-File</tabs>
     <tabs>standard-Quote</tabs>
-    <tabs>MobileLanding</tabs>
+    <tabs>Test_KSWData__c</tabs>
+    <tabs>COM_PTR_Reviewer__c</tabs>
+    <tabs>OEA_CPR_OneToMany__c</tabs>
 </CustomApplication>

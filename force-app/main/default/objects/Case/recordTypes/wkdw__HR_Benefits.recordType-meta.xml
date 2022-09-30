@@ -93,6 +93,139 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Record_Category__c</picklist>
+        <values>
+            <fullName>Application Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIT Enterprise Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOHMH Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Services and Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Database Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email%2C Calendar and Collaboration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File %26 Record Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Equipment %26 Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Device Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network%2C Voice and Connectivity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-DOHMH Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software %26 Licenses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Record_Division__c</picklist>
+        <values>
+            <fullName>ADM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EHS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IIT</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>MHY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OGC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Application Hosting Environment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>What_mobile_device_are_you_requesting__c</picklist>
         <values>
             <fullName>CCEWIN</fullName>

@@ -137,20 +137,22 @@
     <profileSearchLayouts>
         <fields>Name</fields>
         <fields>Division_Bureau__c</fields>
+        <fields>Division__c</fields>
+        <fields>Email</fields>
+        <fields>EmployeeNumber</fields>
+        <fields>Location</fields>
+        <fields>User</fields>
+        <profileName>System Administrator</profileName>
+    </profileSearchLayouts>
+    <profileSearchLayouts>
+        <fields>Name</fields>
+        <fields>Division_Bureau__c</fields>
         <profileName>DOHMH User Employee Profile</profileName>
     </profileSearchLayouts>
     <profileSearchLayouts>
         <fields>Name</fields>
         <fields>Division_Bureau__c</fields>
         <profileName>DOHMH Admin User Employee Profile</profileName>
-    </profileSearchLayouts>
-    <profileSearchLayouts>
-        <fields>Name</fields>
-        <fields>Email</fields>
-        <fields>EmployeeNumber</fields>
-        <fields>Location</fields>
-        <fields>User</fields>
-        <profileName>System Administrator</profileName>
     </profileSearchLayouts>
     <searchLayouts>
         <customTabListAdditionalFields>Email</customTabListAdditionalFields>

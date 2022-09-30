@@ -7,7 +7,19 @@
         <default>false</default>
     </values>
     <values>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>New</fullName>
         <default>true</default>
+    </values>
+    <values>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Processed - Awaiting Device Pickup</fullName>
+        <default>false</default>
     </values>
 </BusinessProcess>

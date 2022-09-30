@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_Mobile_Device_Request</fullName>
+    <active>true</active>
+    <label>IT Mobile Device Request</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processed - Awaiting Device Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting DOHMH Police</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting IT Mobile Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Completing_this_request_on_behalf_of__c</picklist>
+        <values>
+            <fullName>Another User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myself</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hardware_and_Data_Plan__c</picklist>
+        <values>
+            <fullName>Hardware cost%3A %240%2E monthly plan%3A %2416%2E99 w%2FPush-To-Talk%2C %2414%2E99 voice%2C MDM cost%3A %240 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware cost%3A %240%2E monthly plan%3A %2439%2E99%2E MDM cost%3A %240 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware cost%3A %24199%2E99%2E monthly plan%3A %2434%2E99%2E MDM cost%3A %2424%2E40 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware cost%3A Please use IT Purchase Request%2E monthly data plan%3A %2439%2E99%2E MDM cost%3A %2424%2E40 %28Price is subject to change without notice%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hotspot__c</picklist>
+        <values>
+            <fullName>Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Incident_Location__c</picklist>
+        <values>
+            <fullName>DOHMH Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non DOHMH Location</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Internaltional_Roaming__c</picklist>
+        <values>
+            <fullName>Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Migrated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mobile_Deivce_Ownership__c</picklist>
+        <values>
+            <fullName>Bring Your Own Device %28BYOD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOHMH Device</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mobile_Phone_Carrier__c</picklist>
+        <values>
+            <fullName>AT%26T</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T-Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Wireless</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_for_the_Replacement__c</picklist>
+        <values>
+            <fullName>Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stolen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_Of_Request__c</picklist>
+        <values>
+            <fullName>Change in Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_Type_of_Phone__c</picklist>
+        <values>
+            <fullName>Android Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tablet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>What_mobile_device_are_you_requesting__c</picklist>
+        <values>
+            <fullName>CCEWIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samsung Tablet %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verizon Flip Phone %28both device %26 cell plan%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad %28data plan only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone %28both device %26 data plan%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
