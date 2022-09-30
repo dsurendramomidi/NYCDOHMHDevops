@@ -387,8 +387,7 @@
             <label>Another User Type</label>
         </rules>
     </decisions>
-    <description>Adding REGEX to the Phone field to accept only numeric values on Screen Element
-v7: Getting MDR Case RecordType ID and assign it to the case record</description>
+    <description>MDR Screen Flow for Govt Cloud</description>
     <formulas>
         <name>getEmployeeFullName</name>
         <dataType>String</dataType>
@@ -421,9 +420,8 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
 &amp;&quot;What mobile device are you requesting? &quot; +{!What_mobile_device_are_you_requesting} &amp;BR()
 &amp;&quot;Mobile Phone Number: &quot; +{!MobilePhoneNumber.value}</expression>
     </formulas>
-    <interviewLabel>MDR Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
-    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
-    <label>MDR Screen Flow</label>
+    <interviewLabel>MDR Screen Flow Govt {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MDR Screen Flow Govt</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -447,7 +445,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
         <name>Create_Case_for_MDR</name>
         <label>Create Case for MDR</label>
         <locationX>716</locationX>
-        <locationY>931</locationY>
+        <locationY>902</locationY>
         <assignRecordIdToReference>CaseRecordIdVar</assignRecordIdToReference>
         <connector>
             <targetReference>DeviceRequestCheck</targetReference>
@@ -462,12 +460,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
             <field>OwnerId</field>
             <value>
                 <elementReference>EmployeeUserID.recordId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>RecordTypeId</field>
-            <value>
-                <elementReference>Get_MDR_Case_Record_Type.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -658,34 +650,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Case</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_MDR_Case_Record_Type</name>
-        <label>Get MDR Case Record Type</label>
-        <locationX>904</locationX>
-        <locationY>833</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Create_Case_for_MDR</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>SobjectType</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Case</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Name</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>IT Mobile Service Record Type</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
@@ -1017,7 +981,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
         <allowPause>false</allowPause>
         <backButtonLabel>Previous</backButtonLabel>
         <connector>
-            <targetReference>Get_MDR_Case_Record_Type</targetReference>
+            <targetReference>Create_Case_for_MDR</targetReference>
         </connector>
         <fields>
             <name>Mobile_Device_Request_Section1</name>
@@ -1908,7 +1872,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
             <targetReference>IT_Mobile_Device_Request</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>CaseRecordIdVar</name>
         <dataType>String</dataType>

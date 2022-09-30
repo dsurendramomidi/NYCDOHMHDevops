@@ -529,6 +529,7 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
             </fields>
             <isRequired>false</isRequired>
         </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>false</showFooter>
         <showHeader>true</showHeader>
     </screens>

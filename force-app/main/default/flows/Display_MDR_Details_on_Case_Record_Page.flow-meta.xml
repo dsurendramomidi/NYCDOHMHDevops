@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>1. Updated the Color of MDR Referecne Number</description>
+    <interviewLabel>Display MDR Details on Case Record Page {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Display MDR Details on Case Record Page</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Case_Record_ID</name>
+        <label>Get Case Record ID</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_MDR_Record_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>getCaseRecordID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_MDR_Record_Details</name>
+        <label>Get MDR Record Details</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Display_MDR_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Case_Record_ID.Reference_Number__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>IT_Mobile_Device_Request__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <description>This will display MDR details</description>
+        <name>Display_MDR_Details</name>
+        <label>Display MDR Details</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Display_MDR_Details_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Display_MDR_Details_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Reference_Number</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;MDR Reference Number: &lt;/b&gt;&lt;b style=&quot;color: rgb(3, 126, 166);&quot;&gt;{!Get_MDR_Record_Details.Name}&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 72, 255);&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Request_on_Behalf_of</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;I am completing this request on behalf of: &lt;/b&gt;{!Get_MDR_Record_Details.Completing_this_request_on_behalf_of__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Name</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;Name: &lt;/b&gt;{!Get_MDR_Record_Details.Employee_Name__r.Name}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Divison</name>
+                    <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Divison: &lt;/b&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;{!Get_MDR_Record_Details.Division__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Bureau</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;Bureau: &lt;/b&gt;{!Get_MDR_Record_Details.Bureau__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Address</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;Address: &lt;/b&gt;{!Get_MDR_Record_Details.Address__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Work_Phone</name>
+                    <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Work Phone: &lt;/b&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;{!Get_MDR_Record_Details.Work_Phone__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Display_MDR_Details_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Requeste_Work_Unit</name>
+                    <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Requester Work Unit: &lt;/b&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;{!Get_MDR_Record_Details.Requester_Work_Unit__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Requester_Email</name>
+                    <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Requester Email: &lt;/b&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;{!Get_MDR_Record_Details.Requester_Email__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Select_Divisonal_Approver</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;Select your Divisional Approver/DC: &lt;/b&gt;&lt;/p&gt;&lt;p&gt;{!Get_MDR_Record_Details.Select_Your_Divisional_Approver_DC__r.FirstName} {!Get_MDR_Record_Details.Select_Your_Divisional_Approver_DC__r.LastName}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Mobile_device_Ownership</name>
+                    <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Mobile Device Ownership: &lt;/b&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;{!Get_MDR_Record_Details.Mobile_Deivce_Ownership__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Type_of_request</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;Type of Request:&lt;/b&gt; {!Get_MDR_Record_Details.Type_Of_Request__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Mobile_Device_Requesting</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;What mobile device are you requesting? &lt;/b&gt;{!Get_MDR_Record_Details.What_mobile_device_are_you_requesting__c}&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Justification_for_device_request</name>
+                    <fieldText>&lt;p&gt;&lt;b&gt;Justification for a new or replacement device: &lt;/b&gt;{!Get_MDR_Record_Details.Reason_for_a_new_replacement_device__c}&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Case_Record_ID</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>getCaseRecordID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

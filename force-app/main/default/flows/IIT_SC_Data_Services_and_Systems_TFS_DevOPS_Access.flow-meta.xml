@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <constants>
+        <name>Get_Queue_Name</name>
+        <dataType>String</dataType>
+    </constants>
+    <description>TFS/DevOPS permission/Temporary Installer Right</description>
+    <interviewLabel>IIT SC {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>IIT SC Data Services and Systems - TFS/DevOPS Access</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>IIT_SC_Sub_Flow_Default</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>IIT_SC_Sub_Flow_Default</name>
+        <label>IIT SC Sub Flow Default</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <flowName>Default_SC_Sub_Flow</flowName>
+        <inputAssignments>
+            <name>Var_RecordCategory</name>
+            <value>
+                <stringValue>Data Services and Systems</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Var_RecordDivision</name>
+            <value>
+                <stringValue>IIT</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Var_RequestSubject</name>
+            <value>
+                <stringValue>Data Services and Systems - TFS/DevOPS Access</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Var_RequestType</name>
+            <value>
+                <stringValue>TFS/DevOPS permission/Temporary Installer Right</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>GetRecordTypeName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Var_RecordTypeId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>RecordType</objectType>
+    </variables>
+</Flow>

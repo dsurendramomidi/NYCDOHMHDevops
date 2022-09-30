@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Update MDR Status whenever related Case Status is updated</description>
+    <interviewLabel>Update MDR Status Based on Case Status Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update MDR Status Based on Case Status Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_MDR_Status</name>
+        <label>Update MDR Status</label>
+        <locationX>534</locationX>
+        <locationY>369</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Related_Case_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.CaseNumber</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Approval_Status__c</field>
+            <value>
+                <elementReference>$Record.Status</elementReference>
+            </value>
+        </inputAssignments>
+        <object>IT_Mobile_Device_Request__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>410</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Update_MDR_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MDR Request</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
