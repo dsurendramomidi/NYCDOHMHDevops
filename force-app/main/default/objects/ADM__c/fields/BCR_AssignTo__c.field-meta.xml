@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BCR_AssignTo__c</fullName>
+    <externalId>false</externalId>
+    <label>BCR_AssignTo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>BCR_New_RequesterDivision__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anna Tate</fullName>
+                <default>false</default>
+                <label>Anna Tate</label>
+            </value>
+            <value>
+                <fullName>Carlos Espada</fullName>
+                <default>false</default>
+                <label>Carlos Espada</label>
+            </value>
+            <value>
+                <fullName>Darrin Taylor</fullName>
+                <default>false</default>
+                <label>Darrin Taylor</label>
+            </value>
+            <value>
+                <fullName>Daniel Wiafe</fullName>
+                <default>false</default>
+                <label>Daniel Wiafe</label>
+            </value>
+            <value>
+                <fullName>Dave Magno</fullName>
+                <default>false</default>
+                <label>Dave Magno</label>
+            </value>
+            <value>
+                <fullName>Gairy Taylor</fullName>
+                <default>false</default>
+                <label>Gairy Taylor</label>
+            </value>
+            <value>
+                <fullName>Geevarghese Abraham</fullName>
+                <default>false</default>
+                <label>Geevarghese Abraham</label>
+            </value>
+            <value>
+                <fullName>John Rojas</fullName>
+                <default>false</default>
+                <label>John Rojas</label>
+            </value>
+            <value>
+                <fullName>Joseph Slade</fullName>
+                <default>false</default>
+                <label>Joseph Slade</label>
+            </value>
+            <value>
+                <fullName>Karima Ibrahim</fullName>
+                <default>false</default>
+                <label>Karima Ibrahim</label>
+            </value>
+            <value>
+                <fullName>Kimone Ponde</fullName>
+                <default>false</default>
+                <label>Kimone Ponde</label>
+            </value>
+            <value>
+                <fullName>Laena Orkin</fullName>
+                <default>false</default>
+                <label>Laena Orkin</label>
+            </value>
+            <value>
+                <fullName>Lauren Mann</fullName>
+                <default>false</default>
+                <label>Lauren Mann</label>
+            </value>
+            <value>
+                <fullName>Lesley Stalvey</fullName>
+                <default>false</default>
+                <label>Lesley Stalvey</label>
+            </value>
+            <value>
+                <fullName>Monica Marquez</fullName>
+                <default>false</default>
+                <label>Monica Marquez</label>
+            </value>
+            <value>
+                <fullName>Rosalyn Williams</fullName>
+                <default>false</default>
+                <label>Rosalyn Williams</label>
+            </value>
+            <value>
+                <fullName>Sabrina Clowney</fullName>
+                <default>false</default>
+                <label>Sabrina Clowney</label>
+            </value>
+            <value>
+                <fullName>Samuel Sebiyam</fullName>
+                <default>false</default>
+                <label>Samuel Sebiyam</label>
+            </value>
+            <value>
+                <fullName>Sherin George</fullName>
+                <default>false</default>
+                <label>Sherin George</label>
+            </value>
+            <value>
+                <fullName>Victor Sedaros</fullName>
+                <default>false</default>
+                <label>Victor Sedaros</label>
+            </value>
+            <value>
+                <fullName>Victoria Gresia</fullName>
+                <default>false</default>
+                <label>Victoria Gresia</label>
+            </value>
+            <value>
+                <fullName>ZhangZhang Zheng</fullName>
+                <default>false</default>
+                <label>ZhangZhang Zheng</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>First Deputy Commissioner and Chief Equity Officer</controllingFieldValue>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <controllingFieldValue>Office of External Affairs</controllingFieldValue>
+            <controllingFieldValue>Office of General Counsel</controllingFieldValue>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <controllingFieldValue>Office of Chief Medical Examiner</controllingFieldValue>
+            <controllingFieldValue>Commissioner/Executive</controllingFieldValue>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <controllingFieldValue>Family and Child Health</controllingFieldValue>
+            <valueName>Carlos Espada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>First Deputy Commissioner and Chief Equity Officer</controllingFieldValue>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <controllingFieldValue>Office of External Affairs</controllingFieldValue>
+            <controllingFieldValue>Office of General Counsel</controllingFieldValue>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <controllingFieldValue>Office of Chief Medical Examiner</controllingFieldValue>
+            <controllingFieldValue>Commissioner/Executive</controllingFieldValue>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <controllingFieldValue>Family and Child Health</controllingFieldValue>
+            <valueName>Victor Sedaros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>Daniel Wiafe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>Gairy Taylor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>ZhangZhang Zheng</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Darrin Taylor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Anna Tate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Dave Magno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Geevarghese Abraham</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>John Rojas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Karima Ibrahim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Samuel Sebiyam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Kimone Ponde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <valueName>Joseph Slade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <valueName>Rosalyn Williams</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <valueName>Monica Marquez</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family and Child Health</controllingFieldValue>
+            <valueName>Lauren Mann</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

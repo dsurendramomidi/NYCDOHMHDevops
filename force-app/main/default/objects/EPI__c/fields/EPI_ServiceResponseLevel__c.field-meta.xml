@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EPI_ServiceResponseLevel__c</fullName>
+    <externalId>false</externalId>
+    <label>EPI_ServiceResponseLevel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Immediate</fullName>
+                <default>false</default>
+                <label>Immediate</label>
+            </value>
+            <value>
+                <fullName>Long term (&gt;2 weeks)--specify date required</fullName>
+                <default>false</default>
+                <label>Long term (&gt;2 weeks)--specify date required</label>
+            </value>
+            <value>
+                <fullName>Ongoing</fullName>
+                <default>false</default>
+                <label>Ongoing</label>
+            </value>
+            <value>
+                <fullName>Priority: within 1 week</fullName>
+                <default>false</default>
+                <label>Priority: within 1 week</label>
+            </value>
+            <value>
+                <fullName>Routine: within 2 weeks</fullName>
+                <default>false</default>
+                <label>Routine: within 2 weeks</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

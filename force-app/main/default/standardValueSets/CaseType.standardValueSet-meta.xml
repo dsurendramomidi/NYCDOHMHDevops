@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MDR Request</fullName>
+        <default>false</default>
+        <label>MDR Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Default</fullName>
+        <default>false</default>
+        <label>Default</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DB Account and Permission</fullName>
+        <default>false</default>
+        <label>DB Account and Permission</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internet Access</fullName>
+        <default>false</default>
+        <label>Internet Access</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Hosting Environment</fullName>
+        <default>false</default>
+        <label>Application Hosting Environment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DOHMH Network Account and Login</fullName>
+        <default>false</default>
+        <label>DOHMH Network Account and Login</label>
+    </standardValue>
+    <standardValue>
+        <fullName>International Access Request</fullName>
+        <default>false</default>
+        <label>International Access Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Multifactor Authentication</fullName>
+        <default>false</default>
+        <label>Multifactor Authentication</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYCMED Account and Login</fullName>
+        <default>false</default>
+        <label>NYCMED Account and Login</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Password</fullName>
+        <default>false</default>
+        <label>Password</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Public Health Partners Connect</fullName>
+        <default>false</default>
+        <label>Public Health Partners Connect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Remote Access (Virtual Desktop)</fullName>
+        <default>false</default>
+        <label>Remote Access (Virtual Desktop)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EDB - My DOHMH Assets</fullName>
+        <default>false</default>
+        <label>EDB - My DOHMH Assets</label>
+    </standardValue>
+    <standardValue>
+        <fullName>City Time</fullName>
+        <default>false</default>
+        <label>City Time</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OneDrive Issues</fullName>
+        <default>false</default>
+        <label>OneDrive Issues</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OneDrive Request</fullName>
+        <default>false</default>
+        <label>OneDrive Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Restoration</fullName>
+        <default>false</default>
+        <label>File Restoration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Folder Access Request</fullName>
+        <default>false</default>
+        <label>Folder Access Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Secured Folder</fullName>
+        <default>false</default>
+        <label>Secured Folder</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Biscom Access Request for Encrypt File Transfer</fullName>
+        <default>false</default>
+        <label>Biscom Access Request for Encrypt File Transfer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>File Backup</fullName>
+        <default>false</default>
+        <label>File Backup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Secure Encrypted Drive</fullName>
+        <default>false</default>
+        <label>Secure Encrypted Drive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Record Retention</fullName>
+        <default>false</default>
+        <label>Record Retention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request Software &amp; Licenses</fullName>
+        <default>false</default>
+        <label>Request Software &amp; Licenses</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Operating System &amp; Software Troubleshooting</fullName>
+        <default>false</default>
+        <label>Operating System &amp; Software Troubleshooting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Equipment Lost Stolen</fullName>
+        <default>false</default>
+        <label>Equipment Lost Stolen</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mobile Device Troubleshooting</fullName>
+        <default>false</default>
+        <label>Mobile Device Troubleshooting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Room IT Equipment</fullName>
+        <default>false</default>
+        <label>Conference Room IT Equipment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference Room Open Meeting</fullName>
+        <default>false</default>
+        <label>Conference Room Open Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Move IT Hardware</fullName>
+        <default>false</default>
+        <label>Move IT Hardware</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Facility Management</fullName>
+        <default>false</default>
+        <label>IT Facility Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request Mobile Device</fullName>
+        <default>false</default>
+        <label>Request Mobile Device</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request Laptop/Tablet</fullName>
+        <default>false</default>
+        <label>Request Laptop/Tablet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request Other Equipment</fullName>
+        <default>false</default>
+        <label>Request Other Equipment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network Cabling</fullName>
+        <default>false</default>
+        <label>Network Cabling</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network Infrastructure</fullName>
+        <default>false</default>
+        <label>Network Infrastructure</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mobile Print</fullName>
+        <default>false</default>
+        <label>Mobile Print</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eFax</fullName>
+        <default>false</default>
+        <label>eFax</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Telecommunications Request</fullName>
+        <default>false</default>
+        <label>Telecommunications Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Telecom (Phone Set/Phone Line/Phone Bill Issues)</fullName>
+        <default>false</default>
+        <label>Telecom (Phone Set/Phone Line/Phone Bill Issues)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Archive</fullName>
+        <default>false</default>
+        <label>Email Archive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outlook Performance and Issues</fullName>
+        <default>false</default>
+        <label>Outlook Performance and Issues</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Encrypt Email</fullName>
+        <default>false</default>
+        <label>Encrypt Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request New Email Account</fullName>
+        <default>false</default>
+        <label>Request New Email Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Request Email Distribution List</fullName>
+        <default>false</default>
+        <label>Request Email Distribution List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New MS Teams Group</fullName>
+        <default>false</default>
+        <label>New MS Teams Group</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teams Audio License</fullName>
+        <default>false</default>
+        <label>Teams Audio License</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Survey Tools and Services(Survey Monkey, Survey Gizmo - not EDB or training)</fullName>
+        <default>false</default>
+        <label>Survey Tools and Services(Survey Monkey, Survey Gizmo - not EDB or training)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>General Database Policies and Procedures</fullName>
+        <default>false</default>
+        <label>General Database Policies and Procedures</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Account and Permission</fullName>
+        <default>false</default>
+        <label>Account and Permission</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Backup and Restore</fullName>
+        <default>false</default>
+        <label>Backup and Restore</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Create New Database</fullName>
+        <default>false</default>
+        <label>Create New Database</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Create, Alter, or Delete a Database Object</fullName>
+        <default>false</default>
+        <label>Create, Alter, or Delete a Database Object</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Processing Issues (Jobs, Packages, etc.)</fullName>
+        <default>false</default>
+        <label>Data Processing Issues (Jobs, Packages, etc.)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deploy a Database from Non-Production to Production</fullName>
+        <default>false</default>
+        <label>Deploy a Database from Non-Production to Production</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Insert, Update, Delete Data</fullName>
+        <default>false</default>
+        <label>Insert, Update, Delete Data</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Integration and Analytics Svcs (Pentaho, Microsoft BI, Rhapsody, Sas Ebi - not installations)</fullName>
+        <default>false</default>
+        <label>Data Integration and Analytics Svcs (Pentaho, Microsoft BI, Rhapsody, Sas Ebi - not installations)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Linkage and Matching Services(Data Match processes, Quality Stage)</fullName>
+        <default>false</default>
+        <label>Data Linkage and Matching Services(Data Match processes, Quality Stage)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GIS Services (ESRI, ESRI Desktop, ARCGIS Online, GIS Server questions - not installations)</fullName>
+        <default>false</default>
+        <label>GIS Services (ESRI, ESRI Desktop, ARCGIS Online, GIS Server questions - not installations)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PowerBI Report Server (Accounts/Permissions/New Site/Publishing issues)</fullName>
+        <default>false</default>
+        <label>PowerBI Report Server (Accounts/Permissions/New Site/Publishing issues)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Python Server (Jupyterhub) (Accounts/Permissions)</fullName>
+        <default>false</default>
+        <label>Python Server (Jupyterhub) (Accounts/Permissions)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tableau Server (Accounts/Permissions/New Site/Publishing issues)</fullName>
+        <default>false</default>
+        <label>Tableau Server (Accounts/Permissions/New Site/Publishing issues)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TFS/DevOPS permission/Temporary Installer Right</fullName>
+        <default>false</default>
+        <label>TFS/DevOPS permission/Temporary Installer Right</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Breach Notification</fullName>
+        <default>false</default>
+        <label>Breach Notification</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cloud Review Request</fullName>
+        <default>false</default>
+        <label>Cloud Review Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Security Assessment - AppScan Request</fullName>
+        <default>false</default>
+        <label>Security Assessment - AppScan Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Security Assessment - Server Scan Request</fullName>
+        <default>false</default>
+        <label>Security Assessment - Server Scan Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Whitelisting Request</fullName>
+        <default>false</default>
+        <label>Whitelisting Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Deployment</fullName>
+        <default>false</default>
+        <label>Application Deployment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pre-Preproduction Deployment</fullName>
+        <default>false</default>
+        <label>Pre-Preproduction Deployment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Service Account</fullName>
+        <default>false</default>
+        <label>Application Service Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Citrix</fullName>
+        <default>false</default>
+        <label>Citrix</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interaction Client</fullName>
+        <default>false</default>
+        <label>Interaction Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Service Request Center Modification Request</fullName>
+        <default>false</default>
+        <label>Service Request Center Modification Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Service Request Center Access Request</fullName>
+        <default>false</default>
+        <label>Service Request Center Access Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AIDR</fullName>
+        <default>false</default>
+        <label>AIDR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Geo Portal</fullName>
+        <default>false</default>
+        <label>Geo Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HealthNet</fullName>
+        <default>false</default>
+        <label>HealthNet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Informatics Management System (IMS)</fullName>
+        <default>false</default>
+        <label>Informatics Management System (IMS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Project Request</fullName>
+        <default>false</default>
+        <label>IT Project Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Purchase Request</fullName>
+        <default>false</default>
+        <label>IT Purchase Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LogiXML/LogiInfo Reporting</fullName>
+        <default>false</default>
+        <label>LogiXML/LogiInfo Reporting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mobile Device Request eForm</fullName>
+        <default>false</default>
+        <label>Mobile Device Request eForm</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYCMED/HAN</fullName>
+        <default>false</default>
+        <label>NYCMED/HAN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Site Locator</fullName>
+        <default>false</default>
+        <label>Site Locator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VPN Request (eForm App)</fullName>
+        <default>false</default>
+        <label>VPN Request (eForm App)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Administration</fullName>
+        <default>false</default>
+        <label>Applications under Division of Administration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ArchiBus</fullName>
+        <default>false</default>
+        <label>ArchiBus</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COVID SAFE</fullName>
+        <default>false</default>
+        <label>COVID SAFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CAaT</fullName>
+        <default>false</default>
+        <label>CAaT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Capital Project Tracking</fullName>
+        <default>false</default>
+        <label>Capital Project Tracking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Covid Positive Case Tracking System</fullName>
+        <default>false</default>
+        <label>Covid Positive Case Tracking System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eCW</fullName>
+        <default>false</default>
+        <label>eCW</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EDB</fullName>
+        <default>false</default>
+        <label>EDB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EEO</fullName>
+        <default>false</default>
+        <label>EEO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EEO Reasonable Accommodation Request</fullName>
+        <default>false</default>
+        <label>EEO Reasonable Accommodation Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ERRs</fullName>
+        <default>false</default>
+        <label>ERRs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EZLobby</fullName>
+        <default>false</default>
+        <label>EZLobby</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Facility Request System</fullName>
+        <default>false</default>
+        <label>Facility Request System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Heath Screening Assessment (HSA) Tool</fullName>
+        <default>false</default>
+        <label>Heath Screening Assessment (HSA) Tool</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Personnel Action Triggering System</fullName>
+        <default>false</default>
+        <label>Personnel Action Triggering System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRISMS (WMS and DMS)</fullName>
+        <default>false</default>
+        <label>PRISMS (WMS and DMS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Quantros</fullName>
+        <default>false</default>
+        <label>Quantros</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transportation Request</fullName>
+        <default>false</default>
+        <label>Transportation Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Travel Request</fullName>
+        <default>false</default>
+        <label>Travel Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VREA - School Based Vaccine Related Expedited Exemptions Request</fullName>
+        <default>false</default>
+        <label>VREA - School Based Vaccine Related Expedited Exemptions Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Work Location Change Request</fullName>
+        <default>false</default>
+        <label>Work Location Change Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Center of Health Equity</fullName>
+        <default>false</default>
+        <label>Applications under Center of Health Equity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DPHO System</fullName>
+        <default>false</default>
+        <label>DPHO System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EHACE</fullName>
+        <default>false</default>
+        <label>EHACE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Healthy Start Brooklyn</fullName>
+        <default>false</default>
+        <label>Healthy Start Brooklyn</label>
+    </standardValue>
+    <standardValue>
+        <fullName>School Health Promotion</fullName>
+        <default>false</default>
+        <label>School Health Promotion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under the Office of Commissioner</fullName>
+        <default>false</default>
+        <label>Applications under the Office of Commissioner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commissioners Blog</fullName>
+        <default>false</default>
+        <label>Commissioners Blog</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Publication Tracking Request</fullName>
+        <default>false</default>
+        <label>Publication Tracking Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Disease Control</fullName>
+        <default>false</default>
+        <label>Applications under Division of Disease Control</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cepheid 360 - User Access</fullName>
+        <default>false</default>
+        <label>Cepheid 360 - User Access</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CLERK</fullName>
+        <default>false</default>
+        <label>CLERK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Epic / Cerner User Provisioning</fullName>
+        <default>false</default>
+        <label>Epic / Cerner User Provisioning</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ECLRS</fullName>
+        <default>false</default>
+        <label>ECLRS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eDRI</fullName>
+        <default>false</default>
+        <label>eDRI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eOrder</fullName>
+        <default>false</default>
+        <label>eOrder</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eSHARE</fullName>
+        <default>false</default>
+        <label>eSHARE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ETQ</fullName>
+        <default>false</default>
+        <label>ETQ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Foodborne Social Media</fullName>
+        <default>false</default>
+        <label>Foodborne Social Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Immunization Facilities Online Reg</fullName>
+        <default>false</default>
+        <label>Immunization Facilities Online Reg</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MAVEN-BCD</fullName>
+        <default>false</default>
+        <label>MAVEN-BCD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MAVEN-STD</fullName>
+        <default>false</default>
+        <label>MAVEN-STD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MAVEN-TB</fullName>
+        <default>false</default>
+        <label>MAVEN-TB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MAVEN-VPD</fullName>
+        <default>false</default>
+        <label>MAVEN-VPD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>REDCap On Premise (DOHMH Internal / Vanderbilt)</fullName>
+        <default>false</default>
+        <label>REDCap On Premise (DOHMH Internal / Vanderbilt)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reporting Central</fullName>
+        <default>false</default>
+        <label>Reporting Central</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SIMPL</fullName>
+        <default>false</default>
+        <label>SIMPL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>StarLIMS</fullName>
+        <default>false</default>
+        <label>StarLIMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STD Survey</fullName>
+        <default>false</default>
+        <label>STD Survey</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STDEMR</fullName>
+        <default>false</default>
+        <label>STDEMR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Environmental Health Services</fullName>
+        <default>false</default>
+        <label>Applications under Division of Environmental Health Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accela</fullName>
+        <default>false</default>
+        <label>Accela</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCATS</fullName>
+        <default>false</default>
+        <label>CCATS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ChildCare Online Registration</fullName>
+        <default>false</default>
+        <label>ChildCare Online Registration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ChildCare Website</fullName>
+        <default>false</default>
+        <label>ChildCare Website</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COVID-19 Sick Leave Order System</fullName>
+        <default>false</default>
+        <label>COVID-19 Sick Leave Order System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cooling Tower - Audit NOVs</fullName>
+        <default>false</default>
+        <label>Cooling Tower - Audit NOVs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dog Licensing System</fullName>
+        <default>false</default>
+        <label>Dog Licensing System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EH Inventory Management System</fullName>
+        <default>false</default>
+        <label>EH Inventory Management System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FACTS II</fullName>
+        <default>false</default>
+        <label>FACTS II</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Health Academy Online Registration</fullName>
+        <default>false</default>
+        <label>Health Academy Online Registration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MoVIS</fullName>
+        <default>false</default>
+        <label>MoVIS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mosquito Surveillance</fullName>
+        <default>false</default>
+        <label>Mosquito Surveillance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYCETrack</fullName>
+        <default>false</default>
+        <label>NYCETrack</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYCPURS</fullName>
+        <default>false</default>
+        <label>NYCPURS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Food Protection Course</fullName>
+        <default>false</default>
+        <label>Online Food Protection Course</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OnlineRegistration-Water Tank Registration</fullName>
+        <default>false</default>
+        <label>OnlineRegistration-Water Tank Registration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Radiological Equipment Inspection System (RAD)</fullName>
+        <default>false</default>
+        <label>Radiological Equipment Inspection System (RAD)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Restaurant Inspection Website</fullName>
+        <default>false</default>
+        <label>Restaurant Inspection Website</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VRVSS</fullName>
+        <default>false</default>
+        <label>VRVSS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Epidemiology</fullName>
+        <default>false</default>
+        <label>Applications under Division of Epidemiology</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CHI Online Registration</fullName>
+        <default>false</default>
+        <label>CHI Online Registration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CHI Tracker</fullName>
+        <default>false</default>
+        <label>CHI Tracker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Catalog</fullName>
+        <default>false</default>
+        <label>Data Catalog</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Death Certificate Numbering System</fullName>
+        <default>false</default>
+        <label>Death Certificate Numbering System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Epidemiology Services Request</fullName>
+        <default>false</default>
+        <label>Epidemiology Services Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EpiQuery External</fullName>
+        <default>false</default>
+        <label>EpiQuery External</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EpiQuery Internal</fullName>
+        <default>false</default>
+        <label>EpiQuery Internal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EVERS Training</fullName>
+        <default>false</default>
+        <label>EVERS Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eVital</fullName>
+        <default>false</default>
+        <label>eVital</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HRTP</fullName>
+        <default>false</default>
+        <label>HRTP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Microfilm Archive Writer</fullName>
+        <default>false</default>
+        <label>Microfilm Archive Writer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Resident Evaluation System(RES)</fullName>
+        <default>false</default>
+        <label>Resident Evaluation System(RES)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vital Record Request Tracking</fullName>
+        <default>false</default>
+        <label>Vital Record Request Tracking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vital Statistics eForm</fullName>
+        <default>false</default>
+        <label>Vital Statistics eForm</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vital Statistics Project</fullName>
+        <default>false</default>
+        <label>Vital Statistics Project</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vital Statistics Request</fullName>
+        <default>false</default>
+        <label>Vital Statistics Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VRMS</fullName>
+        <default>false</default>
+        <label>VRMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web Top</fullName>
+        <default>false</default>
+        <label>Web Top</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under the Office of Emergency Preparedness and Response</fullName>
+        <default>false</default>
+        <label>Applications under the Office of Emergency Preparedness and Response</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BT Reporting Portal</fullName>
+        <default>false</default>
+        <label>BT Reporting Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Healthcare Facilities Directory</fullName>
+        <default>false</default>
+        <label>Healthcare Facilities Directory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MRC (SelfReg &amp; ADM)</fullName>
+        <default>false</default>
+        <label>MRC (SelfReg &amp; ADM)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYCEPS</fullName>
+        <default>false</default>
+        <label>NYCEPS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OEPR Portal</fullName>
+        <default>false</default>
+        <label>OEPR Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PECO</fullName>
+        <default>false</default>
+        <label>PECO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>POD Responder</fullName>
+        <default>false</default>
+        <label>POD Responder</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRP ADM</fullName>
+        <default>false</default>
+        <label>PRP ADM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Public Health Emergency Response Network Auxiliary Distribution Program</fullName>
+        <default>false</default>
+        <label>Public Health Emergency Response Network Auxiliary Distribution Program</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Family and Child Health</fullName>
+        <default>false</default>
+        <label>Applications under Division of Family and Child Health</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ATDTS</fullName>
+        <default>false</default>
+        <label>ATDTS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Coordinated Intake and Referral System – NowPow</fullName>
+        <default>false</default>
+        <label>Coordinated Intake and Referral System – NowPow</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Family Home Visiting</fullName>
+        <default>false</default>
+        <label>New Family Home Visiting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DMAS</fullName>
+        <default>false</default>
+        <label>DMAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EI ESU</fullName>
+        <default>false</default>
+        <label>EI ESU</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EI Vital Statistics Project</fullName>
+        <default>false</default>
+        <label>EI Vital Statistics Project</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Maternal Mortality Review Information (MMRIA)</fullName>
+        <default>false</default>
+        <label>Maternal Mortality Review Information (MMRIA)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MIRH Newborn Home Visiting</fullName>
+        <default>false</default>
+        <label>MIRH Newborn Home Visiting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MIRH NFP CMS</fullName>
+        <default>false</default>
+        <label>MIRH NFP CMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYEIS Data Mart</fullName>
+        <default>false</default>
+        <label>NYEIS Data Mart</label>
+    </standardValue>
+    <standardValue>
+        <fullName>POMS</fullName>
+        <default>false</default>
+        <label>POMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>School Health Phone Call Logging</fullName>
+        <default>false</default>
+        <label>School Health Phone Call Logging</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teen Survey</fullName>
+        <default>false</default>
+        <label>Teen Survey</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teens in NYC Mobile</fullName>
+        <default>false</default>
+        <label>Teens in NYC Mobile</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under the Office of First Deputy Commissioner</fullName>
+        <default>false</default>
+        <label>Applications under the Office of First Deputy Commissioner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AX2/ACL</fullName>
+        <default>false</default>
+        <label>AX2/ACL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eTASK - Internal Audit Automation</fullName>
+        <default>false</default>
+        <label>eTASK - Internal Audit Automation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal Audit Time Tracker</fullName>
+        <default>false</default>
+        <label>Internal Audit Time Tracker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner Portal</fullName>
+        <default>false</default>
+        <label>Partner Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PRIMA</fullName>
+        <default>false</default>
+        <label>PRIMA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TeamMate - Audit Services</fullName>
+        <default>false</default>
+        <label>TeamMate - Audit Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Finance</fullName>
+        <default>false</default>
+        <label>Applications under Division of Finance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Article 6</fullName>
+        <default>false</default>
+        <label>Article 6</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BMS</fullName>
+        <default>false</default>
+        <label>BMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contrak</fullName>
+        <default>false</default>
+        <label>Contrak</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contrak - Purchasing</fullName>
+        <default>false</default>
+        <label>Contrak - Purchasing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EI Transporation Billing Portal</fullName>
+        <default>false</default>
+        <label>EI Transporation Billing Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FDOS</fullName>
+        <default>false</default>
+        <label>FDOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Financial System User Access Control</fullName>
+        <default>false</default>
+        <label>Financial System User Access Control</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JEMS</fullName>
+        <default>false</default>
+        <label>JEMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OAS</fullName>
+        <default>false</default>
+        <label>OAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OES</fullName>
+        <default>false</default>
+        <label>OES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OTS</fullName>
+        <default>false</default>
+        <label>OTS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PAYRS</fullName>
+        <default>false</default>
+        <label>PAYRS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PECOS</fullName>
+        <default>false</default>
+        <label>PECOS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RC Management</fullName>
+        <default>false</default>
+        <label>RC Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RCMS</fullName>
+        <default>false</default>
+        <label>RCMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Requesting Finance Data or Report</fullName>
+        <default>false</default>
+        <label>Requesting Finance Data or Report</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RMS</fullName>
+        <default>false</default>
+        <label>RMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Service Allocation</fullName>
+        <default>false</default>
+        <label>Service Allocation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vendor Invoice Processing System (VIPS)</fullName>
+        <default>false</default>
+        <label>Vendor Invoice Processing System (VIPS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Mental Hygiene</fullName>
+        <default>false</default>
+        <label>Applications under Division of Mental Hygiene</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Assisted Outpatient Treatment System</fullName>
+        <default>false</default>
+        <label>Assisted Outpatient Treatment System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Audit Tracking System</fullName>
+        <default>false</default>
+        <label>Audit Tracking System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Automation of MHy Audit Process</fullName>
+        <default>false</default>
+        <label>Automation of MHy Audit Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CAPs</fullName>
+        <default>false</default>
+        <label>CAPs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Children Single Point of Access</fullName>
+        <default>false</default>
+        <label>Children Single Point of Access</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CRT</fullName>
+        <default>false</default>
+        <label>CRT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DRS</fullName>
+        <default>false</default>
+        <label>DRS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FCMS</fullName>
+        <default>false</default>
+        <label>FCMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FCMS Reporting</fullName>
+        <default>false</default>
+        <label>FCMS Reporting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>First Episode Psychosis Reporting</fullName>
+        <default>false</default>
+        <label>First Episode Psychosis Reporting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FYPS</fullName>
+        <default>false</default>
+        <label>FYPS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MCT Mobile Crisis Team</fullName>
+        <default>false</default>
+        <label>MCT Mobile Crisis Team</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MHY Level Of Service</fullName>
+        <default>false</default>
+        <label>MHY Level Of Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYC SAFE</fullName>
+        <default>false</default>
+        <label>NYC SAFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYC START</fullName>
+        <default>false</default>
+        <label>NYC START</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Parent Coaching System</fullName>
+        <default>false</default>
+        <label>Parent Coaching System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Program Oversight Dashboard</fullName>
+        <default>false</default>
+        <label>Program Oversight Dashboard</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Provider Licensing and Tracking System</fullName>
+        <default>false</default>
+        <label>Provider Licensing and Tracking System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Provider Portal</fullName>
+        <default>false</default>
+        <label>Provider Portal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Provider Portal AOT Case Monitor Reporting System</fullName>
+        <default>false</default>
+        <label>Provider Portal AOT Case Monitor Reporting System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under the Office of External Affairs</fullName>
+        <default>false</default>
+        <label>Applications under the Office of External Affairs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Card Request</fullName>
+        <default>false</default>
+        <label>Business Card Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call Center Literature</fullName>
+        <default>false</default>
+        <label>Call Center Literature</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IGA</fullName>
+        <default>false</default>
+        <label>IGA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IQ</fullName>
+        <default>false</default>
+        <label>IQ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYC HealthMap</fullName>
+        <default>false</default>
+        <label>NYC HealthMap</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Print Requisition</fullName>
+        <default>false</default>
+        <label>Print Requisition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shareport</fullName>
+        <default>false</default>
+        <label>Shareport</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Webpage Change Request</fullName>
+        <default>false</default>
+        <label>Webpage Change Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under the Office of General Council</fullName>
+        <default>false</default>
+        <label>Applications under the Office of General Council</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AOT Case Tracking</fullName>
+        <default>false</default>
+        <label>AOT Case Tracking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COI - Conflict of Interest for both Outside Positions and Post-Employment</fullName>
+        <default>false</default>
+        <label>COI - Conflict of Interest for both Outside Positions and Post-Employment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EH - Environmental Health Case Tracking</fullName>
+        <default>false</default>
+        <label>EH - Environmental Health Case Tracking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FOIL/Subpoenas/Medical</fullName>
+        <default>false</default>
+        <label>FOIL/Subpoenas/Medical</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GCAS</fullName>
+        <default>false</default>
+        <label>GCAS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IRB - Internal Review Board</fullName>
+        <default>false</default>
+        <label>IRB - Internal Review Board</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MOU</fullName>
+        <default>false</default>
+        <label>MOU</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OGC CTS</fullName>
+        <default>false</default>
+        <label>OGC CTS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications under Division of Prevention and Primary Care</fullName>
+        <default>false</default>
+        <label>Applications under Division of Prevention and Primary Care</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Automated Medication Management</fullName>
+        <default>false</default>
+        <label>Automated Medication Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Children with Special Health Care Needs</fullName>
+        <default>false</default>
+        <label>Children with Special Health Care Needs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee Evaluations</fullName>
+        <default>false</default>
+        <label>Employee Evaluations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Health Insurance Services Enrollment Tracking</fullName>
+        <default>false</default>
+        <label>Health Insurance Services Enrollment Tracking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Healthy Bucks</fullName>
+        <default>false</default>
+        <label>Healthy Bucks</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HIAC</fullName>
+        <default>false</default>
+        <label>HIAC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HICASTS</fullName>
+        <default>false</default>
+        <label>HICASTS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Physically Handicapped Childrens Program: Medical (Fiscal) Application</fullName>
+        <default>false</default>
+        <label>Physically Handicapped Childrens Program: Medical (Fiscal) Application</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Physically Handicapped Childrens Program: Orthondontics Database</fullName>
+        <default>false</default>
+        <label>Physically Handicapped Childrens Program: Orthondontics Database</label>
+    </standardValue>
+    <standardValue>
+        <fullName>AIRS</fullName>
+        <default>false</default>
+        <label>AIRS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>APT</fullName>
+        <default>false</default>
+        <label>APT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bronx RHIO / Healthix</fullName>
+        <default>false</default>
+        <label>Bronx RHIO / Healthix</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCFS</fullName>
+        <default>false</default>
+        <label>CCFS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CHRMS</fullName>
+        <default>false</default>
+        <label>CHRMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>City 311 (Siebel)</fullName>
+        <default>false</default>
+        <label>City 311 (Siebel)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CityShare</fullName>
+        <default>false</default>
+        <label>CityShare</label>
+    </standardValue>
+    <standardValue>
+        <fullName>eHire</fullName>
+        <default>false</default>
+        <label>eHire</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FMS</fullName>
+        <default>false</default>
+        <label>FMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HHS Accelerator</fullName>
+        <default>false</default>
+        <label>HHS Accelerator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>HIN/HCS/HPN</fullName>
+        <default>false</default>
+        <label>HIN/HCS/HPN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MHPD</fullName>
+        <default>false</default>
+        <label>MHPD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYCAPS</fullName>
+        <default>false</default>
+        <label>NYCAPS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYCWIN</fullName>
+        <default>false</default>
+        <label>NYCWIN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYEIS</fullName>
+        <default>false</default>
+        <label>NYEIS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYESS</fullName>
+        <default>false</default>
+        <label>NYESS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NYSAFE</fullName>
+        <default>false</default>
+        <label>NYSAFE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PASSPort</fullName>
+        <default>false</default>
+        <label>PASSPort</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PMS</fullName>
+        <default>false</default>
+        <label>PMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Asset Transfer Request</fullName>
+        <default>false</default>
+        <label>IT Asset Transfer Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Digital Signature Project Request</fullName>
+        <default>false</default>
+        <label>Digital Signature Project Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EPI Services Data Request</fullName>
+        <default>false</default>
+        <label>EPI Services Data Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Communications Project Request</fullName>
+        <default>false</default>
+        <label>Communications Project Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Assistive Technology Devices Tracking System</fullName>
+        <default>false</default>
+        <label>Assistive Technology Devices Tracking System</label>
+    </standardValue>
+</StandardValueSet>

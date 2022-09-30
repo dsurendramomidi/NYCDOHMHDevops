@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Feature Articles</label>
+                <name>Feature_Articles</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Training Videos</label>
+                <name>Training_Videos</name>
+            </dataCategory>
+            <dataCategory>
+                <label>User Guides</label>
+                <name>User_Guides</name>
+            </dataCategory>
+            <label>Knowledge Home</label>
+            <name>Knowledge_Home</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>DOHMH Knowledge Category</description>
+    <label>DOHMH Knowledge Category</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

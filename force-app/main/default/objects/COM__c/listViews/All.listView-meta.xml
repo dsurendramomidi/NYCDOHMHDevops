@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>PTR_PublicationType__c</columns>
+    <columns>PTR_TargetPublication__c</columns>
+    <columns>PTR_ConferenceTitle__c</columns>
+    <columns>PTR_SubmissionDeadline__c</columns>
+    <columns>PTR_ArticleTitle__c</columns>
+    <columns>PTR_Authors__c</columns>
+    <columns>PTR_Abstract__c</columns>
+    <columns>PTR_AuthorsComments__c</columns>
+    <columns>PTR_ReviewerByOutsideDOHMH__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

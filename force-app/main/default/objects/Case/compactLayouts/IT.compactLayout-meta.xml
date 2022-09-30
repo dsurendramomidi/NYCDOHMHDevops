@@ -4,8 +4,8 @@
     <fields>CaseNumber</fields>
     <fields>Type</fields>
     <fields>Reference_Number__c</fields>
-    <fields>Record_Category__c</fields>
     <fields>OwnerId</fields>
     <fields>CreatedById</fields>
+    <fields>Status</fields>
     <label>IT</label>
 </CompactLayout>

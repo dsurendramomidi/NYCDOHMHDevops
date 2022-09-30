@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Administration</fullName>
+        <default>false</default>
+        <label>Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Center for Health Equity and Community Wellness</fullName>
+        <default>false</default>
+        <label>Center for Health Equity and Community Wellness</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Operating Officer</fullName>
+        <default>false</default>
+        <label>Chief Operating Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Commissioner/Executive</fullName>
+        <default>false</default>
+        <label>Commissioner/Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Disease Control</fullName>
+        <default>false</default>
+        <label>Disease Control</label>
+    </customValue>
+    <customValue>
+        <fullName>Emergency Preparedness and Response</fullName>
+        <default>false</default>
+        <label>Emergency Preparedness and Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Environmental Health</fullName>
+        <default>false</default>
+        <label>Environmental Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Epidemiology</fullName>
+        <default>false</default>
+        <label>Epidemiology</label>
+    </customValue>
+    <customValue>
+        <fullName>Family and Child Health</fullName>
+        <default>false</default>
+        <label>Family and Child Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance</fullName>
+        <default>false</default>
+        <label>Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>First Deputy Commissioner and Chief Equity Officer</fullName>
+        <default>false</default>
+        <label>First Deputy Commissioner and Chief Equity Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Information Technology</fullName>
+        <default>false</default>
+        <label>Information Technology</label>
+    </customValue>
+    <customValue>
+        <fullName>Mental Hygiene</fullName>
+        <default>false</default>
+        <label>Mental Hygiene</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of Chief Medical Examiner</fullName>
+        <default>false</default>
+        <label>Office of Chief Medical Examiner</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of External Affairs</fullName>
+        <default>false</default>
+        <label>Office of External Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of General Counsel</fullName>
+        <default>false</default>
+        <label>Office of General Counsel</label>
+    </customValue>
+    <masterLabel>Division</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

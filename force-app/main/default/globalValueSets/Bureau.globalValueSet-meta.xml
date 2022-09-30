@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Administration Office</fullName>
+        <default>false</default>
+        <label>Administration Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Agency Preparedness and Response</fullName>
+        <default>false</default>
+        <label>Bureau of Agency Preparedness and Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Alcohol and Drug Use Prevention, Care and Treatment</fullName>
+        <default>false</default>
+        <label>Bureau of Alcohol and Drug Use Prevention, Care and Treatment</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Application Development and Database Administration</fullName>
+        <default>false</default>
+        <label>Bureau of Application Development and Database Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Audit Services</fullName>
+        <default>false</default>
+        <label>Bureau of Audit Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Bronx Neighborhood Health</fullName>
+        <default>false</default>
+        <label>Bureau of Bronx Neighborhood Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Brooklyn Neighborhood Health</fullName>
+        <default>false</default>
+        <label>Bureau of Brooklyn Neighborhood Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Budget and Revenue</fullName>
+        <default>false</default>
+        <label>Bureau of Budget and Revenue</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Childcare</fullName>
+        <default>false</default>
+        <label>Bureau of Childcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Children, Youth, and Families</fullName>
+        <default>false</default>
+        <label>Bureau of Children, Youth, and Families</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Chronic Disease Prevention</fullName>
+        <default>false</default>
+        <label>Bureau of Chronic Disease Prevention</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Clinical Quality Management and Improvement</fullName>
+        <default>false</default>
+        <label>Bureau of Clinical Quality Management and Improvement</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Communicable Diseases</fullName>
+        <default>false</default>
+        <label>Bureau of Communicable Diseases</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Communications</fullName>
+        <default>false</default>
+        <label>Bureau of Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Controller</fullName>
+        <default>false</default>
+        <label>Bureau of Controller</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Customer Support</fullName>
+        <default>false</default>
+        <label>Bureau of Customer Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Developmental Disabilities</fullName>
+        <default>false</default>
+        <label>Bureau of Developmental Disabilities</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Early Intervention</fullName>
+        <default>false</default>
+        <label>Bureau of Early Intervention</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Emergency Field Operations</fullName>
+        <default>false</default>
+        <label>Bureau of Emergency Field Operations</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Environmental Disease and Injury Prevention</fullName>
+        <default>false</default>
+        <label>Bureau of Environmental Disease and Injury Prevention</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Environmental Sciences and Engineering</fullName>
+        <default>false</default>
+        <label>Bureau of Environmental Sciences and Engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Environmental Surveillance and Policy</fullName>
+        <default>false</default>
+        <label>Bureau of Environmental Surveillance and Policy</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Epidemiology Services</fullName>
+        <default>false</default>
+        <label>Bureau of Epidemiology Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Equitable Health Systems</fullName>
+        <default>false</default>
+        <label>Bureau of Equitable Health Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Facilities Planning and Administrative Services</fullName>
+        <default>false</default>
+        <label>Bureau of Facilities Planning and Administrative Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Finance, Administration and Services</fullName>
+        <default>false</default>
+        <label>Bureau of Finance, Administration and Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Food Safety and Community Sanitation</fullName>
+        <default>false</default>
+        <label>Bureau of Food Safety and Community Sanitation</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Grants Management and Administration</fullName>
+        <default>false</default>
+        <label>Bureau of Grants Management and Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Harlem Neighborhood Health</fullName>
+        <default>false</default>
+        <label>Bureau of Harlem Neighborhood Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Healthcare and Community Readiness</fullName>
+        <default>false</default>
+        <label>Bureau of Healthcare and Community Readiness</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Health Equity Capacity Building</fullName>
+        <default>false</default>
+        <label>Bureau of Health Equity Capacity Building</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Health Promotion for Justice-Impacted Populations</fullName>
+        <default>false</default>
+        <label>Bureau of Health Promotion for Justice-Impacted Populations</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Hepatitis, HIV, and STI</fullName>
+        <default>false</default>
+        <label>Bureau of Hepatitis, HIV, and STI</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Human Resources and Labor Relations</fullName>
+        <default>false</default>
+        <label>Bureau of Human Resources and Labor Relations</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Immunization</fullName>
+        <default>false</default>
+        <label>Bureau of Immunization</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of IT Strategy and Project Management</fullName>
+        <default>false</default>
+        <label>Bureau of IT Strategy and Project Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Maternal Infant and Reproductive Health</fullName>
+        <default>false</default>
+        <label>Bureau of Maternal Infant and Reproductive Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Mental Health</fullName>
+        <default>false</default>
+        <label>Bureau of Mental Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Mental Hygiene Administration</fullName>
+        <default>false</default>
+        <label>Bureau of Mental Hygiene Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Mental Hygiene Community Engagement, Policy &amp; Practice</fullName>
+        <default>false</default>
+        <label>Bureau of Mental Hygiene Community Engagement, Policy &amp; Practice</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Network Technology Services</fullName>
+        <default>false</default>
+        <label>Bureau of Network Technology Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Operations</fullName>
+        <default>false</default>
+        <label>Bureau of Operations</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Public Affairs</fullName>
+        <default>false</default>
+        <label>Bureau of Public Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Public Health Clinics</fullName>
+        <default>false</default>
+        <label>Bureau of Public Health Clinics</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Public Health Training</fullName>
+        <default>false</default>
+        <label>Bureau of Public Health Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of School Health</fullName>
+        <default>false</default>
+        <label>Bureau of School Health</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of the Public Health Laboratory</fullName>
+        <default>false</default>
+        <label>Bureau of the Public Health Laboratory</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Tuberculosis Control</fullName>
+        <default>false</default>
+        <label>Bureau of Tuberculosis Control</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Veterinary and Pest Control Services</fullName>
+        <default>false</default>
+        <label>Bureau of Veterinary and Pest Control Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Bureau of Vital Statistics</fullName>
+        <default>false</default>
+        <label>Bureau of Vital Statistics</label>
+    </customValue>
+    <customValue>
+        <fullName>CHECW Deputy Commissioner</fullName>
+        <default>false</default>
+        <label>CHECW Deputy Commissioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Division Management &amp; Systems Coordination</fullName>
+        <default>false</default>
+        <label>Division Management &amp; Systems Coordination</label>
+    </customValue>
+    <customValue>
+        <fullName>Environmental Health Administration</fullName>
+        <default>false</default>
+        <label>Environmental Health Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Epidemiology Administration</fullName>
+        <default>false</default>
+        <label>Epidemiology Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>EPR Office of the Deputy Commissioner</fullName>
+        <default>false</default>
+        <label>EPR Office of the Deputy Commissioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Family and Child Health Administration</fullName>
+        <default>false</default>
+        <label>Family and Child Health Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance Administration and Planning</fullName>
+        <default>false</default>
+        <label>Finance Administration and Planning</label>
+    </customValue>
+    <customValue>
+        <fullName>OEA Administration</fullName>
+        <default>false</default>
+        <label>OEA Administration</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of Chief Information Officer</fullName>
+        <default>false</default>
+        <label>Office of Chief Information Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of Chief Medical Examiner</fullName>
+        <default>false</default>
+        <label>Office of Chief Medical Examiner</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of Chief Operating Officer</fullName>
+        <default>false</default>
+        <label>Office of Chief Operating Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of Clinical Affairs</fullName>
+        <default>false</default>
+        <label>Office of Clinical Affairs</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of First Deputy Commissioner and Chief Equity Officer</fullName>
+        <default>false</default>
+        <label>Office of First Deputy Commissioner and Chief Equity Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of General Counsel</fullName>
+        <default>false</default>
+        <label>Office of General Counsel</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of the Agency Chief Contracting Officer</fullName>
+        <default>false</default>
+        <label>Office of the Agency Chief Contracting Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of the Commissioner</fullName>
+        <default>false</default>
+        <label>Office of the Commissioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of the Executive Deputy Commissioner</fullName>
+        <default>false</default>
+        <label>Office of the Executive Deputy Commissioner</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider Education</fullName>
+        <default>false</default>
+        <label>Provider Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Strategic Operations and Performance Management</fullName>
+        <default>false</default>
+        <label>Strategic Operations and Performance Management</label>
+    </customValue>
+    <customValue>
+        <fullName>World Trade Center Health Registry</fullName>
+        <default>false</default>
+        <label>World Trade Center Health Registry</label>
+    </customValue>
+    <masterLabel>Bureau</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

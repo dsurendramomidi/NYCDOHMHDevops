@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTR_PublicationType__c</fullName>
+    <externalId>false</externalId>
+    <label>PTR_PublicationType</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Manuscript</fullName>
+                <default>false</default>
+                <label>Manuscript</label>
+            </value>
+            <value>
+                <fullName>Abstract</fullName>
+                <default>false</default>
+                <label>Abstract</label>
+            </value>
+            <value>
+                <fullName>Magazine Article</fullName>
+                <default>false</default>
+                <label>Magazine Article</label>
+            </value>
+            <value>
+                <fullName>Presentation</fullName>
+                <default>false</default>
+                <label>Presentation</label>
+            </value>
+            <value>
+                <fullName>Book Chapter</fullName>
+                <default>false</default>
+                <label>Book Chapter</label>
+            </value>
+            <value>
+                <fullName>Book</fullName>
+                <default>false</default>
+                <label>Book</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

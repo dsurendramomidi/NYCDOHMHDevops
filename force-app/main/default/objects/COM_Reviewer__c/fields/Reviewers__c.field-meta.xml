@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reviewers__c</fullName>
+    <externalId>false</externalId>
+    <label>Reviewer</label>
+    <referenceTo>COM_PTR_Reviewer__c</referenceTo>
+    <relationshipLabel>COM Reviewers</relationshipLabel>
+    <relationshipName>COM_Reviewers</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

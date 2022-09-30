@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>ATR_SolutionDirector__c</columns>
+    <columns>ATR_Receiver__c</columns>
+    <columns>ATR_Consult__c</columns>
+    <columns>ATR_ReceiverInfoDIVISION__c</columns>
+    <columns>ATR_ReceiverInfoBUREAU__c</columns>
+    <columns>ATR_ReceiverInfoPhone__c</columns>
+    <columns>ATR_CancellationReason__c</columns>
+    <columns>ATR_CancellationComments__c</columns>
+    <columns>SECA_DivisionGroup__c</columns>
+    <columns>SECA_DivisionalApprover__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

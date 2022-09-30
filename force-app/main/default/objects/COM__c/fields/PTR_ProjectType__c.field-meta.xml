@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTR_ProjectType__c</fullName>
+    <externalId>false</externalId>
+    <label>PTR_ProjectType</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Case study/report</fullName>
+                <default>false</default>
+                <label>Case study/report</label>
+            </value>
+            <value>
+                <fullName>Commentary/editorial</fullName>
+                <default>false</default>
+                <label>Commentary/editorial</label>
+            </value>
+            <value>
+                <fullName>Original research – design</fullName>
+                <default>false</default>
+                <label>Original research – design</label>
+            </value>
+            <value>
+                <fullName>Original research – findings (do not include program evaluation)</fullName>
+                <default>false</default>
+                <label>Original research – findings (do not include program evaluation)</label>
+            </value>
+            <value>
+                <fullName>Outbreak investigation</fullName>
+                <default>false</default>
+                <label>Outbreak investigation</label>
+            </value>
+            <value>
+                <fullName>Program or policy overview/description</fullName>
+                <default>false</default>
+                <label>Program or policy overview/description</label>
+            </value>
+            <value>
+                <fullName>Program/policy evaluation</fullName>
+                <default>false</default>
+                <label>Program/policy evaluation</label>
+            </value>
+            <value>
+                <fullName>Review/meta-analysis</fullName>
+                <default>false</default>
+                <label>Review/meta-analysis</label>
+            </value>
+            <value>
+                <fullName>Tools for public health (methods, guidance)</fullName>
+                <default>false</default>
+                <label>Tools for public health (methods, guidance)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

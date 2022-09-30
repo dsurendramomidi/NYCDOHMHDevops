@@ -1,0 +1,123 @@
+@font-face {
+font-family: 'HelveticaNeue';
+src: url('/sfsites/c/resource/HelveticaNeue/HelveticaNeue.ttc') format('opentype');
+}
+.forceCommunityHeadline .headlineTitle{
+font-family: 'HelveticaNeue';
+}
+
+.siteforceContentArea{
+    background:#F4F4F4;
+}
+.rootDiv {
+  padding: 10px 2px 55px 19px;
+  background-color: #0080a9;
+    margin-top: -15px;
+}
+.DOHMHPolicies {
+  width: 199px;
+  height: 31px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+}
+
+.ensureTransperency {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.allAgencyPolicies {
+  width: 233px;
+  height: 17px;
+  margin: 28px 2px 0 180px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  color: white;
+}
+
+.columnFinApp {
+  float: left;
+  width: 50%;
+  padding: 6px 0 0 0;
+  font-size: 12px;
+}
+
+.rowFinApp:after {
+  content: "";
+  display: table;
+  clear: both;  
+}
+
+.finAppLink{
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: #2b96b8;
+}
+.columnLinks {
+  width: 368px;
+  height: 17px;
+  flex-grow: 0;
+  margin: 0 80px 10px 0;
+  font-weight: bold;
+  text-align: left;
+  color: #0080a9;
+}
+
+.adminApp {
+  padding: 10px 2px 5px 10px;
+  color: #2b96b8;
+  background:#FFFFFF;
+  font-size:12px;
+  margin-top: -15px;
+}
+.adminAppLinks {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: #2b96b8;
+}
+
+.dataResearchApp{
+  padding: 10px 2px 5px 10px;
+  color: #2b96b8;
+  background:#FFFFFF;
+  font-size:12px;
+  margin-top: -15px;
+}
+
+.dataResearchAppLinks {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: #2b96b8;
+}
+
+.dataResearchAppContent{
+    font-size: 12px;
+    text-align: left;
+    color: black;
+}
+.slds-path .slds-path__mark-complete{ display: none; }
+
+/* styling sidebar */
+.sidehoverbar a {
+    position: fixed;
+    top: 400px;
+    left: -50px;
+    transition: 0.3s;
+    padding: 0 0 0 25px;
+    width: 120px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #0080a9;
+    height: 30px;
+    transform: rotate(-90deg);
+    }
+:root { --dxp-c-section-columns-max-width: 1440px; }

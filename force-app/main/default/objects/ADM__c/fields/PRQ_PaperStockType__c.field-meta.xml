@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRQ_PaperStockType__c</fullName>
+    <externalId>false</externalId>
+    <label>PRQ_PaperStockType</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>110lb Index</fullName>
+                <default>false</default>
+                <label>110lb Index</label>
+            </value>
+            <value>
+                <fullName>20lb Bond</fullName>
+                <default>false</default>
+                <label>20lb Bond</label>
+            </value>
+            <value>
+                <fullName>28lb Color Copy Digital</fullName>
+                <default>false</default>
+                <label>28lb Color Copy Digital</label>
+            </value>
+            <value>
+                <fullName>60lb Color Copy Digital</fullName>
+                <default>false</default>
+                <label>60lb Color Copy Digital</label>
+            </value>
+            <value>
+                <fullName>60lb Opaque Smooth Finish</fullName>
+                <default>false</default>
+                <label>60lb Opaque Smooth Finish</label>
+            </value>
+            <value>
+                <fullName>65lb Linen Cover</fullName>
+                <default>false</default>
+                <label>65lb Linen Cover</label>
+            </value>
+            <value>
+                <fullName>67lb Bristol Cover</fullName>
+                <default>false</default>
+                <label>67lb Bristol Cover</label>
+            </value>
+            <value>
+                <fullName>80lb Color Copy Digital Cover</fullName>
+                <default>false</default>
+                <label>80lb Color Copy Digital Cover</label>
+            </value>
+            <value>
+                <fullName>80lb Silk Text</fullName>
+                <default>false</default>
+                <label>80lb Silk Text</label>
+            </value>
+            <value>
+                <fullName>Carbonless 2-Part</fullName>
+                <default>false</default>
+                <label>Carbonless 2-Part</label>
+            </value>
+            <value>
+                <fullName>Carbonless 3-Part</fullName>
+                <default>false</default>
+                <label>Carbonless 3-Part</label>
+            </value>
+            <value>
+                <fullName>Carbonless 4-Part</fullName>
+                <default>false</default>
+                <label>Carbonless 4-Part</label>
+            </value>
+            <value>
+                <fullName>Carbonless 5-Part</fullName>
+                <default>false</default>
+                <label>Carbonless 5-Part</label>
+            </value>
+            <value>
+                <fullName>Client Supplied</fullName>
+                <default>false</default>
+                <label>Client Supplied</label>
+            </value>
+            <value>
+                <fullName>Envelopes Standard #10</fullName>
+                <default>false</default>
+                <label>Envelopes Standard #10</label>
+            </value>
+            <value>
+                <fullName>Envelopes Window #10</fullName>
+                <default>false</default>
+                <label>Envelopes Window #10</label>
+            </value>
+            <value>
+                <fullName>Heavyweight Coated</fullName>
+                <default>false</default>
+                <label>Heavyweight Coated</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

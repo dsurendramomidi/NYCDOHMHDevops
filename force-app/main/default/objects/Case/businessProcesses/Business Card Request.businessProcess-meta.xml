@@ -11,11 +11,19 @@
         <default>true</default>
     </values>
     <values>
+        <fullName>Division Rejected</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Print Shop Cancelled</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Print Shop Task</fullName>
         <default>false</default>
     </values>
     <values>
-        <fullName>Requester Review</fullName>
+        <fullName>Task Reassignment Approval</fullName>
         <default>false</default>
     </values>
 </BusinessProcess>

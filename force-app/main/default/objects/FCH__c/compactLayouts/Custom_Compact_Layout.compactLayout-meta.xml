@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>NFHV_FirstName__c</fields>
+    <fields>NFHV_LastName__c</fields>
+    <fields>NFHV_DOB__c</fields>
+    <fields>NFHV_MobilePhoneNumber__c</fields>
+    <fields>NFHV_Email__c</fields>
+    <fields>NFHV_Address1__c</fields>
+    <fields>NFHV_Address2__c</fields>
+    <fields>NFHV_City__c</fields>
+    <fields>NFHV_PostalCode__c</fields>
+    <label>Custom Compact Layout</label>
+</CompactLayout>

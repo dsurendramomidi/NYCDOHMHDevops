@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRQ_PressWorkType__c</fullName>
+    <externalId>false</externalId>
+    <label>PRQ_PressWorkType</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Digital (Black and White)</fullName>
+                <default>false</default>
+                <label>Digital (Black and White)</label>
+            </value>
+            <value>
+                <fullName>Digital (Color)</fullName>
+                <default>false</default>
+                <label>Digital (Color)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Printing Press (2-Color)</fullName>
+                <default>false</default>
+                <label>Printing Press (2-Color)</label>
+            </value>
+            <value>
+                <fullName>Printing Press (Black &amp; White)</fullName>
+                <default>false</default>
+                <label>Printing Press (Black &amp; White)</label>
+            </value>
+            <value>
+                <fullName>Wide Format</fullName>
+                <default>false</default>
+                <label>Wide Format</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

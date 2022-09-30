@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VSR_ServiceResponseLevel__c</fullName>
+    <externalId>false</externalId>
+    <label>VSR_ServiceResponseLevel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Routine-1-4 Weeks</fullName>
+                <default>false</default>
+                <label>Routine-1-4 Weeks</label>
+            </value>
+            <value>
+                <fullName>Urgent-Within 24 Hours</fullName>
+                <default>false</default>
+                <label>Urgent-Within 24 Hours</label>
+            </value>
+            <value>
+                <fullName>Identifiable Data Requests- 4-8 weeks</fullName>
+                <default>false</default>
+                <label>Identifiable Data Requests- 4-8 weeks</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
