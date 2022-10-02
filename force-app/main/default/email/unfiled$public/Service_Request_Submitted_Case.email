@@ -1,0 +1,6 @@
+Hi {!Case.CreatedBy},
+
+Your Service Request {!Case.Reference_Number__c} has been submitted to the approver. 
+
+Thank you,
+IIT Salesforce Team

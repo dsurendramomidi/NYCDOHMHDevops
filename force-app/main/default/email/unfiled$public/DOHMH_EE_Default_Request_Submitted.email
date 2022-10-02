@@ -1,0 +1,3 @@
+Hi {!Case.CreatedBy},
+
+Your eForm Request {!Case.CaseNumber} has been submitted

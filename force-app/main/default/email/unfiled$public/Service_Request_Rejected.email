@@ -1,0 +1,6 @@
+Hi {!IT_Mobile_Device_Request__c.CreatedBy},
+
+Your Service Request {!IT_Mobile_Device_Request__c.Name} has been rejected. Please check with your manager.
+
+Thank you,
+Salesforce Team

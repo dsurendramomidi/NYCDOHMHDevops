@@ -1,0 +1,17 @@
+Hi,
+
+The Case {!Case.CaseNumber} has been assigned to you for further actions. Please fulfill the request as needed.
+
+Case ID: {!Case.CaseNumber}
+Related ID: {!Case.Reference_Number__c}
+Description: 
+{!Case.Description}
+
+
+Please follow the below link to approve the request.
+
+Approval Link: {!ear__Enhanced_Approval_Request_Helper__c.Link}
+https://dohmhee--dohmhdev.sandbox.my.salesforce.com/lightning/n/ear__Approval_Requests
+
+Thank You,
+Salesforce Team

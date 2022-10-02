@@ -1,0 +1,3 @@
+Hi {!IT_Mobile_Device_Request__c.CreatedBy},
+
+Your eForm Request {!Case.CaseNumber} has been rejected.
