@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>2</sortOrder>
+        <svcCatalogCategory>category_1659464080783_DataServicesandSystems</svcCatalogCategory>
+    </categories>
+    <description>&lt;p&gt;Tableau Server (Accounts/Permissions/New Site/Publishing issues)&lt;/p&gt;</description>
+    <flow>item_1659730940185_TableauServerPermission</flow>
+    <image>Tableaubanner2</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>Tableau Server Access</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>

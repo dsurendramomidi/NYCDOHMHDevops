@@ -214,7 +214,6 @@
         </connector>
         <fields>
             <name>Display_All_Reviewers_List_Section1</name>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>Display_All_Reviewers_List_Section1_Column1</name>

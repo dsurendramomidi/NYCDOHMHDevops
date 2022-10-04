@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogCategory xmlns="http://soap.sforce.com/2006/04/metadata">
+    <image>download_3</image>
+    <isActive>true</isActive>
+    <isProtected>false</isProtected>
+    <masterLabel>Network, Voice and Connectivity</masterLabel>
+    <sortOrder>5</sortOrder>
+</SvcCatalogCategory>

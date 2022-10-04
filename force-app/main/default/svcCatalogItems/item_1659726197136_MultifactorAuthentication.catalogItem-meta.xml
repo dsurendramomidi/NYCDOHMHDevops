@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>2</sortOrder>
+        <svcCatalogCategory>category_1659385753426_AccountandAccess</svcCatalogCategory>
+    </categories>
+    <flow>item_1659726197136_MultifactorAuthentication</flow>
+    <image>multifactorsecurity</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>Multifactor Authentication</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>

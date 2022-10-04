@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogCategory xmlns="http://soap.sforce.com/2006/04/metadata">
+    <image>download_12</image>
+    <isActive>true</isActive>
+    <isProtected>false</isProtected>
+    <masterLabel>IT Equipment &amp; Infrastructure</masterLabel>
+    <sortOrder>4</sortOrder>
+</SvcCatalogCategory>

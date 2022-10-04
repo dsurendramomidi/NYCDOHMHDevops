@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>6</sortOrder>
+        <svcCatalogCategory>category_1659463993172_DatabaseAdministration</svcCatalogCategory>
+    </categories>
+    <flow>item_1659735014921_InsertUpdateDeleteData</flow>
+    <image>alter_database</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>Insert, Update, Delete Data</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>

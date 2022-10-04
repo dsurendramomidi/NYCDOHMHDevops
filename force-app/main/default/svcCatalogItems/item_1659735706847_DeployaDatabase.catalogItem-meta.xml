@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>8</sortOrder>
+        <svcCatalogCategory>category_1659463993172_DatabaseAdministration</svcCatalogCategory>
+    </categories>
+    <description>&lt;p&gt;Deploy a Database from Non-Production to Production&lt;/p&gt;</description>
+    <flow>item_1659735706847_DeployaDatabase</flow>
+    <image>database_deploy</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>Deploy a Database</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogCategory xmlns="http://soap.sforce.com/2006/04/metadata">
+    <image>softwarelicensingShutterstock1</image>
+    <isActive>true</isActive>
+    <isProtected>false</isProtected>
+    <masterLabel>Software &amp; Licenses</masterLabel>
+    <sortOrder>3</sortOrder>
+</SvcCatalogCategory>

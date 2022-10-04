@@ -13,7 +13,6 @@
     <navType>Standard</navType>
     <tabs>standard-Case</tabs>
     <tabs>IT_Mobile_Device_Request__c</tabs>
-    <tabs>ear__Approval_Requests</tabs>
     <tabs>Test_KSWData__c</tabs>
     <tabs>standard-Task</tabs>
     <tabs>COM__c</tabs>

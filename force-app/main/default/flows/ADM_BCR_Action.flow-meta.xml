@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <apiVersion>56.0</apiVersion>
+    <apiVersion>54.0</apiVersion>
     <choices>
         <name>Approve</name>
         <choiceText>Approve</choiceText>
@@ -66,62 +66,13 @@
         </value>
     </choices>
     <decisions>
-        <name>Copy_1_of_Decision_Division_Approval</name>
-        <label>Copy 1 of Decision Division Approval</label>
-        <locationX>1979</locationX>
-        <locationY>566</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Task_Reassignment_Approval_Approve</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Action_Task_Reassignment_Approval</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>Approve</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Copy_1_of_Get_BCR_Graphic_Group</targetReference>
-            </connector>
-            <label>Approve</label>
-        </rules>
-        <rules>
-            <name>Task_Reassignment_Approval_Reject</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Action_Task_Reassignment_Approval</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>Reject</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Copy_1_of_Update_Case_4</targetReference>
-            </connector>
-            <label>Reject</label>
-        </rules>
-        <rules>
-            <name>Task_Reassignment_Approval_Reassign</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Action_Task_Reassignment_Approval</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>Reassign</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Copy_1_of_Update_Case_5</targetReference>
-            </connector>
-            <label>Reassign</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Current_Status</name>
         <label>Current Status</label>
         <locationX>1472</locationX>
-        <locationY>326</locationY>
+        <locationY>325</locationY>
+        <defaultConnector>
+            <targetReference>Empty_Screen</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Current_Status_Division_Approval</name>
@@ -164,7 +115,7 @@
     <decisions>
         <name>Decision_Division_Approval</name>
         <label>Decision Division Approval</label>
-        <locationX>393</locationX>
+        <locationX>399</locationX>
         <locationY>608</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -216,8 +167,8 @@
     <decisions>
         <name>Decision_Print_Shop_Task</name>
         <label>Decision Print Shop Task</label>
-        <locationX>918</locationX>
-        <locationY>603</locationY>
+        <locationX>939</locationX>
+        <locationY>645</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Print_Shop_Task_Submit_To_Print</name>
@@ -280,34 +231,6 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordLookups>
-        <name>Copy_1_of_Get_BCR_Graphic_Group</name>
-        <label>Copy 1 of Get BCR Graphic Group</label>
-        <locationX>1899</locationX>
-        <locationY>689</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Copy_1_of_Update_Case_3</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Type</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Queue</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>BCR_Graphic_Group</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Group</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Get_BCR_Graphic_Group</name>
         <label>Get BCR Graphic Group</label>
         <locationX>138</locationX>
@@ -359,39 +282,6 @@
         </outputAssignments>
     </recordLookups>
     <recordUpdates>
-        <name>Back_to_requester</name>
-        <label>Back to requester</label>
-        <locationX>1414</locationX>
-        <locationY>668</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>CaseID</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Comments__c</field>
-            <value>
-                <elementReference>Commentszzz</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>$User.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Division Approval</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Case</object>
-    </recordUpdates>
-    <recordUpdates>
         <name>Completed</name>
         <label>Completed</label>
         <locationX>833</locationX>
@@ -414,87 +304,6 @@
             <field>Status</field>
             <value>
                 <stringValue>Completed</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Case</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Copy_1_of_Update_Case_3</name>
-        <label>Copy 1 of Update Case 3</label>
-        <locationX>1840</locationX>
-        <locationY>840</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>CaseID</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>Copy_1_of_Get_BCR_Graphic_Group.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Print Shop Task</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Case</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Copy_1_of_Update_Case_4</name>
-        <label>Copy 1 of Update Case 4</label>
-        <locationX>2012</locationX>
-        <locationY>803</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>CaseID</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>0058y000001ORmY</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Division Rejected</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Case</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Copy_1_of_Update_Case_5</name>
-        <label>Copy 1 of Update Case 5</label>
-        <locationX>2111</locationX>
-        <locationY>686</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>CaseID</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>ReassignUser_Task_Reassignment_Approval.recordId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Task Reassignment Approval</stringValue>
             </value>
         </inputAssignments>
         <object>Case</object>
@@ -607,6 +416,17 @@
         </inputAssignments>
         <object>Case</object>
     </recordUpdates>
+    <screens>
+        <name>Empty_Screen</name>
+        <label>Empty Screen</label>
+        <locationX>1624</locationX>
+        <locationY>447</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
     <screens>
         <name>Screen_Division_Approval</name>
         <label>Screen Division Approval</label>
@@ -756,8 +576,8 @@
     <screens>
         <name>Screen_Print_Shop_Task</name>
         <label>Screen Print Shop Task</label>
-        <locationX>1064</locationX>
-        <locationY>530</locationY>
+        <locationX>1130</locationX>
+        <locationY>565</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -816,206 +636,6 @@
             </fields>
             <fields>
                 <name>Screen_Print_Shop_Task_Section1_Column4</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-        </fields>
-        <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
-        <showFooter>true</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
-    <screens>
-        <name>Screen_Requester_Review</name>
-        <label>Screen Requester Review</label>
-        <locationX>1416</locationX>
-        <locationY>520</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Back_to_requester</targetReference>
-        </connector>
-        <fields>
-            <name>Screen_Requester_Review_Section1</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Screen_Requester_Review_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Action5</name>
-                    <choiceReferences>Submit_Again</choiceReferences>
-                    <choiceReferences>Cancel</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Action</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>Commentszzz</name>
-                    <fieldText>Comments</fieldText>
-                    <fieldType>LargeTextArea</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Screen_Requester_Review_Section1_Column2</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Screen_Requester_Review_Section1_Column3</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Screen_Requester_Review_Section1_Column4</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-        </fields>
-        <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
-        <showFooter>true</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
-    <screens>
-        <name>Screen_Task_Reassignment_Approval</name>
-        <label>Screen Task Reassignment Approval</label>
-        <locationX>1979</locationX>
-        <locationY>446</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Copy_1_of_Decision_Division_Approval</targetReference>
-        </connector>
-        <fields>
-            <name>Copy_1_of_status2</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); font-size: var(--lwc-fontSize3,0.8125rem);&quot;&gt;Action Required - &lt;/strong&gt;&lt;strong&gt;Task Reassignment Approval&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>Screen_Task_Reassignment_Approval_Section1</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Screen_Task_Reassignment_Approval_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Action_Task_Reassignment_Approval</name>
-                    <choiceReferences>Approve</choiceReferences>
-                    <choiceReferences>Reject</choiceReferences>
-                    <choiceReferences>Reassign</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Action</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Screen_Task_Reassignment_Approval_Section1_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>ReassignUser_Task_Reassignment_Approval</name>
-                    <extensionName>flowruntime:lookup</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>fieldApiName</name>
-                        <value>
-                            <stringValue>LastModifiedById</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Pick a user</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>objectApiName</name>
-                        <value>
-                            <stringValue>Case</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>required</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>ActionDivisionApproval</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <elementReference>Reassign</elementReference>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Screen_Task_Reassignment_Approval_Section1_Column3</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Screen_Task_Reassignment_Approval_Section1_Column4</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>

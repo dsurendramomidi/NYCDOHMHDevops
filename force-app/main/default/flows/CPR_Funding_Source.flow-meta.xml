@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <apiVersion>55.0</apiVersion>
+    <apiVersion>54.0</apiVersion>
     <assignments>
         <name>APP_Assign_Current_Record_Data</name>
         <label>APP_Assign Current Record Data</label>

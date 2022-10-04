@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>1</sortOrder>
+        <svcCatalogCategory>category_1659461390372_EmailCalendarandCollaboration</svcCatalogCategory>
+    </categories>
+    <flow>item_1659731594296_EmailArchive</flow>
+    <image>email</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>Email Archive</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>

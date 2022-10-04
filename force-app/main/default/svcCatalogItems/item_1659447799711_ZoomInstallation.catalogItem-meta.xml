@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>1</sortOrder>
+        <svcCatalogCategory>category_1659385787867_SoftwareLicenses</svcCatalogCategory>
+    </categories>
+    <flow>item_1659447799711_ZoomInstallation</flow>
+    <image>zoom</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>Zoom Installation</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>

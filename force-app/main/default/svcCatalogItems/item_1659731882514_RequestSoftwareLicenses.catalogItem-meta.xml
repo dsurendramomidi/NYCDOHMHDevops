@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>2</sortOrder>
+        <svcCatalogCategory>category_1659385787867_SoftwareLicenses</svcCatalogCategory>
+    </categories>
+    <flow>item_1659731882514_RequestSoftwareLicenses</flow>
+    <image>software_license</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>Request Software &amp; Licenses</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>3</sortOrder>
+        <svcCatalogCategory>category_1659385753426_AccountandAccess</svcCatalogCategory>
+    </categories>
+    <flow>item_1659727245176_NYCMEDAccountandLogin</flow>
+    <image>NYCMED</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>NYCMED Account and Login</masterLabel>
+    <status>Published</status>
+</SvcCatalogItemDef>
