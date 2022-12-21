@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <actionCalls>
-        <name>APP_Navigate_to_Case_Record</name>
-        <label>APP Navigate to Case Record</label>
-        <locationX>776</locationX>
-        <locationY>1181</locationY>
+        <name>FW_Email_Action</name>
+        <label>FW Email Action</label>
+        <locationX>771</locationX>
+        <locationY>1154</locationY>
+        <actionName>Case.FW_Default_Request_Update</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>FW_Case_Confirmation</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>FW_Create_Case_V2.Case.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>FW_Email_Requester</name>
+        <label>FW Email Requester</label>
+        <locationX>766</locationX>
+        <locationY>1040</locationY>
+        <actionName>Case.FW_Default_Request_Submitted</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>FW_Email_Action</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>FW_Create_Case_V2.Case.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>FW_Navigate_to_Case_Record</name>
+        <label>FW Navigate to Case Record</label>
+        <locationX>770</locationX>
+        <locationY>1406</locationY>
         <actionName>c:navigateTo</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -17,53 +53,21 @@
         <inputParameters>
             <name>url</name>
             <value>
-                <stringValue>assistive-technology-devices-tracking-system</stringValue>
-            </value>
-        </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </actionCalls>
-    <actionCalls>
-        <name>FW_Submit_for_Approval</name>
-        <label>FW_Submit for Approval</label>
-        <locationX>482</locationX>
-        <locationY>936</locationY>
-        <actionName>submit</actionName>
-        <actionType>submit</actionType>
-        <connector>
-            <targetReference>FW_Case_Confirmation</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>processDefinitionNameOrId</name>
-            <value>
-                <elementReference>APP_Approval_Process</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>objectId</name>
-            <value>
-                <elementReference>FW_Create_Case.Case.Id</elementReference>
+                <elementReference>APP_ApplicationURL</elementReference>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <apiVersion>54.0</apiVersion>
     <dynamicChoiceSets>
-        <name>OptionsDeActivationStatus</name>
+        <name>ActivationStatusChoice</name>
         <dataType>Picklist</dataType>
         <displayField xsi:nil="true"/>
         <object xsi:nil="true"/>
         <picklistField>ATDTS_ActivationStatus__c</picklistField>
         <picklistObject>MHY__c</picklistObject>
     </dynamicChoiceSets>
-    <formulas>
-        <name>APP_CustomApp_RecordData_To_CaseDescriptionSummary</name>
-        <dataType>String</dataType>
-        <expression>&quot;Device ID: &quot; +{!Device_Id} &amp;BR()
-&amp;&quot;Device Name: &quot; +{!Device_Name} &amp;BR()
-&amp;&quot;DeActivation Status: &quot; +{!DeActivationStatus} &amp;BR()</expression>
-    </formulas>
-    <interviewLabel>MHY ATDTS Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel>Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>MHY ATDTS Screen Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -87,12 +91,14 @@
     <recordCreates>
         <name>APP_Create_Record_In_Custom_App_Object</name>
         <label>APP Create Record In Custom App Object</label>
-        <locationX>776</locationX>
-        <locationY>566</locationY>
-        <assignRecordIdToReference>FW_CustomAppObjectRecordId</assignRecordIdToReference>
+        <locationX>774</locationX>
+        <locationY>665</locationY>
         <connector>
-            <targetReference>APP_Get_App_Record_Details</targetReference>
+            <targetReference>APP_Update_Related_Case_Record</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>FW_Rollback_AfterCaseUpdate</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>APP_Record__c</field>
             <value>
@@ -102,90 +108,52 @@
         <inputAssignments>
             <field>ATDTS_ActivationStatus__c</field>
             <value>
-                <elementReference>DeActivationStatus</elementReference>
+                <elementReference>ActivationStatus</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>ATDTS_DeviceId__c</field>
             <value>
-                <elementReference>Device_Id</elementReference>
+                <elementReference>DeviceId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>ATDTS_DeviceName__c</field>
             <value>
-                <elementReference>Device_Name</elementReference>
+                <elementReference>DeviceName</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Name</field>
             <value>
-                <elementReference>FW_Create_Case.Case.Reference_Number__c</elementReference>
+                <elementReference>FW_Create_Case_V2.Case.Reference_Number__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Related_Case_ID__c</field>
             <value>
-                <elementReference>FW_Create_Case.Case.Id</elementReference>
+                <elementReference>FW_Create_Case_V2.Case.Id</elementReference>
             </value>
         </inputAssignments>
         <object>MHY__c</object>
-    </recordCreates>
-    <recordDeletes>
-        <name>FW_DeleteCaseRecord</name>
-        <label>FW_DeleteCaseRecord</label>
-        <locationX>1040</locationX>
-        <locationY>1046</locationY>
-        <connector>
-            <targetReference>FW_Rollback_Confirmation</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>FW_Create_Case.Case.Id</elementReference>
-            </value>
-        </filters>
-        <object>Case</object>
-    </recordDeletes>
-    <recordLookups>
-        <name>APP_Get_App_Record_Details</name>
-        <label>APP_Get App Record Details</label>
-        <locationX>776</locationX>
-        <locationY>685</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>APP_Update_Related_Case_Record</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>FW_CustomAppObjectRecordId</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>MHY__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
+    </recordCreates>
     <recordRollbacks>
         <name>FW_Rollback_AfterCaseUpdate</name>
         <label>FW_Rollback_AfterCaseUpdate</label>
         <locationX>1040</locationX>
         <locationY>926</locationY>
         <connector>
-            <targetReference>FW_DeleteCaseRecord</targetReference>
+            <targetReference>FW_Rollback_Confirmation</targetReference>
         </connector>
     </recordRollbacks>
     <recordUpdates>
         <name>APP_Update_Related_Case_Record</name>
         <label>APP_Update Related Case Record</label>
-        <locationX>761</locationX>
-        <locationY>826</locationY>
+        <locationX>774</locationX>
+        <locationY>808</locationY>
         <connector>
-            <targetReference>FW_Submit_for_Approval</targetReference>
+            <targetReference>FW_Approval_History</targetReference>
         </connector>
         <faultConnector>
             <targetReference>FW_Rollback_AfterCaseUpdate</targetReference>
@@ -195,13 +163,19 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>FW_Create_Case.Case.Id</elementReference>
+                <elementReference>FW_Create_Case_V2.Case.Id</elementReference>
             </value>
         </filters>
         <inputAssignments>
-            <field>Description</field>
+            <field>OwnerId</field>
             <value>
-                <elementReference>FW_ForCaseDescription</elementReference>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>New</stringValue>
             </value>
         </inputAssignments>
         <object>Case</object>
@@ -210,13 +184,13 @@
     <screens>
         <name>APP_Request</name>
         <label>APP_Request</label>
-        <locationX>798</locationX>
-        <locationY>444</locationY>
-        <allowBack>false</allowBack>
+        <locationX>769</locationX>
+        <locationY>356</locationY>
+        <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>APP_Create_Record_In_Custom_App_Object</targetReference>
+            <targetReference>FW_Create_Case_V2</targetReference>
         </connector>
         <fields>
             <name>APP_Request_Section1</name>
@@ -285,78 +259,25 @@
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>APP_Request_Section2</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>APP_Request_Section2_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Device_Id</name>
-                    <dataType>String</dataType>
-                    <fieldText>Device Id</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>Device_Name</name>
-                    <dataType>String</dataType>
-                    <fieldText>Device Name</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <fields>
-                    <name>DeActivationStatus</name>
-                    <choiceReferences>OptionsDeActivationStatus</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>DeActivationStatus</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <fields>
-                    <name>Attachment</name>
-                    <extensionName>c:fileUploadImproved</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>allowMultiple</name>
-                        <value>
-                            <booleanValue>true</booleanValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>recordId</name>
-                        <value>
-                            <elementReference>FW_Create_Case.Case.Id</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>sessionKey</name>
-                        <value>
-                            <stringValue>{!$Flow.InterviewGuid}2</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>APP_Request_Section2_Column2</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
+            <name>ActivationStatus</name>
+            <choiceReferences>ActivationStatusChoice</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>ActivationStatus</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>DeviceId</name>
+            <dataType>String</dataType>
+            <fieldText>DeviceId</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>DeviceName</name>
+            <dataType>String</dataType>
+            <fieldText>DeviceName</fieldText>
+            <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
@@ -366,17 +287,17 @@
     <screens>
         <name>FW_Case_Confirmation</name>
         <label>FW Case Confirmation</label>
-        <locationX>776</locationX>
-        <locationY>1046</locationY>
+        <locationX>774</locationX>
+        <locationY>1287</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>APP_Navigate_to_Case_Record</targetReference>
+            <targetReference>FW_Navigate_to_Case_Record</targetReference>
         </connector>
         <fields>
             <name>FW_Case_Confirmation_Display_Text</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Your case # {!APP_Get_App_Record_Details.Name} has been created successfully.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Your case # {!FW_Create_Case_V2.Case.Reference_Number__c} has been created successfully.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <nextOrFinishButtonLabel>Go to Case Record</nextOrFinishButtonLabel>
@@ -406,32 +327,48 @@
             <targetReference>FW_OnBehalfOf</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
-        <name>FW_Create_Case</name>
-        <label>FW Create Case</label>
-        <locationX>775</locationX>
-        <locationY>326</locationY>
+        <name>FW_Approval_History</name>
+        <label>FW Approval History</label>
+        <locationX>773</locationX>
+        <locationY>925</locationY>
         <connector>
-            <targetReference>APP_Request</targetReference>
+            <targetReference>FW_Email_Requester</targetReference>
         </connector>
-        <flowName>FW_Create_Case</flowName>
+        <flowName>FW_Approval_History</flowName>
+        <inputAssignments>
+            <name>Action</name>
+            <value>
+                <stringValue>Submitted</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>CaseID</name>
+            <value>
+                <elementReference>FW_Create_Case_V2.Case.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Workflow</name>
+            <value>
+                <stringValue>Request</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>FW_Create_Case_V2</name>
+        <label>FW Create Case V2</label>
+        <locationX>774</locationX>
+        <locationY>504</locationY>
+        <connector>
+            <targetReference>APP_Create_Record_In_Custom_App_Object</targetReference>
+        </connector>
+        <flowName>FW_Create_Case_V2</flowName>
         <inputAssignments>
             <name>APP_Application_type</name>
             <value>
                 <elementReference>APP_Application_type</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>APP_ApprovalProcess_FirstStatus</name>
-            <value>
-                <elementReference>APP_ApprovalProcess_FirstStatus</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>APP_Initial_Assigned_Group</name>
-            <value>
-                <elementReference>APP_Initial_Assigned_Group_API_Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -458,15 +395,21 @@
                 <elementReference>APP_Related_Object</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <name>APP_Requester</name>
+            <value>
+                <elementReference>FW_OnBehalfOf.Employee.Id</elementReference>
+            </value>
+        </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <subflows>
         <name>FW_OnBehalfOf</name>
         <label>FW OnBehalfOf</label>
-        <locationX>768</locationX>
-        <locationY>196</locationY>
+        <locationX>770</locationX>
+        <locationY>198</locationY>
         <connector>
-            <targetReference>FW_Create_Case</targetReference>
+            <targetReference>APP_Request</targetReference>
         </connector>
         <flowName>FW_On_Behalf_Of</flowName>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -482,33 +425,13 @@
         </value>
     </variables>
     <variables>
-        <name>APP_Approval_Process</name>
+        <name>APP_ApplicationURL</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <value>
-            <stringValue>DOHMH_EE_Default_Approval_Process</stringValue>
-        </value>
-    </variables>
-    <variables>
-        <name>APP_ApprovalProcess_FirstStatus</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <stringValue>Submitted for Approval</stringValue>
-        </value>
-    </variables>
-    <variables>
-        <name>APP_Initial_Assigned_Group_API_Name</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <stringValue>DOHMH_EE_Default_Queue</stringValue>
+            <stringValue>assistive-technology-devices-tracking-system</stringValue>
         </value>
     </variables>
     <variables>
@@ -518,7 +441,7 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <value>
-            <stringValue>MHY APP</stringValue>
+            <stringValue>eForm</stringValue>
         </value>
     </variables>
     <variables>
@@ -538,7 +461,7 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <value>
-            <stringValue>Application Default</stringValue>
+            <stringValue>Assistive Technology Devices Tracking System</stringValue>
         </value>
     </variables>
     <variables>
@@ -549,23 +472,6 @@
         <isOutput>false</isOutput>
         <value>
             <stringValue>MHY</stringValue>
-        </value>
-    </variables>
-    <variables>
-        <name>FW_CustomAppObjectRecordId</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>FW_ForCaseDescription</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <elementReference>APP_CustomApp_RecordData_To_CaseDescriptionSummary</elementReference>
         </value>
     </variables>
 </Flow>

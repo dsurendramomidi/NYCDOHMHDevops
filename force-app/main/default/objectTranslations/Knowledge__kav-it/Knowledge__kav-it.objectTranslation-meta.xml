@@ -9,6 +9,167 @@
         <value>Knowledge</value>
     </caseValues>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>FAQ - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FAQ - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Detail External</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
     <nameFieldLabel></nameFieldLabel>
+    <recordTypes>
+        <label></label>
+        <name>Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articoli sui benefit del Centro di assistenza RU</description>
+        <label>RU - Benefit</label>
+        <name>HR_Benefits</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articoli sulle relazioni con i dipendenti del Centro di assistenza RU</description>
+        <label>RU - Relazioni con i dipendenti</label>
+        <name>HR_Employee_Relations</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articoli del Centro di assistenza RU di carattere generale</description>
+        <label>RU - Generale</label>
+        <name>HR_General</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articoli sui congedi/aspettative del Centro di assistenza RU</description>
+        <label>RU - Congedo/aspettativa</label>
+        <name>HR_Leave</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articoli sull&apos;orientamento del Centro di assistenza RU</description>
+        <label>RU - Orientamento</label>
+        <name>HR_Onboarding</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articoli sulle paghe del Centro di assistenza RU</description>
+        <label>RU - Paghe</label>
+        <name>HR_Payroll</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Crea un articolo Knowledge per contenuti relativi alle tecnologie dell&apos;informazione, ad esempio apparecchiature, accesso o soluzioni per ottimizzare le prestazioni delle applicazioni</description>
+        <label>Articolo Knowledge IT</label>
+        <name>IT_Knowledge_Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Procedure</name>
+    </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

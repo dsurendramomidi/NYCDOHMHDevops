@@ -4,5 +4,166 @@
         <plural>false</plural>
         <value>Knowledge</value>
     </caseValues>
+    <layouts>
+        <layout>FAQ - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FAQ - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Detail External</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
     <nameFieldLabel></nameFieldLabel>
+    <recordTypes>
+        <label></label>
+        <name>Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <description>HR 服務中心福利文章</description>
+        <label>HR - 福利</label>
+        <name>HR_Benefits</name>
+    </recordTypes>
+    <recordTypes>
+        <description>HR 服務中心員工關係文章</description>
+        <label>HR - 員工關係</label>
+        <name>HR_Employee_Relations</name>
+    </recordTypes>
+    <recordTypes>
+        <description>一般 HR 服務中心文章</description>
+        <label>HR - 一般</label>
+        <name>HR_General</name>
+    </recordTypes>
+    <recordTypes>
+        <description>HR 服務中心休假文章</description>
+        <label>HR - 休假</label>
+        <name>HR_Leave</name>
+    </recordTypes>
+    <recordTypes>
+        <description>HR 服務中心入職文章</description>
+        <label>HR - 入職</label>
+        <name>HR_Onboarding</name>
+    </recordTypes>
+    <recordTypes>
+        <description>HR 服務中心薪資文章</description>
+        <label>HR - 薪資</label>
+        <name>HR_Payroll</name>
+    </recordTypes>
+    <recordTypes>
+        <description>建立資訊技術內容的 Knowledge 文章，例如設備、存取權或應用程式效能解決方案</description>
+        <label>資訊技術 Knowledge 文章</label>
+        <name>IT_Knowledge_Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Procedure</name>
+    </recordTypes>
 </CustomObjectTranslation>

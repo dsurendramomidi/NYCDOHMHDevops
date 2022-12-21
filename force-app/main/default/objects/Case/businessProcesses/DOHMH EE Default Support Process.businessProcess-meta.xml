@@ -7,7 +7,15 @@
         <default>false</default>
     </values>
     <values>
+        <fullName>Division Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
         <fullName>Processing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Requester Review</fullName>
         <default>false</default>
     </values>
     <values>

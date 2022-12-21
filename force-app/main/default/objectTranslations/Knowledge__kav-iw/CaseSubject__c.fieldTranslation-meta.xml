@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>ניתן להשאיר את השדה &apos;נושא מקרה&apos; ריק ושם המאמר הנוכחי יופיע בו כברירת מחדל.</help>
+    <label>נושא המקרה</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

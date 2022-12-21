@@ -4,6 +4,12 @@
     <name>IIT SC Database Administration</name>
     <queueMembers>
         <users>
+            <user>dwiafe@health.nyc.gov</user>
+            <user>dsurendramomidi@health.nyc.gov</user>
+            <user>gtaylor@health.nyc.gov</user>
+            <user>stalla@health.nyc.gov.ee</user>
+            <user>sgeorge11@health.nyc.gov</user>
+            <user>zzheng1@health.nyc.gov</user>
         </users>
     </queueMembers>
     <queueSobject>

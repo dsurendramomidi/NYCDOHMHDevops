@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>U kunt het veld Caseonderwerp blanco laten; in dat geval komt er standaard de titel van het huidige artikel te staan.</help>
+    <label>Caseonderwerp</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

@@ -49,5 +49,166 @@
         <value>Knowledge</value>
     </caseValues>
     <gender>Neuter</gender>
+    <layouts>
+        <layout>FAQ - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FAQ - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Detail External</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
     <nameFieldLabel></nameFieldLabel>
+    <recordTypes>
+        <label></label>
+        <name>Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articole despre beneficii în Centru de servicii HR</description>
+        <label>HR – Beneficii</label>
+        <name>HR_Benefits</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articole despre relațiile cu angajații în Centru de servicii HR</description>
+        <label>HR – Relații cu angajații</label>
+        <name>HR_Employee_Relations</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articole generale în Centru de servicii HR</description>
+        <label>HR – Generalități</label>
+        <name>HR_General</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articole despre învoiri în Centru de servicii HR</description>
+        <label>HR – Învoiri</label>
+        <name>HR_Leave</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articole despre inițiere în Centru de servicii HR</description>
+        <label>HR – Inițiere</label>
+        <name>HR_Onboarding</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Articole despre salarii în Centru de servicii HR</description>
+        <label>HR – Salarizare</label>
+        <name>HR_Payroll</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Creați un articol Knowledge cu conținut legat de informatică, de exemplu, echipamente, acces sau soluții de îmbunătățire a performanțelor aplicațiilor.</description>
+        <label>Articol Knowledge IT</label>
+        <name>IT_Knowledge_Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Procedure</name>
+    </recordTypes>
 </CustomObjectTranslation>

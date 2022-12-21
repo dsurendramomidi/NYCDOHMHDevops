@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Можете да оставите полето „Тема на случай“ празно и то по подразбиране ще бъде текущото заглавие на статията.</help>
+    <label>Тема на случай</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

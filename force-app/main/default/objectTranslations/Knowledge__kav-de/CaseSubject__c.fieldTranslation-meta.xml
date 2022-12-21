@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Sie können das Feld &quot;Kundenvorgangsthema&quot; leer lassen. In diesem Fall wird hier standardmäßig der Titel des aktuellen Artikels eingefügt.</help>
+    <label>Kundenvorgangsthema</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

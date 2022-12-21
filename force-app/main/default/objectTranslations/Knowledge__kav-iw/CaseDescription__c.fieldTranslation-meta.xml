@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>הזן תוכן ברירת מחדל עבור משתמשים שייפתחו קריאה חדשה הקשורה למאמר זה. השדה יכול להיות ריק או להכיל הוראות כגון &quot;תאר את הבעיה או הבקשה שלך...&quot;</help>
+    <label>תיאור מקרה</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

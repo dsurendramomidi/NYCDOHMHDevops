@@ -61,5 +61,166 @@
         <value>Knowledge</value>
     </caseValues>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>FAQ - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FAQ - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Detail External</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
     <nameFieldLabel></nameFieldLabel>
+    <recordTypes>
+        <label></label>
+        <name>Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Članci o pogodnostima uslužnog centra za ljudske potencijale</description>
+        <label>Ljudski potencijali – Pogodnosti zaposlenika</label>
+        <name>HR_Benefits</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Članci o odnosima zaposlenika uslužnog centra za ljudske potencijale</description>
+        <label>Ljudski potencijali – Odnosi zaposlenika</label>
+        <name>HR_Employee_Relations</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Članci o općim pitanjima uslužnog centra za ljudske potencijale</description>
+        <label>Ljudski potencijali – Opća pitanja</label>
+        <name>HR_General</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Članci o dopustu uslužnog centra za ljudske potencijale</description>
+        <label>Ljudski potencijali – Dopusti</label>
+        <name>HR_Leave</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Članci o uključivanju zaposlenika uslužnog centra za ljudske potencijale</description>
+        <label>Ljudski potencijali – Uključivanje zaposlenika</label>
+        <name>HR_Onboarding</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Članci o obračunu plaća uslužnog centra za ljudske potencijale</description>
+        <label>Ljudski potencijali – Obračun plaća</label>
+        <name>HR_Payroll</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Kreirajte članak znanja za sadržaj odjela informacijskih tehnologija, kao što su oprema, pristup ili rješenja za rad aplikacija</description>
+        <label>Članak značajke Knowledge za informacijske tehnologije</label>
+        <name>IT_Knowledge_Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Procedure</name>
+    </recordTypes>
 </CustomObjectTranslation>

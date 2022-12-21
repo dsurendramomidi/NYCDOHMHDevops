@@ -8,5 +8,100 @@
         <plural>true</plural>
         <value>IT Mobile Device Requests</value>
     </caseValues>
+    <layouts>
+        <layout>Another User</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Incident Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mobile Device Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requester Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Roaming and Hotspot features</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>IT Mobile Device Request Layout</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Incident Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mobile Device Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requester Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Roaming and Hotspot features</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MySelf</layout>
+        <sections>
+            <label></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Incident Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mobile Device Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requester Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Roaming and Hotspot features</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Another_User</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>IT_Mobile_Device_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Myself</name>
+    </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

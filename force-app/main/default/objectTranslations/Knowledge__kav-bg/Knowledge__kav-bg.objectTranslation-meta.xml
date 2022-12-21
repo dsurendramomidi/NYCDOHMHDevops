@@ -9,5 +9,166 @@
         <value>Knowledge</value>
     </caseValues>
     <gender>Neuter</gender>
+    <layouts>
+        <layout>FAQ - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FAQ - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Detail External</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Knowledge Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Procedure - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Author</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SimpleLayout - Reader</layout>
+        <sections>
+            <label></label>
+            <section>Article Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Properties</section>
+        </sections>
+    </layouts>
     <nameFieldLabel></nameFieldLabel>
+    <recordTypes>
+        <label></label>
+        <name>Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Статии за социални придобивки за центъра за обслужване за човешки ресурси</description>
+        <label>Човешки ресурси – социални придобивки</label>
+        <name>HR_Benefits</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Статии за връзки със служителите за центъра за обслужване за човешки ресурси</description>
+        <label>Човешки ресурси – връзки със служителите</label>
+        <name>HR_Employee_Relations</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Статии за общи въпроси за центъра за обслужване за човешки ресурси</description>
+        <label>Човешки ресурси – общи въпроси</label>
+        <name>HR_General</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Статии за отпуски за центъра за обслужване за човешки ресурси</description>
+        <label>Човешки ресурси – отпуски</label>
+        <name>HR_Leave</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Статии за интегриране в работния процес за центъра за обслужване за човешки ресурси</description>
+        <label>Човешки ресурси – интегриране в работния процес</label>
+        <name>HR_Onboarding</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Статии за ТРЗ за центъра за обслужване за човешки ресурси</description>
+        <label>Човешки ресурси – ТРЗ</label>
+        <name>HR_Payroll</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Създайте статия от Knowledge за съдържание за отдела за информационните технологии, като например решения за оборудване, достъп или решения за производителността на приложенията</description>
+        <label>Статии от Knowledge за IT</label>
+        <name>IT_Knowledge_Article</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Procedure</name>
+    </recordTypes>
 </CustomObjectTranslation>

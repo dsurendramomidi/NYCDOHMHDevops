@@ -8,5 +8,12 @@
         <plural>true</plural>
         <value>Tecsys Assets</value>
     </caseValues>
+    <layouts>
+        <layout>Tecsys Asset Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

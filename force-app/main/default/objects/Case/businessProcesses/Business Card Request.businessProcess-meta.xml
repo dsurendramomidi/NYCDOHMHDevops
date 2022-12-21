@@ -22,8 +22,4 @@
         <fullName>Print Shop Task</fullName>
         <default>false</default>
     </values>
-    <values>
-        <fullName>Task Reassignment Approval</fullName>
-        <default>false</default>
-    </values>
 </BusinessProcess>

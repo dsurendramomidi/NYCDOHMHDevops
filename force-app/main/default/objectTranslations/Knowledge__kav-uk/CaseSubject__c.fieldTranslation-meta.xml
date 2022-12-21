@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Ви можете залишити поле &quot;Тема звернення&quot; порожнім, воно за замовчуванням заповнюється поточною назвою статті.</help>
+    <label>Тема звернення</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

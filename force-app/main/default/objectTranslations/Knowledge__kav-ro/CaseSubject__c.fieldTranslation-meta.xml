@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Câmpul Subiect de caz poate să rămână necompletat. Implicit, se va completa cu titlul articolului curent.</help>
+    <label>Subiect de caz</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

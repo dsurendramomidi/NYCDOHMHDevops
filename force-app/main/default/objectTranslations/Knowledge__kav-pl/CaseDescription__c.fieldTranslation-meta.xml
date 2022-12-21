@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wprowadź zawartość domyślną dla użytkowników, gdy rejestrują nowe zgłoszenie powiązane z tym artykułem. Pole może być puste lub zawierać instrukcję, np. „Opisz swoją sprawę lub żądanie...”</help>
+    <label>Opis sprawy</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

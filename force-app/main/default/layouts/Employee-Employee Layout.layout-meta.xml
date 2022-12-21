@@ -300,6 +300,10 @@
         <fields>NAME</fields>
         <relatedList>ADM_BCR_Division_Approver__c.Employee__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>IIT__c.ITPT_ProjectLead__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>

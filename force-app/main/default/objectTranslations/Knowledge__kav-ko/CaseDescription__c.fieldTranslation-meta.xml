@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>이 기사와 관련된 새 티켓을 기록할 때 사용자의 기본 콘텐츠를 입력합니다. 필드는 공백이거나 &quot;문제 또는 요청 설명...&quot; 등 지침일 수 있습니다.</help>
+    <label>사례 설명</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

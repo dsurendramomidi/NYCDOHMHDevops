@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Zadajte predvolený obsah pre používateľov, keď vytvoria nový ticket súvisiaci s týmto článkom. Pole môže byť prázdne alebo inštruktážne, napríklad „Popíšte svoj problém alebo požiadavku...</help>
+    <label>Popis prípadu</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

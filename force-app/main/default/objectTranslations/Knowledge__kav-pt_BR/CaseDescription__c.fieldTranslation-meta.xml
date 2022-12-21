@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Insira o conteúdo padrão para os usuários quando eles registram um novo pedido relacionado a este artigo. O campo pode estar em branco, ou ser instrutivo, como &quot;Descreva seu problema ou sua solicitação...</help>
+    <label>Descrição do caso</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

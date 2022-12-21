@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>您可以将个案主题字段留空，并默认设置为当前文章标题。</help>
+    <label>个案主题</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

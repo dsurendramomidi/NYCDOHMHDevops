@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Puede dejar el campo Asunto de caso en blanco y tomará como predeterminado el título del artículo vigente.</help>
+    <label>Asunto de caso</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Vnesite privzeto vsebino za uporabnike, ko ustvarijo novo vstopnico, povezano s tem člankom. Polje je lahko prazno ali vsebuje navodila, na primer &quot;Opišite svojo težavo ali zahtevo ...&quot;.</help>
+    <label>Opis primera</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

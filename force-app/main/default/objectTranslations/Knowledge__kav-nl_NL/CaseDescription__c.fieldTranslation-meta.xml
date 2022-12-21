@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Geef de standaardinhoud voor gebruikers op bij het vastleggen van een nieuw ticket dat is gerelateerd aan dit artikel. Het veld kan blanco zijn, maar ook een instructie bevatten, zoals &quot;Beschrijf uw probleem of verzoek...&quot;</help>
+    <label>Casebeschrijving</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

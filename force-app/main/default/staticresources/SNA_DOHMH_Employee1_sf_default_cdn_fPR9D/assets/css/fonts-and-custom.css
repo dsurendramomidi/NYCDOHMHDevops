@@ -120,4 +120,28 @@ font-family: 'HelveticaNeue';
     height: 30px;
     transform: rotate(-90deg);
     }
+
+/* Removing the Follow, Edit and Delete buttons on case pagelayout */
+.not-selected{ visibility: hidden }
+
+/* Header chnages */
+.forceHighlightsStencilDesktop .entityNameTitle {
+    color: var(--lwc-colorTextWeak,rgb(0, 0, 0));
+    font-size:16px !important;
+    font-weight:700 !important;
+}
+
+.forceHighlightsStencilDesktop .clip-text {
+ font-weight:400 !important;
+}
+
+
+.forceHighlightsDesktopListRecordItem .slds-form-element__label{
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.forceHighlightsDesktopListRecordItem .slds-form-element__static {
+    font-size: 18px !important;
+}
 :root { --dxp-c-section-columns-max-width: 1440px; }

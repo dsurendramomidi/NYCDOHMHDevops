@@ -8,5 +8,17 @@
         <plural>true</plural>
         <value>ADM</value>
     </caseValues>
+    <recordTypes>
+        <label></label>
+        <name>Business_Card_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Print_Requisition</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Transportation_Request</name>
+    </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

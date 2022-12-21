@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>[編集] をクリックして、ここにナレッジ記事の内容を入力します。ユーザが記事を検索して選択すると、この情報が表示されます。</help>
+    <label>本文</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

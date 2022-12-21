@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>在用户记录与本文章相关的新票证时，为他们输入默认内容。该字段可以留空，或具有指导性，例如“描述问题或请求...</help>
+    <label>个案描述</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

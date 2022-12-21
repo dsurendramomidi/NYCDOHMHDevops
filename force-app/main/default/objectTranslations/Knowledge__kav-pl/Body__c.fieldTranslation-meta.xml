@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Kliknij przycisk Edytuj i wpisz tutaj zawartość artykułu wiedzy. Użytkownicy widzą tę informację, gdy wyszukują i wybierają artykuł</help>
+    <label>Treść</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

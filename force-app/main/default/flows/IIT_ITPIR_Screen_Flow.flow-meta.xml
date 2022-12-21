@@ -1,10 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <actionCalls>
+        <name>AssignFileToCase</name>
+        <label>AssignFileToCase</label>
+        <locationX>972</locationX>
+        <locationY>627</locationY>
+        <actionName>FileUploadImprovedHelper</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>APP_Create_Record_In_Custom_App_Object</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>versIds</name>
+            <value>
+                <elementReference>file2.contentVersionIds</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>FW_Create_Case.Case.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>FW_Email_Action</name>
+        <label>FW_Email_Action</label>
+        <locationX>1096</locationX>
+        <locationY>1166</locationY>
+        <actionName>Case.FW_Default_Request_Update</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>FW_Case_Confirmation</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>FW_Create_Case.Case.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>FW_Email_Requester</name>
+        <label>FW_Email_Requester</label>
+        <locationX>1096</locationX>
+        <locationY>1046</locationY>
+        <actionName>Case.FW_Default_Request_Submitted</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>FW_Email_Action</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>FW_Create_Case.Case.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>FW_Navigate_to_Case_Record</name>
         <label>FW Navigate to Case Record</label>
-        <locationX>776</locationX>
-        <locationY>1166</locationY>
+        <locationX>1096</locationX>
+        <locationY>1406</locationY>
         <actionName>c:navigateTo</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -22,32 +82,23 @@
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
-    <actionCalls>
-        <name>FW_Submit_for_Approval</name>
-        <label>FW_Submit for Approval</label>
-        <locationX>776</locationX>
-        <locationY>926</locationY>
-        <actionName>submit</actionName>
-        <actionType>submit</actionType>
-        <connector>
-            <targetReference>FW_Case_Confirmation</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>processDefinitionNameOrId</name>
-            <value>
-                <elementReference>APP_Approval_Process</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>objectId</name>
-            <value>
-                <elementReference>FW_Create_Case.Case.Id</elementReference>
-            </value>
-        </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </actionCalls>
     <apiVersion>54.0</apiVersion>
+    <choices>
+        <name>No</name>
+        <choiceText>No</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Yes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Yes</stringValue>
+        </value>
+    </choices>
     <dynamicChoiceSets>
         <name>OptionProjectType</name>
         <dataType>Picklist</dataType>
@@ -89,12 +140,14 @@
     <recordCreates>
         <name>APP_Create_Record_In_Custom_App_Object</name>
         <label>APP Create Record In Custom App Object</label>
-        <locationX>776</locationX>
-        <locationY>566</locationY>
-        <assignRecordIdToReference>FW_CustomAppObjectRecordId</assignRecordIdToReference>
+        <locationX>1096</locationX>
+        <locationY>693</locationY>
         <connector>
-            <targetReference>APP_Get_App_Record_Details</targetReference>
+            <targetReference>APP_Update_Related_Case_Record</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>FW_Rollback_AfterCaseUpdate</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>APP_Record__c</field>
             <value>
@@ -138,62 +191,45 @@
             </value>
         </inputAssignments>
         <object>IIT__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordDeletes>
-        <name>FW_DeleteCaseRecord</name>
-        <label>FW_DeleteCaseRecord</label>
-        <locationX>1040</locationX>
-        <locationY>1046</locationY>
-        <connector>
-            <targetReference>FW_Rollback_Confirmation</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>FW_Create_Case.Case.Id</elementReference>
-            </value>
-        </filters>
-        <object>Case</object>
-    </recordDeletes>
     <recordLookups>
-        <name>APP_Get_App_Record_Details</name>
-        <label>APP_Get App Record Details</label>
-        <locationX>776</locationX>
-        <locationY>686</locationY>
+        <name>Get_My_Info</name>
+        <label>Get My Info</label>
+        <locationX>1096</locationX>
+        <locationY>326</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>APP_Update_Related_Case_Record</targetReference>
+            <targetReference>APP_Request</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>Id</field>
+            <field>UserId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>FW_CustomAppObjectRecordId</elementReference>
+                <elementReference>FW_OnBehalfOf.Employee.UserId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>IIT__c</object>
+        <object>Employee</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordRollbacks>
         <name>FW_Rollback_AfterCaseUpdate</name>
         <label>FW_Rollback_AfterCaseUpdate</label>
-        <locationX>1040</locationX>
+        <locationX>1360</locationX>
         <locationY>926</locationY>
         <connector>
-            <targetReference>FW_DeleteCaseRecord</targetReference>
+            <targetReference>FW_Rollback_Confirmation</targetReference>
         </connector>
     </recordRollbacks>
     <recordUpdates>
         <name>APP_Update_Related_Case_Record</name>
         <label>APP_Update Related Case Record</label>
-        <locationX>776</locationX>
+        <locationX>1096</locationX>
         <locationY>806</locationY>
         <connector>
-            <targetReference>FW_Submit_for_Approval</targetReference>
+            <targetReference>Approval_History</targetReference>
         </connector>
         <faultConnector>
             <targetReference>FW_Rollback_AfterCaseUpdate</targetReference>
@@ -224,13 +260,13 @@
     <screens>
         <name>APP_Request</name>
         <label>APP_Request</label>
-        <locationX>776</locationX>
-        <locationY>447</locationY>
+        <locationX>1096</locationX>
+        <locationY>446</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>APP_Create_Record_In_Custom_App_Object</targetReference>
+            <targetReference>FW_Create_Case</targetReference>
         </connector>
         <fields>
             <name>APP_Request_Section1</name>
@@ -308,10 +344,62 @@
                     <name>Project_Type</name>
                     <choiceReferences>OptionProjectType</choiceReferences>
                     <dataType>String</dataType>
+                    <defaultValue>
+                        <stringValue>Standard Application</stringValue>
+                    </defaultValue>
                     <fieldText>Project Type</fieldText>
                     <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
+                    <isRequired>true</isRequired>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section2_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section2_Column4</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>APP_Request_Section3</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section3_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
                     <name>Project_Name</name>
                     <dataType>String</dataType>
@@ -347,7 +435,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section2_Column2</name>
+                <name>APP_Request_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -358,6 +446,157 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Project_Type</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Standard Application</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>APP_Request_Section4</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section4_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>msg</name>
+                    <fieldText>&lt;p&gt;&lt;em style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; color: rgb(255, 0, 0);&quot;&gt;This request will be reviewed by Communications.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Please review the agency’s Guidelines for Mobile App Development on the External Affairs Shareport page. It details what program should expect and the commitment required in building a native mobile application. Once program has researched, strategized and budgeted for the build, fill out the checklist below. The checklist will need to be approved by Communications and the First Deputy Commissioner.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>HaveYouObtained</name>
+                    <choiceReferences>Yes</choiceReferences>
+                    <choiceReferences>No</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Have you obtained the authorized signatures for the Mobile Application Checklist?</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Checklist</name>
+                    <extensionName>flowruntime:url</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>readonly</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Mobile Application Checklist Form</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>disabled</name>
+                        <value>
+                            <booleanValue>false</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value>
+                            <booleanValue>false</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>www.google.com</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>HaveYouObtained</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <elementReference>No</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>file2</name>
+                    <extensionName>c:fileUploadImproved</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>sessionKey</name>
+                        <value>
+                            <elementReference>$Flow.InterviewGuid</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>renderFilesBelow</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Upload a signed copy of Mobile Application Checklist</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>allowMultiple</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>HaveYouObtained</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <elementReference>Yes</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section4_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>Project_Type</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Mobile Application</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -366,8 +605,8 @@
     <screens>
         <name>FW_Case_Confirmation</name>
         <label>FW Case Confirmation</label>
-        <locationX>776</locationX>
-        <locationY>1046</locationY>
+        <locationX>1096</locationX>
+        <locationY>1286</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -386,8 +625,8 @@
     <screens>
         <name>FW_Rollback_Confirmation</name>
         <label>FW_Rollback_Confirmation</label>
-        <locationX>1040</locationX>
-        <locationY>1166</locationY>
+        <locationX>1360</locationX>
+        <locationY>1046</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -400,20 +639,48 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>650</locationX>
+        <locationX>970</locationX>
         <locationY>48</locationY>
         <connector>
             <targetReference>FW_OnBehalfOf</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
+    <subflows>
+        <name>Approval_History</name>
+        <label>Approval History</label>
+        <locationX>1096</locationX>
+        <locationY>926</locationY>
+        <connector>
+            <targetReference>FW_Email_Requester</targetReference>
+        </connector>
+        <flowName>FW_Approval_History</flowName>
+        <inputAssignments>
+            <name>Action</name>
+            <value>
+                <stringValue>Submitted</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>CaseID</name>
+            <value>
+                <elementReference>FW_Create_Case.Case.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Workflow</name>
+            <value>
+                <stringValue>Request</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
     <subflows>
         <name>FW_Create_Case</name>
         <label>FW Create Case</label>
-        <locationX>776</locationX>
-        <locationY>326</locationY>
+        <locationX>1096</locationX>
+        <locationY>545</locationY>
         <connector>
-            <targetReference>APP_Request</targetReference>
+            <targetReference>AssignFileToCase</targetReference>
         </connector>
         <flowName>FW_Create_Case</flowName>
         <inputAssignments>
@@ -463,10 +730,10 @@
     <subflows>
         <name>FW_OnBehalfOf</name>
         <label>FW OnBehalfOf</label>
-        <locationX>776</locationX>
+        <locationX>1096</locationX>
         <locationY>206</locationY>
         <connector>
-            <targetReference>FW_Create_Case</targetReference>
+            <targetReference>Get_My_Info</targetReference>
         </connector>
         <flowName>FW_On_Behalf_Of</flowName>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -560,13 +827,6 @@
         <value>
             <stringValue>IIT</stringValue>
         </value>
-    </variables>
-    <variables>
-        <name>FW_CustomAppObjectRecordId</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>FW_ForCaseDescription</name>

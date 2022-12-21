@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Въведете съдържание по подразбиране за потребителите, когато регистрират нов билет, свързан с тази статия. Полето може да е празно или инструктивно, като например „Опишете своя проблем или заявка...“</help>
+    <label>Описание на случай</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

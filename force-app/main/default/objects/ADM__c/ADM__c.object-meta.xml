@@ -162,7 +162,7 @@
     <pluralLabel>ADM</pluralLabel>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <searchLayouts>
-        <searchResultsAdditionalFields>BCR_AssignTo__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BCR_AssignedToName__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>BCR_RequesterCellPhone__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>BCR_ContactRequired__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>BCR_PositionRequired__c</searchResultsAdditionalFields>

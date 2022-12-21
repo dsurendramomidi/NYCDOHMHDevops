@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>คลิก แก้ไข แล้วป้อนเนื้อหาของบทความ Knowledge ที่นี่ ผู้ใช้จะเห็นข้อมูลนี้เมื่อค้นหาและเลือกบทความ</help>
+    <label>เนื้อความ</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

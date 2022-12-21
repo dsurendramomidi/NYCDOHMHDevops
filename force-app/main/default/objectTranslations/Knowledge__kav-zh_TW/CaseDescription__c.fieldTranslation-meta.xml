@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>輸入當使用者記錄與此文章相關的新提問時，他們會看到的預設內容。該欄位可以空白，也可以包含指示，例如「請描述您的問題或要求...</help>
+    <label>個案描述</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

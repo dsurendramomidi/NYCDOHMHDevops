@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BCR_Print_Shop_Task_TEST</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Reference_Number__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <filterScope>Queue</filterScope>
+    <label>BCR - Print Shop Task (TEST)</label>
+    <queue>BCR_Graphic_Group</queue>
+</ListView>

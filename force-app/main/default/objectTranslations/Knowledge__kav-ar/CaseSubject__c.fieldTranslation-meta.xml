@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>يمكنك ترك حقل موضوع الحالة فارغًا وسيعود افتراضيًا إلى عنوان المقالة الحالي.</help>
+    <label>موضوع الحالة</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

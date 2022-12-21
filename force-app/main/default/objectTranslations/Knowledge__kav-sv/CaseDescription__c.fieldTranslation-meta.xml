@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Ange standardinnehåll för användare när de loggar ett nytt kundcase för denna artikel. Fältet kan vara tomt eller innehålla instruktioner, t.ex. ”Beskriv ditt problem eller din begäran …”.</help>
+    <label>Beskrivning av kundcase</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

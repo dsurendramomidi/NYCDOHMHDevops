@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Μπορείτε να αφήσετε κενό το πεδίο &quot;Θέμα υπόθεσης&quot; και θα οριστεί από προεπιλογή στον τρέχοντα τίτλο άρθρου.</help>
+    <label>Θέμα υπόθεσης</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

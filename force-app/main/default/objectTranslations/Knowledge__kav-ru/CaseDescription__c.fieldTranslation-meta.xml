@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Введите стандартное содержимое для пользователей при регистрации нового обращения, связанного с данной статьей. Поле может быть пустым или содержать инструкции (например, &quot;Опишите свою проблему или отправьте запрос...&quot;).</help>
+    <label>Описание обращения</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

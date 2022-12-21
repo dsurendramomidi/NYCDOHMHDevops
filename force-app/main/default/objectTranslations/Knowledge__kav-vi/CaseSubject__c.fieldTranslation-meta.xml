@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Bạn có thể để trống trường Chủ Đề Trường Hợp và trường này sẽ mặc định theo tiêu đề bài viết hiện tại.</help>
+    <label>Chủ Đề Trường Hợp</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

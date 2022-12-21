@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>按一下「編輯」，並在此處輸入 Knowledge 文章的內容。當使用者搜尋並選取文章時，他們會看見此資訊。</help>
+    <label>本文</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

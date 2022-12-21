@@ -25,13 +25,10 @@
     <actionCalls>
         <name>FW_Submit_for_Approval</name>
         <label>FW_Submit for Approval</label>
-        <locationX>1241</locationX>
-        <locationY>1230</locationY>
+        <locationX>1044</locationX>
+        <locationY>1271</locationY>
         <actionName>submit</actionName>
         <actionType>submit</actionType>
-        <connector>
-            <targetReference>FW_Case_Confirmation</targetReference>
-        </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>processDefinitionNameOrId</name>
@@ -206,7 +203,7 @@
         <locationX>1249</locationX>
         <locationY>1015</locationY>
         <defaultConnector>
-            <targetReference>FW_Submit_for_Approval</targetReference>
+            <targetReference>FW_Case_Confirmation</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -225,7 +222,8 @@
             <label>FW Add Attachment Outcome</label>
         </rules>
     </decisions>
-    <description>Move create case to the end</description>
+    <description>Move create case to the end
+Remove Submit for approval</description>
     <dynamicChoiceSets>
         <name>OptionProjectType</name>
         <dataType>Picklist</dataType>
@@ -792,7 +790,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>FW_Submit_for_Approval</targetReference>
+            <targetReference>FW_Case_Confirmation</targetReference>
         </connector>
         <fields>
             <name>FW_Attachment_Component1</name>
@@ -873,7 +871,7 @@
             <targetReference>FW_OnBehalfOf</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>CPR_Funding_Source</name>
         <label>CPR Funding Source</label>

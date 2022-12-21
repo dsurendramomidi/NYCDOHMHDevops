@@ -3,6 +3,9 @@
     <active>true</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
         <type>owner</type>
     </allowedSubmitters>
     <approvalPageFields>
@@ -41,7 +44,11 @@
     <emailTemplate>unfiled$public/Approval_Processing_Email_Template</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
-        <formula>1=1</formula>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>notEqual</operation>
+            <value>Webpage Change Request</value>
+        </criteriaItems>
     </entryCriteria>
     <finalApprovalActions>
         <action>
@@ -76,7 +83,7 @@
         </action>
     </initialSubmissionActions>
     <label>DOHMH EE Default Approval Process</label>
-    <processOrder>2</processOrder>
+    <processOrder>3</processOrder>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

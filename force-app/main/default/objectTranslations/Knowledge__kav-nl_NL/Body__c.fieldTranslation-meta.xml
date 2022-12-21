@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Klik op Bewerken en geef hier de inhoud van een Knowledge-artikel op. Gebruikers zien deze informatie bij het zoeken naar en selecteren van een artikel</help>
+    <label>Hoofdtekst</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

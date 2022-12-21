@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>انقر فوق &quot;تحرير&quot; وأدخل محتوى المقالة المعرفية هنا. يرى المستخدمون هذه المعلومات عندما يقومون بالبحث عن مقالة واختيارها</help>
+    <label>النص الأساسي</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

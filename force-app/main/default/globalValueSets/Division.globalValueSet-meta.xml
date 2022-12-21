@@ -16,6 +16,11 @@
         <label>Chief Operating Officer</label>
     </customValue>
     <customValue>
+        <fullName>Chief Program Officer</fullName>
+        <default>false</default>
+        <label>Chief Program Officer</label>
+    </customValue>
+    <customValue>
         <fullName>Commissioner/Executive</fullName>
         <default>false</default>
         <label>Commissioner/Executive</label>

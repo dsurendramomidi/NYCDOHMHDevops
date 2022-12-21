@@ -109,4 +109,46 @@
         <label>Print Shop Cancelled</label>
         <closed>true</closed>
     </standardValue>
+    <standardValue>
+        <fullName>Draft</fullName>
+        <default>false</default>
+        <label>Draft</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Review</fullName>
+        <default>false</default>
+        <label>Pending Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved - Not Started</fullName>
+        <default>false</default>
+        <label>Approved - Not Started</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>Approved</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Canceled</fullName>
+        <default>false</default>
+        <label>Canceled</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+        <closed>true</closed>
+    </standardValue>
 </StandardValueSet>

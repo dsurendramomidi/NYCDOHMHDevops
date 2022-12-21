@@ -10,7 +10,7 @@
     <columns>Record_Type_Name__c</columns>
     <columns>MDR_Reason_for_the_Replacement__c</columns>
     <columns>CASES.RECORDTYPE</columns>
-    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.CREATED_DATE</columns>
     <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
     <columns>Related_Record_URL__c</columns>
     <filterScope>Everything</filterScope>
@@ -20,4 +20,7 @@
         <value>Closed</value>
     </filters>
     <label>All Open Cases</label>
+    <sharedTo>
+        <group>DOHMH_EE_Default_Group</group>
+    </sharedTo>
 </ListView>

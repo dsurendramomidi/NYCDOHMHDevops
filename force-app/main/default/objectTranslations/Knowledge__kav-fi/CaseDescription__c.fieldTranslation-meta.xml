@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Kirjoita käyttäjille oletussisältö, kun he kirjaavat tähän artikkeliin liittyvän uuden tiketin. Kenttä voi olla tyhjä tai sisältää ohjeita, kuten &quot;Kuvaile ongelmaa tai pyyntöä...&quot;</help>
+    <label>Tapauksen kuvaus</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

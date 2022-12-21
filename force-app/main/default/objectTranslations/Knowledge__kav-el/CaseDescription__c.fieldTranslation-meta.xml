@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Εισαγάγετε το προεπιλεγμένο περιεχόμενο για χρήστες όταν καταγράφουν ένα νέο δελτίο που σχετίζεται με αυτό το άρθρο. Το πεδίο μπορεί να είναι κενό ή να περιέχει οδηγίες, όπως &quot;Περιγράψτε το ζήτημα ή το αίτημά σας...&quot;</help>
+    <label>Περιγραφή υπόθεσης</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

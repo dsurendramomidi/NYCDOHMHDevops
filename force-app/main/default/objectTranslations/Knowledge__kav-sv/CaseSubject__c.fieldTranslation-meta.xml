@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Du kan lämna fältet Kundcase-ämne tomt och det blir som standard för den nuvarande artikelrubriken.</help>
+    <label>Kundcase-ämne</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

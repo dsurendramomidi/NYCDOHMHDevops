@@ -211,9 +211,9 @@
         <label>Bureau of Operations</label>
     </customValue>
     <customValue>
-        <fullName>Bureau of Public Affairs</fullName>
+        <fullName>Bureau of Government Affairs</fullName>
         <default>false</default>
-        <label>Bureau of Public Affairs</label>
+        <label>Bureau of Government Affairs</label>
     </customValue>
     <customValue>
         <fullName>Bureau of Public Health Clinics</fullName>
@@ -336,11 +336,6 @@
         <label>Office of the Executive Deputy Commissioner</label>
     </customValue>
     <customValue>
-        <fullName>Provider Education</fullName>
-        <default>false</default>
-        <label>Provider Education</label>
-    </customValue>
-    <customValue>
         <fullName>Strategic Operations and Performance Management</fullName>
         <default>false</default>
         <label>Strategic Operations and Performance Management</label>
@@ -349,6 +344,21 @@
         <fullName>World Trade Center Health Registry</fullName>
         <default>false</default>
         <label>World Trade Center Health Registry</label>
+    </customValue>
+    <customValue>
+        <fullName>OTPS Uncontrollables,</fullName>
+        <default>false</default>
+        <label>OTPS Uncontrollables,</label>
+    </customValue>
+    <customValue>
+        <fullName>Office of Chief Program Officer,</fullName>
+        <default>false</default>
+        <label>Office of Chief Program Officer,</label>
+    </customValue>
+    <customValue>
+        <fullName>OEA Deputy Commissioner</fullName>
+        <default>false</default>
+        <label>OEA Deputy Commissioner</label>
     </customValue>
     <masterLabel>Bureau</masterLabel>
     <sorted>true</sorted>

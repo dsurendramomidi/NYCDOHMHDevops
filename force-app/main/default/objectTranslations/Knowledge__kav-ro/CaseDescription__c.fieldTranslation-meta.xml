@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Introduceți conținutul implicit pentru utilizatorii care înregistrează un nou tichet legat de acest articol. Acest câmp poate fi necompletat sau poate să conțină instrucțiuni, de exemplu, „Descrieți problema sau solicitarea...”</help>
+    <label>Descriere caz</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Angiv standardindhold for brugere, når de opretter en ny supportanmodning, der er relateret til denne artikel. Feltet kan være tomt eller instruerende, f.eks. &quot;Beskriv dit problem eller din anmodning...</help>
+    <label>Sagsbeskrivelse</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

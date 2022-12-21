@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Nhập nội dung mặc định cho người dùng khi họ ghi lại phiếu mới liên quan đến bài viết này. Trường có thể để trống hoặc mang tính hướng dẫn như “Mô tả sự cố hoặc yêu cầu của bạn...</help>
+    <label>Mô Tả Trường Hợp</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

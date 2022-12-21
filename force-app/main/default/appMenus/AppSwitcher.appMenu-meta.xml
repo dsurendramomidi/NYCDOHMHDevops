@@ -196,4 +196,12 @@
         <name>Tigerface1__Tiger_Face_Systems</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>Public Community</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Private Community</name>
+        <type>Network</type>
+    </appMenuItems>
 </AppMenu>

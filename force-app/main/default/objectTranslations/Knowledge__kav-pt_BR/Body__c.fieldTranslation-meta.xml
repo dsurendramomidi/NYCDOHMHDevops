@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Clique em Editar e insira o conteúdo para o artigo do Knowledge aqui. Os usuários visualizam essa informação quando eles procuram e selecionam um artigo</help>
+    <label>Corpo</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

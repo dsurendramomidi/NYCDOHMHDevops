@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Saisissez un contenu par défaut pour les utilisateurs lorsqu’ils consignent un nouveau ticket relatif à cet article. Le champ peut être vide ou instructif, tel que « Décrivez votre problème ou votre requête... »</help>
+    <label>Description de la requête</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

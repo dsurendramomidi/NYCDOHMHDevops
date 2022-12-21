@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Klikk på Rediger og skriv inn innholdet for en kunnskapsartikkel her. Brukere ser denne informasjonen når de søker og velger en artikkel.</help>
+    <label>Tekst</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

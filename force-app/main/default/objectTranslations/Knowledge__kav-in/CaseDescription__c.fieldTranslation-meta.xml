@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Masukkan konten default untuk pengguna saat mereka mencatat tiket baru yang terkait dengan artikel ini. Bidang isian dapat kosong, atau instruksional, seperti &quot;Jelaskan masalah atau permintaan Anda...</help>
+    <label>Deskripsi Kasus</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

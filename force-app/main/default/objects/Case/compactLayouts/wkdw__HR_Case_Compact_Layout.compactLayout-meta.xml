@@ -4,6 +4,7 @@
     <fields>Subject</fields>
     <fields>RecordTypeId</fields>
     <fields>Priority</fields>
+    <fields>OwnerId</fields>
     <fields>CaseNumber</fields>
     <fields>Status</fields>
     <fields>CreatedDate</fields>

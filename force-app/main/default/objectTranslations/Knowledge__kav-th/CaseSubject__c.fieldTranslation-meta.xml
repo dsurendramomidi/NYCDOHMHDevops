@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>ปล่อยให้ฟิลด์ชื่อเรื่องเคสว่างได้ ซึ่งจะค่าเริ่มต้นจะเป็นไปตามชื่อเรื่องบทความปัจจุบัน</help>
+    <label>ชื่อเรื่องเคส</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

@@ -8,5 +8,12 @@
         <plural>true</plural>
         <value>Commissioner&apos;s Office Records</value>
     </caseValues>
+    <layouts>
+        <layout>COM Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Pole Předmět případu můžete nechat prázdné a bude fungovat jako výchozí pro aktuální název článku.</help>
+    <label>Předmět případu</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

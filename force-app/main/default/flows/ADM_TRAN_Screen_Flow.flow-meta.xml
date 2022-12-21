@@ -1214,7 +1214,7 @@
             <targetReference>FW_OnBehalfOf</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>FW_Create_Case</name>
         <label>FW Create Case</label>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
+        <fullName>FW_Default_Request_Submitted</fullName>
+        <ccEmails>zzheng1@health.nyc.gov</ccEmails>
+        <description>FW Send Email to the Requester</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderAddress>gtaylor@health.nyc.gov</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/FW_Default_Request_Submitted</template>
+    </alerts>
+    <alerts>
+        <fullName>FW_Default_Request_Update</fullName>
+        <ccEmails>zzheng1@health.nyc.gov</ccEmails>
+        <description>FW Send Email to the Action</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>gtaylor@health.nyc.gov</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/FW_Default_Request_Update</template>
+    </alerts>
+    <alerts>
         <fullName>Send_Email_to_the_Requester1</fullName>
         <ccEmails>stalla@health.nyc.gov</ccEmails>
         <ccEmails>dsurendramomidi@health.nyc.gov</ccEmails>
@@ -62,6 +86,26 @@
         <template>unfiled$public/Service_Request_Submitted</template>
     </alerts>
     <alerts>
+        <fullName>X1_hour</fullName>
+        <description>1 hour warning before resolution expires</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Case_Escalation_First_Warning</template>
+    </alerts>
+    <alerts>
+        <fullName>X2_hour_warning_before_resolution_expires</fullName>
+        <description>2 hour warning before resolution expires</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Case_Escalation_Second_Warning</template>
+    </alerts>
+    <alerts>
         <fullName>eForm_Approved_Email</fullName>
         <description>eForm Approved Email</description>
         <protected>false</protected>
@@ -92,10 +136,21 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
-        <fullName>Division_Approval</fullName>
+        <fullName>Owner_Daniel_Wiafe</fullName>
+        <field>OwnerId</field>
+        <lookupValue>dwiafe@health.nyc.gov</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Owner:Daniel Wiafe</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Division_Approval</fullName>
         <field>Status</field>
         <literalValue>Division Approval</literalValue>
-        <name>Division  Approval</name>
+        <name>Status:Division Approval</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -152,9 +207,29 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Status_Processing</fullName>
+        <field>Status</field>
+        <literalValue>Processing</literalValue>
+        <name>Status:Processing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Requester_Review</fullName>
+        <field>Status</field>
+        <literalValue>Requester Review</literalValue>
+        <name>Status:Requester Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Status_Update_to_Completed</fullName>
         <field>Status</field>
-        <literalValue>Completed</literalValue>
+        <literalValue>Closed</literalValue>
         <name>Status Update to Completed</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
@@ -166,6 +241,16 @@
         <field>Status</field>
         <literalValue>Submitted for Approval</literalValue>
         <name>Status Update to Submit for Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Submitted_for_Approval</fullName>
+        <field>Status</field>
+        <literalValue>Submitted for Approval</literalValue>
+        <name>Status:Submitted for Approval</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -224,17 +309,6 @@
         <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>Update_Owner_To_BCR_Division_Approver</fullName>
-        <field>OwnerId</field>
-        <lookupValue>sgeorge11@health.nyc.gov</lookupValue>
-        <lookupValueType>User</lookupValueType>
-        <name>Update Owner To BCR Division Approver</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>LookupValue</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
         <fullName>Updating_Case_Owner_to_IT_MDT_approvers</fullName>

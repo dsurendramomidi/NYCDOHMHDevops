@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Щелкните &quot;Правка&quot; и введите здесь содержимое для статьи Knowledge. Данная информация отображается пользователям при поиске и выборе статьи.</help>
+    <label>Текст</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

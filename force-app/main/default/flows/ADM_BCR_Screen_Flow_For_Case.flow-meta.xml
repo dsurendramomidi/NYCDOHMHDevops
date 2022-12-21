@@ -17,6 +17,7 @@
             <stringValue>Yes</stringValue>
         </value>
     </choices>
+    <description>remove banner</description>
     <dynamicChoiceSets>
         <name>OptionProjectType</name>
         <dataType>Picklist</dataType>
@@ -65,8 +66,8 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordLookups>
-        <name>Get_Reference_Number</name>
-        <label>Get Reference Number</label>
+        <name>Get_Case</name>
+        <label>Get Case</label>
         <locationX>768</locationX>
         <locationY>210</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
@@ -81,17 +82,15 @@
                 <elementReference>CaseID</elementReference>
             </value>
         </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Case</object>
-        <outputAssignments>
-            <assignToReference>ReferenceNumber</assignToReference>
-            <field>Reference_Number__c</field>
-        </outputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
         <name>Get_Request_Data</name>
         <label>Get Request Data</label>
-        <locationX>702</locationX>
-        <locationY>399</locationY>
+        <locationX>471</locationX>
+        <locationY>391</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Copy_1_of_APP_Request</targetReference>
@@ -101,7 +100,7 @@
             <field>Name</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>ReferenceNumber</elementReference>
+                <elementReference>Get_Case.Reference_Number__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -112,18 +111,14 @@
     <screens>
         <name>Copy_1_of_APP_Request</name>
         <label>Copy 1 of APP_Request</label>
-        <locationX>704</locationX>
-        <locationY>698</locationY>
+        <locationX>774</locationX>
+        <locationY>471</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Get_Reference_Number</targetReference>
+            <targetReference>Get_Case</targetReference>
         </connector>
-        <fields>
-            <name>Copy_1_of_msg2</name>
-            <fieldType>DisplayText</fieldType>
-        </fields>
         <fields>
             <name>Copy_1_of_APP_Request_Section1</name>
             <fieldType>RegionContainer</fieldType>
@@ -136,13 +131,8 @@
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
-                    <name>f2</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Job Title: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterJobTitle__c}&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>f3</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Work Address: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterWorkAddress__c}&lt;/p&gt;</fieldText>
+                    <name>f4</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Work Phone: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterWorkPhone__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
@@ -153,7 +143,7 @@
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>6</stringValue>
+                        <stringValue>4</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
@@ -162,8 +152,8 @@
                 <name>Copy_1_of_APP_Request_Section1_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>f4</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Work Phone: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterWorkPhone__c}&lt;/p&gt;</fieldText>
+                    <name>f2</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Job Title: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterJobTitle__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
@@ -172,19 +162,75 @@
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
-                    <name>f5</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Fax:&lt;/strong&gt;&lt;span style=&quot;background-color: var(--lwc-colorBackgroundInput,rgb(255, 255, 255)); color: var(--lwc-colorTextWeak,rgb(68, 68, 68)); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;);&quot;&gt;{!Get_Request_Data.BCR_New_RequesterWorkFax__c} &lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>f7</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Division: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterDivision2__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
-                        <stringValue>6</stringValue>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Copy_1_of_APP_Request_Section1_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>f3</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Work Address: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterWorkAddress__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>f5</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Fax: &lt;/strong&gt;&lt;span style=&quot;font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); font-size: var(--lwc-fontSize3,0.8125rem); color: var(--lwc-colorTextWeak,rgb(68, 68, 68)); background-color: var(--lwc-colorBackgroundInput,rgb(255, 255, 255));&quot;&gt;{!Get_Request_Data.BCR_New_RequesterWorkFax__c} &lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>f9</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Bureau: &lt;/strong&gt;{!Get_Request_Data.BCR_New_RequesterBureau2__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
                     </value>
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>f16</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Select your division approver: &lt;/strong&gt;{!Get_Request_Data.BCR_AssignedToName__c}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>f11</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;1. Does your job require you to spend more than sixty percent of your time interacting with the public?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_Request_Data.BCR_PublicDealing__c}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>f12</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;2. Does your job require that these contacts get back to you specifically as opposed to any others in your office?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!Get_Request_Data.BCR_ContactRequired__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>f13</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;3. Does your position require that you are often personally accessible by phone or pager?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_Request_Data.BCR_PositionRequired__c}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>f14</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;4. Do you frequently represent the agency to public and private business contacts?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!Get_Request_Data.BCR_RepresentAgency__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>f15</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Comments:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; color: rgb(2, 2, 2);&quot;&gt;{!Get_Request_Data.BCR_Comments__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>false</showFooter>
         <showHeader>false</showHeader>
@@ -193,7 +239,7 @@
         <locationX>649</locationX>
         <locationY>48</locationY>
         <connector>
-            <targetReference>Get_Reference_Number</targetReference>
+            <targetReference>Get_Case</targetReference>
         </connector>
     </start>
     <status>Active</status>

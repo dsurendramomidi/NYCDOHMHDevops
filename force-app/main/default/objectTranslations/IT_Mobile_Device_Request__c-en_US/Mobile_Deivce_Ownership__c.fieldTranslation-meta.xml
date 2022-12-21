@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Mobile_Deivce_Ownership__c</name>
+    <picklistValues>
+        <masterLabel>Bring Your Own Device (BYOD)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOHMH Device</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

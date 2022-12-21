@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
-    <active>true</active>
+    <active>false</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
         <type>owner</type>
@@ -124,7 +124,7 @@
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <initialSubmissionActions>
         <action>
-            <name>Division_Approval</name>
+            <name>Owner_Daniel_Wiafe</name>
             <type>FieldUpdate</type>
         </action>
         <action>
@@ -132,7 +132,7 @@
             <type>Alert</type>
         </action>
         <action>
-            <name>Update_Owner_To_BCR_Division_Approver</name>
+            <name>Submitted_for_Approval</name>
             <type>FieldUpdate</type>
         </action>
     </initialSubmissionActions>

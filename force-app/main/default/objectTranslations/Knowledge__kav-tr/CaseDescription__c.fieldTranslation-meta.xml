@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Bu makale ile ilgili yeni bir bileti kaydettiklerinde kullanıcılar için varsayılan içeriği girin. Alan boş ya da talimat niteliğinde olabilir; örneğin; “Sorununuzu veya isteğinizi açıklayın...”</help>
+    <label>Vaka Açıklaması</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Vous pouvez laisser le champ Objet de la requête vide et par défaut, il indiquera le titre de l’article actuel.</help>
+    <label>Objet de la requête</label>
+    <name>CaseSubject__c</name>
+</CustomFieldTranslation>

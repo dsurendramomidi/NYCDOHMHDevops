@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>この記事に関連する新しいチケットをユーザが登録する場合のデフォルトの内容を入力します。項目は空白か、または「問題または申請の内容を説明してください...」のような指示を入力します。</help>
+    <label>ケースの説明</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Unesite zadani sadržaj za korisnike kada evidentiraju novu karticu povezanu s ovom člankom. Polje može biti prazno ili može sadržavati uputu, primjerice &quot;Opišite svoj problem ili navedite zahtjev...&quot;</help>
+    <label>Opis slučaja</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

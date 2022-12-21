@@ -135,7 +135,19 @@
                         <img src="{!$Resource.icons + '/Digital_Signature_Project_Request.png'}"   />
                         <span>Digital Signature Project Request</span>
                     </a>
-                </div>     
+                </div>   
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./it-project-tracker" title="IT Project Tracker" class="icons">
+                        <img src="{!$Resource.icons + '/IT_Project_Request.png'}"   />
+                        <span>IT Project Tracker</span>
+                    </a>
+                </div>
+                <div class="slds-col slds-size_1-of-4 horizontalAlign">
+                    <a href="./assistive-technology-devices-tracking-system" title="Assistive Technology Devices Tracking System" class="icons">
+                        <img src="{!$Resource.icons + '/IT_Project_Request.png'}"   />
+                        <span>Assistive Technology Devices Tracking System</span>
+                    </a>
+                </div>
             </aura:if>
         </div>
     </div>

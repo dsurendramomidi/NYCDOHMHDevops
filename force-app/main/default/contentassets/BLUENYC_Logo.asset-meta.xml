@@ -9,6 +9,10 @@
             <access>VIEWER</access>
             <name>DOHMH Employee</name>
         </network>
+        <network>
+            <access>VIEWER</access>
+            <name>Public Community</name>
+        </network>
         <workspace>
             <access>INFERRED</access>
             <isManagingWorkspace>true</isManagingWorkspace>

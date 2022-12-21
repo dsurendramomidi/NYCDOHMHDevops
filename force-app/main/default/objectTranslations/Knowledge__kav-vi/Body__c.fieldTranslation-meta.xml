@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Nhấp vào Sửa rồi nhập nội dung cho bài viết Knowledge tại đây. Người dùng sẽ thấy thông tin này khi họ tìm kiếm và chọn bài viết</help>
+    <label>Nội dung</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

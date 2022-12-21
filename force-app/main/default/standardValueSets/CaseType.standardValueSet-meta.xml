@@ -1516,4 +1516,14 @@
         <default>false</default>
         <label>Assistive Technology Devices Tracking System</label>
     </standardValue>
+    <standardValue>
+        <fullName>IT Project Tracker</fullName>
+        <default>false</default>
+        <label>IT Project Tracker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Project Tracker Status Report</fullName>
+        <default>false</default>
+        <label>IT Project Tracker Status Report</label>
+    </standardValue>
 </StandardValueSet>

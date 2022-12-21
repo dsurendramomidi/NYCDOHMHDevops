@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>ป้อนเนื้อหาเริ่มต้นสำหรับผู้ใช้เมื่อบันทึกตั๋วใหม่ที่เกี่ยวข้องกับบทความนี้ ฟิลด์ว่างเปล่าได้ หรือเป็นคำแนะนำก็ได้ เช่น &quot;อธิบายปัญหาหรือคำขอของคุณ...</help>
+    <label>คำอธิบายเคส</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

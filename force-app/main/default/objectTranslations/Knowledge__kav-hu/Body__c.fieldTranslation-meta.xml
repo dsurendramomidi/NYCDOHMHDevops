@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Kattintson a Szerkesztés lehetőségre, és adja meg itt a Knowledge-cikk tartalmát. A felhasználók ezt az információt látják, amikor keresés után kiválasztanak egy cikket.</help>
+    <label>Szövegtörzs</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Введіть вміст за замовчуванням для користувачів, коли вони реєструють новий квиток, пов&apos;язаний із цією статтею. Поле може бути порожнім або містити інструкції, наприклад: &quot;Опишіть проблему чи запит…&quot;</help>
+    <label>Опис звернення</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

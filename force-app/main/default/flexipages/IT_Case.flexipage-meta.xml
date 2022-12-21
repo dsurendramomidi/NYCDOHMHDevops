@@ -245,6 +245,16 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>hideMarkCompleteButton</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentName>support:milestones</componentName>
+                <identifier>support_milestones</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>lookupFieldName</name>
                     <value>Case.AssetId</value>
                 </componentInstanceProperties>

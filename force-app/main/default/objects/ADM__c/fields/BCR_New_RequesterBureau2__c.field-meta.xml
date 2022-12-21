@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BCR_New_RequesterBureau2__c</fullName>
+    <externalId>false</externalId>
+    <label>BCR_New_RequesterBureau2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>BCR_New_RequesterDivision2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Bureau</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>First Deputy Commissioner and Chief Equity Officer</controllingFieldValue>
+            <valueName>Office of First Deputy Commissioner and Chief Equity Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>Bureau of Application Development and Database Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>Bureau of IT Strategy and Project Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>Bureau of Network Technology Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information Technology</controllingFieldValue>
+            <valueName>Office of Chief Information Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Bureau of Alcohol and Drug Use Prevention, Care and Treatment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Bureau of Children, Youth, and Families</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Bureau of Developmental Disabilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Bureau of Health Promotion for Justice-Impacted Populations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Bureau of Mental Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Bureau of Mental Hygiene Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Bureau of Mental Hygiene Community Engagement, Policy &amp; Practice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Office of Clinical Affairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mental Hygiene</controllingFieldValue>
+            <valueName>Office of the Executive Deputy Commissioner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office of Chief Medical Examiner</controllingFieldValue>
+            <valueName>Office of Chief Medical Examiner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office of External Affairs</controllingFieldValue>
+            <valueName>Bureau of Communications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office of External Affairs</controllingFieldValue>
+            <valueName>Bureau of Customer Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office of External Affairs</controllingFieldValue>
+            <valueName>Bureau of Government Affairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office of External Affairs</controllingFieldValue>
+            <valueName>OEA Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office of External Affairs</controllingFieldValue>
+            <valueName>OEA Deputy Commissioner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office of General Counsel</controllingFieldValue>
+            <valueName>Office of General Counsel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chief Program Officer</controllingFieldValue>
+            <valueName>Office of Chief Program Officer,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Administration Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Bureau of Clinical Quality Management and Improvement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Bureau of Facilities Planning and Administrative Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Bureau of Human Resources and Labor Relations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administration</controllingFieldValue>
+            <valueName>Bureau of Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Bureau of Bronx Neighborhood Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Bureau of Brooklyn Neighborhood Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Bureau of Chronic Disease Prevention</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Bureau of Equitable Health Systems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Bureau of Finance, Administration and Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Bureau of Harlem Neighborhood Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>Bureau of Health Equity Capacity Building</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Center for Health Equity and Community Wellness</controllingFieldValue>
+            <valueName>CHECW Deputy Commissioner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chief Operating Officer</controllingFieldValue>
+            <valueName>Bureau of Audit Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chief Operating Officer</controllingFieldValue>
+            <valueName>Office of Chief Operating Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chief Operating Officer</controllingFieldValue>
+            <valueName>Strategic Operations and Performance Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commissioner/Executive</controllingFieldValue>
+            <valueName>Office of the Commissioner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Bureau of Communicable Diseases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Bureau of Hepatitis, HIV, and STI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Bureau of Immunization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Bureau of Public Health Clinics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Bureau of the Public Health Laboratory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Bureau of Tuberculosis Control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disease Control</controllingFieldValue>
+            <valueName>Division Management &amp; Systems Coordination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <valueName>Bureau of Agency Preparedness and Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <valueName>Bureau of Emergency Field Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <valueName>Bureau of Grants Management and Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <valueName>Bureau of Healthcare and Community Readiness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Emergency Preparedness and Response</controllingFieldValue>
+            <valueName>EPR Office of the Deputy Commissioner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Bureau of Childcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Bureau of Environmental Disease and Injury Prevention</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Bureau of Environmental Sciences and Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Bureau of Environmental Surveillance and Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Bureau of Food Safety and Community Sanitation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Bureau of Veterinary and Pest Control Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Health</controllingFieldValue>
+            <valueName>Environmental Health Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <valueName>Bureau of Epidemiology Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <valueName>Bureau of Public Health Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <valueName>Bureau of Vital Statistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <valueName>Epidemiology Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Epidemiology</controllingFieldValue>
+            <valueName>World Trade Center Health Registry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family and Child Health</controllingFieldValue>
+            <valueName>Bureau of Early Intervention</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family and Child Health</controllingFieldValue>
+            <valueName>Bureau of Maternal Infant and Reproductive Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family and Child Health</controllingFieldValue>
+            <valueName>Bureau of School Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Family and Child Health</controllingFieldValue>
+            <valueName>Family and Child Health Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>Bureau of Budget and Revenue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>Bureau of Controller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>Finance Administration and Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finance</controllingFieldValue>
+            <valueName>Office of the Agency Chief Contracting Officer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

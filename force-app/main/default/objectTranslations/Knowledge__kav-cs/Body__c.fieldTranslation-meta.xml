@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Klikněte na možnost Upravit a zadejte obsah znalostního článku. Uživatelé tyto informace vidí při vyhledávání a výběru článku</help>
+    <label>Text</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

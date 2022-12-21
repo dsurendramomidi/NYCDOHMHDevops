@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Adja meg az alapértelmezett tartalmat a felhasználók számára arra az esetre, ha ezzel a cikkel kapcsolatban új jegyet készítenek. A mező üresen is hagyható, vagy utasításokat is el lehet benne helyezni például: „Ismertesse a problémáját vagy a kérését”.</help>
+    <label>Eset leírása</label>
+    <name>CaseDescription__c</name>
+</CustomFieldTranslation>

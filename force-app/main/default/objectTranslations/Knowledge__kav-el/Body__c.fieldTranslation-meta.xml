@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Κάντε κλικ στην επιλογή &quot;Επεξεργασία&quot; και εισαγάγετε το περιεχόμενο του άρθρου γνωσιακής βάσης εδώ. Οι χρήστες θα μπορούν να βλέπουν αυτές τις πληροφορίες όταν αναζητούν και επιλέγουν ένα άρθρο</help>
+    <label>Κυρίως τμήμα</label>
+    <name>Body__c</name>
+</CustomFieldTranslation>

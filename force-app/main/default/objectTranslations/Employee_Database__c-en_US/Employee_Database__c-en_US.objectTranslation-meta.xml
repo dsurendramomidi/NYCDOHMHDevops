@@ -8,5 +8,16 @@
         <plural>true</plural>
         <value>Employee Databases</value>
     </caseValues>
+    <layouts>
+        <layout>Employee Database Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Work Information</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

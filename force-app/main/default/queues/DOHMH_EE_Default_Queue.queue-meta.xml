@@ -8,6 +8,9 @@
         </publicGroups>
     </queueMembers>
     <queueSobject>
+        <sobjectType>Application_Dashboard__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
         <sobjectType>Case</sobjectType>
     </queueSobject>
 </Queue>
