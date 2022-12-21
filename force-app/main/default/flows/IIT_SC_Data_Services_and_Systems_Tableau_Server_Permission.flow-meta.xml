@@ -7,6 +7,7 @@
     </constants>
     <description>Tableau Server (Accounts/Permissions/New Site/Publishing issues)
 V2: a. Update to work with new sub flow and rename sub flow b. Remove RecordId lookup and queue ID lookup elements</description>
+    <environments>Default</environments>
     <interviewLabel>IIT SC Data Services and Systems - {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT SC Data Services and Systems - Tableau Server Permission</label>
     <processMetadataValues>

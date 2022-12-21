@@ -9,6 +9,7 @@
 V2
 1. Remove Record Type ID retrieval element
 2. Update Flow variables</description>
+    <environments>Default</environments>
     <interviewLabel>IIT SC Database Administration - {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT SC Database Administration - Deploy a Database</label>
     <processMetadataValues>

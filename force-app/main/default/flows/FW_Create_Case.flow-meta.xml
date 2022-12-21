@@ -2,6 +2,7 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
     <description>add related case url</description>
+    <environments>Default</environments>
     <formulas>
         <name>FW_CASE_URL</name>
         <dataType>String</dataType>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITPT_My_Tasks</fullName>
+    <columns>NAME</columns>
+    <columns>ITPT_ProjectName_c__c</columns>
+    <columns>ITPT_ProjectLead_User__c</columns>
+    <columns>ITPT_ResponsibleDirector_User_c__c</columns>
+    <columns>ITPT_AccountableSeniorLeader_User_c__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Record_Type__c</field>
+        <operation>equals</operation>
+        <value>IT Project Tracker</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved - Not Started</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>In Progress</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Canceled</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Rejected</value>
+    </filters>
+    <label>ITPT - My Tasks</label>
+</ListView>

@@ -389,6 +389,7 @@
     </decisions>
     <description>Adding REGEX to the Phone field to accept only numeric values on Screen Element
 v7: Getting MDR Case RecordType ID and assign it to the case record</description>
+    <environments>Default</environments>
     <formulas>
         <name>getEmployeeFullName</name>
         <dataType>String</dataType>
@@ -985,6 +986,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -1080,6 +1082,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Mobile_Device_Request_Section2</name>
@@ -1176,6 +1179,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -1690,6 +1694,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Mobile_Device_Request_Section4</name>
@@ -1733,6 +1738,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Mobile_Device_Request_Section5</name>
@@ -1795,6 +1801,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -1870,6 +1877,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>

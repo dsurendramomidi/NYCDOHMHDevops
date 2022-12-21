@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>9</activeVersionNumber>
+    <description>This flow is Default sub flow which is used to call for all the flows.
+
+Version 7 --This version is updated to &quot;Okay&quot; to &quot;Case details&quot; button label
+Version 8 -- Deleted the responseVar1 variable
+Version 9 -- 
+a. Save to Case.Description - descriptionOfIssue, 
+b. Pointed Case Origin to &quot;Employee Portal&quot; in case creation element. 
+c. Removed Fetching Queue Name ID and Record Type ID from parent flow and added to this Subflow version. 
+d. Removed unwanted variables.</description>
+    <masterLabel>Default SC Sub Flow</masterLabel>
+</FlowDefinition>

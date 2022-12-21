@@ -121,6 +121,7 @@
 Version 7 --This version is updated to &quot;Okay&quot; to &quot;Case details&quot; button label
 Version 8 -- Deleted the responseVar1 variable
 Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin to &quot;Employee Portal&quot; in case creation element.</description>
+    <environments>Default</environments>
     <interviewLabel>Default Sub Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Default SC Sub Flow</label>
     <processMetadataValues>
@@ -401,6 +402,7 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Installation_Issue_Section2</name>
@@ -423,6 +425,7 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -499,6 +502,7 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>

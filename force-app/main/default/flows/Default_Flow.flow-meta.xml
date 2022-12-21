@@ -158,6 +158,7 @@
         </rules>
     </decisions>
     <description>Moving all Subcategories into one flow(Trail version)</description>
+    <environments>Default</environments>
     <interviewLabel>Default {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Default Flow</label>
     <processMetadataValues>
@@ -407,6 +408,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Installation_Issue_Section2</name>
@@ -423,6 +425,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Installation_Issue_Section3</name>
@@ -445,6 +448,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -530,6 +534,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>

@@ -60,6 +60,7 @@
         </rules>
     </decisions>
     <description>v6 -- Added Display Reviewers</description>
+    <environments>Default</environments>
     <interviewLabel>Add Reviewers {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Add Reviewers</label>
     <loops>
@@ -269,6 +270,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
@@ -304,6 +306,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>

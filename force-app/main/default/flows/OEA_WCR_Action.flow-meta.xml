@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>OEA WCR A {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OEA WCR Action</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Click</name>
+        <label>Click</label>
+        <locationX>1089</locationX>
+        <locationY>155</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>OEA_WCR_Screen_Flow</targetReference>
+        </connector>
+        <fields>
+            <name>MSG</name>
+            <fieldText>&lt;p&gt;Click &quot;Create Child Case&quot; to create associated child case&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Create Child Case</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>970</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Click</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>OEA_WCR_Screen_Flow</name>
+        <label>OEA WCR Screen Flow</label>
+        <locationX>1100</locationX>
+        <locationY>243</locationY>
+        <flowName>OEA_WCR_Screen_Flow</flowName>
+        <inputAssignments>
+            <name>APP_ParentCase</name>
+            <value>
+                <elementReference>CaseID</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>CaseID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

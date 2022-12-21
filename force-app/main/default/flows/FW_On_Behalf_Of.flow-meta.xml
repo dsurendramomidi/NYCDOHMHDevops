@@ -74,6 +74,7 @@
             <label>FW_Another User Type</label>
         </rules>
     </decisions>
+    <environments>Default</environments>
     <interviewLabel>FW OnBehalf {!$Flow.CurrentDateTime}</interviewLabel>
     <label>FW On Behalf Of</label>
     <processMetadataValues>
@@ -232,6 +233,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>

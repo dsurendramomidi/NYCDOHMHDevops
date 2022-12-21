@@ -39,6 +39,7 @@
     </choices>
     <description>This flow is used for the Internet Access requests.
 V2: a. Add Default Sub flow</description>
+    <environments>Default</environments>
     <interviewLabel>IIT_SC_ {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT_SC_Internet Access</label>
     <processMetadataValues>

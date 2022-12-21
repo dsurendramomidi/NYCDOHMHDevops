@@ -5,6 +5,7 @@
         <name>Get_Queue_Name</name>
         <dataType>String</dataType>
     </constants>
+    <environments>Default</environments>
     <interviewLabel>IIT SC Non-DOHMH Applications - NYCAPS {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT SC Non-DOHMH Applications - NYCAPS</label>
     <processMetadataValues>

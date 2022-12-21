@@ -8,12 +8,14 @@
     <disableReputationRecordConversations>false</disableReputationRecordConversations>
     <emailSenderAddress>stalla@health.nyc.gov</emailSenderAddress>
     <emailSenderName>Employee Service Community</emailSenderName>
+    <enableApexCDNCaching>true</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>false</enableDirectMessages>
     <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
     <enableGuestChatter>false</enableGuestChatter>
     <enableGuestFileAccess>false</enableGuestFileAccess>
     <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableImageOptimizationCDN>true</enableImageOptimizationCDN>
     <enableInvitation>false</enableInvitation>
     <enableKnowledgeable>false</enableKnowledgeable>
     <enableMemberVisibility>false</enableMemberVisibility>
@@ -34,8 +36,8 @@
         <permissionSet>Employee_Knowledge_User</permissionSet>
         <permissionSet>Knowledge_Manager</permissionSet>
         <permissionSet>wkdw__helpdesk_user</permissionSet>
-        <profile>Admin</profile>
-        <profile>IT Agent</profile>
+        <profile>admin</profile>
+        <profile>it agent</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
