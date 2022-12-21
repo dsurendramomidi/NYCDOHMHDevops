@@ -3,9 +3,13 @@
     <defaultLandingTab>standard-Chatter</defaultLandingTab>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <tabs>standard-Chatter</tabs>
     <tabs>standard-File</tabs>
     <tabs>Test_KSWData__c</tabs>
     <tabs>COM_PTR_Reviewer__c</tabs>
     <tabs>OEA_CPR_OneToMany__c</tabs>
+    <tabs>ADM_BCR_Division_Approver__c</tabs>
+    <tabs>ServiceRequest__c</tabs>
+    <tabs>Application_Dashboard__c</tabs>
 </CustomApplication>

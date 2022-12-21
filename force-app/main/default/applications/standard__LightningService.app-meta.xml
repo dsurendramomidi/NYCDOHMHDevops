@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Service Console</label>
     <navType>Console</navType>
     <setupExperience>service</setupExperience>
@@ -20,9 +21,18 @@
     <tabs>Test_KSWData__c</tabs>
     <tabs>COM_PTR_Reviewer__c</tabs>
     <tabs>OEA_CPR_OneToMany__c</tabs>
+    <tabs>ADM_BCR_Division_Approver__c</tabs>
+    <tabs>ServiceRequest__c</tabs>
+    <tabs>Application_Dashboard__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>ADM_BCR_Division_Approver__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Application_Dashboard__c</tab>
+        </mappings>
         <mappings>
             <tab>COM_PTR_Reviewer__c</tab>
         </mappings>
@@ -31,6 +41,9 @@
         </mappings>
         <mappings>
             <tab>OEA_CPR_OneToMany__c</tab>
+        </mappings>
+        <mappings>
+            <tab>ServiceRequest__c</tab>
         </mappings>
         <mappings>
             <tab>Test_KSWData__c</tab>

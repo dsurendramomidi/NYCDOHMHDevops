@@ -9,8 +9,81 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Agent Desk</label>
     <navType>Console</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH Admin User Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH Admin User Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH User Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH User Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Assistive_Technology_Devices_Tracking_System</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Assistive_Technology_Devices_Tracking_System</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
         <content>IT_Case</content>
@@ -44,6 +117,60 @@
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.wkdw__IT</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Project_Tracker</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.IT_Project_Tracker</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Project_Tracker</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.IT_Project_Tracker</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH Admin User Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Project_Tracker_Status_Report</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.IT_Project_Tracker_Status_Report</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH Admin User Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Project_Tracker_Status_Report</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.IT_Project_Tracker_Status_Report</recordType>
+        <type>Flexipage</type>
+        <profile>DOHMH Employee Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IT_Project_Tracker_Status_Report</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.IT_Project_Tracker_Status_Report</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Business_Card_Request</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Business_Card_Request</recordType>
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
@@ -60,9 +187,18 @@
     <tabs>standard-SocialPost</tabs>
     <tabs>COM_PTR_Reviewer__c</tabs>
     <tabs>OEA_CPR_OneToMany__c</tabs>
+    <tabs>ADM_BCR_Division_Approver__c</tabs>
+    <tabs>ServiceRequest__c</tabs>
+    <tabs>Application_Dashboard__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Agent_Desk_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>ADM_BCR_Division_Approver__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Application_Dashboard__c</tab>
+        </mappings>
         <mappings>
             <tab>COM_PTR_Reviewer__c</tab>
         </mappings>
@@ -71,6 +207,9 @@
         </mappings>
         <mappings>
             <tab>OEA_CPR_OneToMany__c</tab>
+        </mappings>
+        <mappings>
+            <tab>ServiceRequest__c</tab>
         </mappings>
         <mappings>
             <tab>Test_KSWData__c</tab>
