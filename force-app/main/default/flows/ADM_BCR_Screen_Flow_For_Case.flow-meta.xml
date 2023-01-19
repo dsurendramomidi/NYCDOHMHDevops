@@ -44,7 +44,6 @@
         <picklistObject>COM__c</picklistObject>
         <sortOrder>Asc</sortOrder>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <interviewLabel>OEA CPR Screen Flow For Case {!$Flow.CurrentDateTime}</interviewLabel>
     <label>ADM BCR Screen Flow For Case</label>
     <processMetadataValues>
@@ -202,7 +201,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>f16</name>

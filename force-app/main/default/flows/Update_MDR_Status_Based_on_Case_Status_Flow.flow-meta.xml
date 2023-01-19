@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
-    <description>Update MDR Status whenever related Case Status is updated</description>
+    <description>Updating object from IT MDR to IIT</description>
     <interviewLabel>Update MDR Status Based on Case Status Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Update MDR Status Based on Case Status Flow</label>
     <processMetadataValues>
@@ -37,12 +37,12 @@
             </value>
         </filters>
         <inputAssignments>
-            <field>Approval_Status__c</field>
+            <field>MDR_Approval_Status__c</field>
             <value>
                 <elementReference>$Record.Status</elementReference>
             </value>
         </inputAssignments>
-        <object>IT_Mobile_Device_Request__c</object>
+        <object>IIT__c</object>
     </recordUpdates>
     <start>
         <locationX>410</locationX>

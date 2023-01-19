@@ -118,7 +118,6 @@
     </decisions>
     <description>This flow is used for the Database Administration requests.
 V2 - Change Okay but to Case Details</description>
-    <environments>Default</environments>
     <formulas>
         <name>IIT_SC_DBAdministartion_Concatenate</name>
         <dataType>String</dataType>
@@ -406,7 +405,6 @@ V2 - Change Okay but to Case Details</description>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Installation_Issue_Section2</name>
@@ -443,7 +441,6 @@ V2 - Change Okay but to Case Details</description>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -520,7 +517,6 @@ V2 - Change Okay but to Case Details</description>
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>

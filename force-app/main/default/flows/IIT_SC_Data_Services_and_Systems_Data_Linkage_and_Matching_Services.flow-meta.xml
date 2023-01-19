@@ -7,7 +7,6 @@
     </constants>
     <description>Data Linkage and Matching Services(Data Match processes, Quality Stage)
 V2: a. Update to work with new sub flow and rename sub flow b. Remove RecordId lookup and queue ID lookup elements</description>
-    <environments>Default</environments>
     <interviewLabel>IIT SC Data Services and Systems - GIS Services {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT SC Data Services and Systems - Data Linkage and Matching Services</label>
     <processMetadataValues>

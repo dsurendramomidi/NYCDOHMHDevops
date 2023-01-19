@@ -90,6 +90,14 @@
         </value>
     </choices>
     <choices>
+        <name>No</name>
+        <choiceText>No</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </choices>
+    <choices>
         <name>Planning</name>
         <choiceText>Planning</choiceText>
         <dataType>String</dataType>
@@ -105,11 +113,44 @@
             <stringValue>Testing</stringValue>
         </value>
     </choices>
+    <choices>
+        <name>Yes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Yes</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>BannerWithStatusReportLink</name>
+        <label>BannerWithStatusReportLink</label>
+        <locationX>1720</locationX>
+        <locationY>400</locationY>
+        <defaultConnector>
+            <targetReference>IT_Banner_1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>WithLink</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>BannerWithStatusReport</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ITPT_Banner</targetReference>
+            </connector>
+            <label>WithLink</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Case_Record_Type</name>
         <label>Case Record Type</label>
-        <locationX>1280</locationX>
-        <locationY>432</locationY>
+        <locationX>1304</locationX>
+        <locationY>460</locationY>
         <defaultConnector>
             <targetReference>Check_User_RIghts</targetReference>
         </defaultConnector>
@@ -197,13 +238,45 @@
             <label>AllowEdit</label>
         </rules>
     </decisions>
-    <description>Adding default values to Overall RAG and SDLC Phase fields in Read Only Screen and making all labels to bold v2</description>
+    <decisions>
+        <name>CheckIsBanner</name>
+        <label>CheckIsBanner</label>
+        <locationX>1473</locationX>
+        <locationY>308</locationY>
+        <defaultConnector>
+            <targetReference>Case_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>YesIsBanner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsBanner</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetLastestApprovedChildRecord</targetReference>
+            </connector>
+            <label>YesIsBanner</label>
+        </rules>
+    </decisions>
     <dynamicChoiceSets>
         <name>GRiskPriority</name>
         <dataType>Picklist</dataType>
         <displayField xsi:nil="true"/>
         <object xsi:nil="true"/>
         <picklistField>ITPT_Urgency__c</picklistField>
+        <picklistObject>IIT__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>PL_ProjectType</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ITPT_ProjectType__c</picklistField>
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
@@ -223,6 +296,14 @@
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
+        <name>RAG</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ITPT_Overall_RAG__c</picklistField>
+        <picklistObject>IIT__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
         <name>RiskChoice</name>
         <dataType>Picklist</dataType>
         <displayField xsi:nil="true"/>
@@ -230,11 +311,20 @@
         <picklistField>ITPT_StaffingRisk__c</picklistField>
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>CASESAFEID_UserID</name>
         <dataType>String</dataType>
         <expression>CASESAFEID({!$User.Id})</expression>
+    </formulas>
+    <formulas>
+        <name>F_AIDR_ID</name>
+        <dataType>String</dataType>
+        <expression>IF({!ProjectType}= &apos;System Project&apos;, {!AIDR_ID_R}, {!AIDR_ID})</expression>
+    </formulas>
+    <formulas>
+        <name>F_ITPIR</name>
+        <dataType>String</dataType>
+        <expression>IF({!ExistsInITPIR}={!Yes}, {!ITPIR_R}, {!ITPIR})</expression>
     </formulas>
     <interviewLabel>IIT ITPT {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT ITPT Data</label>
@@ -264,7 +354,7 @@
         <locationY>244</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Case_Record_Type</targetReference>
+            <targetReference>CheckIsBanner</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -299,6 +389,36 @@
         <object>IIT__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>GetLastestApprovedChildRecord</name>
+        <label>GetLastestApprovedChildRecord</label>
+        <locationX>1662</locationX>
+        <locationY>238</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>BannerWithStatusReportLink</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CaseID</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Update_Custom_object</name>
         <label>Update Custom object</label>
@@ -318,7 +438,7 @@
         <inputAssignments>
             <field>ITPT_AIDR_ID__c</field>
             <value>
-                <elementReference>AIDR_ID</elementReference>
+                <elementReference>F_AIDR_ID</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -358,6 +478,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>ITPT_ExistsInITPIR__c</field>
+            <value>
+                <elementReference>ExistsInITPIR</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>ITPT_FundingRisk__c</field>
             <value>
                 <elementReference>Funding_Risk</elementReference>
@@ -366,7 +492,7 @@
         <inputAssignments>
             <field>ITPT_ITPIR__c</field>
             <value>
-                <elementReference>ITPIR</elementReference>
+                <elementReference>F_ITPIR</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -409,6 +535,12 @@
             <field>ITPT_ProjectName__c</field>
             <value>
                 <elementReference>Project_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_ProjectType__c</field>
+            <value>
+                <elementReference>ProjectType</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -468,6 +600,161 @@
         <object>IIT__c</object>
     </recordUpdates>
     <screens>
+        <name>IT_Banner_1</name>
+        <label>IT Banner 1</label>
+        <locationX>1942</locationX>
+        <locationY>387</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>IT_Banner_1_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>IT_Banner_1_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>b11</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;Project Name&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_ITPT_Data.ITPT_ProjectName__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>IT_Banner_1_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>b12</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px; font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255)));&quot;&gt;Reference Number&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_Case.Reference_Number__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>IT_Banner_1_Section1_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>b13</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px; font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255)));&quot;&gt;Status﻿&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_Case.Status}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>IT_Banner_1_Section1_Column4</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>ITPT_Banner</name>
+        <label>ITPT Banner</label>
+        <locationX>1759</locationX>
+        <locationY>644</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ITPT_Banner_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>ITPT_Banner_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>b1</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;Project Name&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_ITPT_Data.ITPT_ProjectName__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ITPT_Banner_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>b2</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px; font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255)));&quot;&gt;Reference Number&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_Case.Reference_Number__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ITPT_Banner_Section1_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>b3</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px; font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255)));&quot;&gt;Status﻿&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_Case.Status}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ITPT_Banner_Section1_Column4</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>b4</name>
+                    <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Latest Status Report&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;{!GetLastestApprovedChildRecord.Related_Record_URL__c}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;);&quot;&gt;Click Here&lt;/a&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>s1</name>
         <label>Read Only</label>
         <locationX>1365</locationX>
@@ -483,7 +770,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>text</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Project Name&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ProjectName__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Project Division&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ProjectDivision__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Project Description&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ProjectDescription__c}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Project Name&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ProjectName__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Project Description&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ProjectDescription__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -528,7 +815,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s1_Section2</name>
@@ -537,8 +823,18 @@
                 <name>s1_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
+                    <name>t12</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Type of Project&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ProjectType__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
                     <name>t4</name>
                     <fieldText>&lt;p&gt;&lt;strong&gt;AIDR ID&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_AIDR_ID__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>OverllRAG</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Overall RAG&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_Overall_RAG__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -553,8 +849,18 @@
                 <name>s1_Section2_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
+                    <name>t13</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Does this project exists in ITPIR&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ExistsInITPIR__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
                     <name>text13</name>
                     <fieldText>&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;ITPIR #&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ITPIR__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>SLDCPhase</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;SLDC Phase&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_SDLC_Phase__c}&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -588,7 +894,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>t2</name>
@@ -629,7 +934,7 @@
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>text12</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Business Sponsor&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_BusinessSponsor__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Vendor Name&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_VendorName__c}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Business Sponsor&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_BusinessSponsor__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Project Division&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ProjectDivision__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Vendor Name&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_VendorName__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -652,45 +957,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>s1_Section4</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>s1_Section4_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>OverllRAG</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Overall RAG&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_Overall_RAG__c}&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>s1_Section4_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>SLDCPhase</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;SLDC Phase&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_SDLC_Phase__c}&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>text2</name>
@@ -698,10 +964,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>s1_Section5</name>
+            <name>s1_Section4</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section5_Column1</name>
+                <name>s1_Section4_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>text3</name>
@@ -717,11 +983,11 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section5_Column2</name>
+                <name>s1_Section4_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>text4</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Risk Score&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_RiskScore__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Staffing Risk&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_StaffingRisk__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Technical Complexity&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_TechnicalComplexity__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Communication Complexity&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_CommunicationComplexity__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Vendor Risk&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_VendorRisk__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Contract Risk&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ContractRisk__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Funding Risk&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_FundingRisk__c}&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Risk Score&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_RiskScore__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Staffing Risk&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_StaffingRisk__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Technical Complexity&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_TechnicalComplexity__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Communication Complexity&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_CommunicationComplexity__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Vendor Risk&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_VendorRisk__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Contract Risk&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_ContractRisk__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Funding Risk&lt;/p&gt;&lt;p&gt;{!Get_ITPT_Data.ITPT_FundingRisk__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -733,7 +999,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section5_Column3</name>
+                <name>s1_Section4_Column3</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -744,7 +1010,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section5_Column4</name>
+                <name>s1_Section4_Column4</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -755,7 +1021,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>false</showFooter>
         <showHeader>false</showHeader>
@@ -785,17 +1050,6 @@
                     </defaultValue>
                     <fieldText>&lt;b&gt;Project Name&lt;/b&gt;</fieldText>
                     <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>Project_Division</name>
-                    <choiceReferences>ProjectDivisionChoices</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Get_ITPT_Data.ITPT_ProjectDivision__c</elementReference>
-                    </defaultValue>
-                    <fieldText>&lt;b&gt;Project Division&lt;/b&gt;</fieldText>
-                    <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -829,7 +1083,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section2</name>
@@ -866,7 +1119,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section3</name>
@@ -875,6 +1127,17 @@
                 <name>s2_Section3_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
+                    <name>ProjectType</name>
+                    <choiceReferences>PL_ProjectType</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_ProjectType__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Type of Project&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
                     <name>AIDR_ID</name>
                     <dataType>String</dataType>
                     <defaultValue>
@@ -882,6 +1145,47 @@
                     </defaultValue>
                     <fieldText>&lt;b&gt;AIDR ID&lt;/b&gt;</fieldText>
                     <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ProjectType</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>System Project</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>AIDR_ID_R</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_AIDR_ID__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;AIDR ID&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ProjectType</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>System Project</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Overall_RAG</name>
+                    <choiceReferences>RAG</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_Overall_RAG__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Overall RAG&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
                 <inputParameters>
@@ -896,6 +1200,18 @@
                 <name>s2_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
+                    <name>ExistsInITPIR</name>
+                    <choiceReferences>Yes</choiceReferences>
+                    <choiceReferences>No</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_ExistsInITPIR__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Does this project exists in ITPIR?&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
                     <name>ITPIR</name>
                     <dataType>String</dataType>
                     <defaultValue>
@@ -903,6 +1219,53 @@
                     </defaultValue>
                     <fieldText>&lt;b&gt;ITPIR #&lt;/b&gt;</fieldText>
                     <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ExistsInITPIR</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <elementReference>Yes</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>ITPIR_R</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_ITPIR__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;ITPIR #&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ExistsInITPIR</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <elementReference>Yes</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>SDLC_Phase</name>
+                    <choiceReferences>Planning</choiceReferences>
+                    <choiceReferences>Analysis</choiceReferences>
+                    <choiceReferences>Design</choiceReferences>
+                    <choiceReferences>Development</choiceReferences>
+                    <choiceReferences>Testing</choiceReferences>
+                    <choiceReferences>Implementation</choiceReferences>
+                    <choiceReferences>Maintenance</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_SDLC_Phase__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;SDLC Phase&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
                 <inputParameters>
@@ -936,7 +1299,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>t</name>
@@ -993,6 +1355,55 @@
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section4_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Project_Division</name>
+                    <choiceReferences>ProjectDivisionChoices</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_ProjectDivision__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Project Division&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section4_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>s2_Section5</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>s2_Section5_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
                     <name>Responsible_Drector</name>
                     <extensionName>flowruntime:lookup</extensionName>
@@ -1037,6 +1448,54 @@
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section5_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Business_Sponsor</name>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPT_Data.ITPT_BusinessSponsor__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Business Sponsor&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section5_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>s2_Section6</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>s2_Section6_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
                     <name>Accountable_Senior_Leader</name>
                     <extensionName>flowruntime:lookup</extensionName>
@@ -1090,25 +1549,15 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section4_Column2</name>
+                <name>s2_Section6_Column2</name>
                 <fieldType>Region</fieldType>
-                <fields>
-                    <name>Business_Sponsor</name>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Get_ITPT_Data.ITPT_BusinessSponsor__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Business Sponsor</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
                 <fields>
                     <name>Vendor_Name</name>
                     <dataType>String</dataType>
                     <defaultValue>
                         <elementReference>Get_ITPT_Data.ITPT_VendorName__c</elementReference>
                     </defaultValue>
-                    <fieldText>Vendor Name</fieldText>
+                    <fieldText>&lt;b&gt;Vendor Name&lt;/b&gt;</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1121,7 +1570,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section4_Column3</name>
+                <name>s2_Section6_Column3</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -1132,65 +1581,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>s2_Section5</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>s2_Section5_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Overall_RAG</name>
-                    <choiceReferences>High_1</choiceReferences>
-                    <choiceReferences>Medium2</choiceReferences>
-                    <choiceReferences>Low3</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Get_ITPT_Data.ITPT_Overall_RAG__c</elementReference>
-                    </defaultValue>
-                    <fieldText>&lt;b&gt;Overall RAG&lt;/b&gt;</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>s2_Section5_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>SDLC_Phase</name>
-                    <choiceReferences>Planning</choiceReferences>
-                    <choiceReferences>Analysis</choiceReferences>
-                    <choiceReferences>Design</choiceReferences>
-                    <choiceReferences>Development</choiceReferences>
-                    <choiceReferences>Testing</choiceReferences>
-                    <choiceReferences>Implementation</choiceReferences>
-                    <choiceReferences>Maintenance</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Get_ITPT_Data.ITPT_SDLC_Phase__c</elementReference>
-                    </defaultValue>
-                    <fieldText>&lt;b&gt;SDLC Phase&lt;/b&gt;</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>t1</name>
@@ -1198,10 +1588,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>s2_Section6</name>
+            <name>s2_Section7</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s2_Section6_Column1</name>
+                <name>s2_Section7_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Priority_Score_Display</name>
@@ -1243,7 +1633,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section6_Column2</name>
+                <name>s2_Section7_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Risk_Score_Display</name>
@@ -1285,13 +1675,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s2_Section7</name>
+            <name>s2_Section8</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s2_Section7_Column1</name>
+                <name>s2_Section8_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Division_Priority</name>
@@ -1335,7 +1724,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section7_Column2</name>
+                <name>s2_Section8_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Urgency</name>
@@ -1368,7 +1757,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section7_Column3</name>
+                <name>s2_Section8_Column3</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Staffing_Risk</name>
@@ -1412,7 +1801,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section7_Column4</name>
+                <name>s2_Section8_Column4</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Vendor_Risk</name>
@@ -1456,7 +1845,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>btn</name>
@@ -1499,22 +1887,6 @@
         <showFooter>false</showFooter>
         <showHeader>false</showHeader>
     </screens>
-    <screens>
-        <name>s3</name>
-        <label>s3</label>
-        <locationX>598</locationX>
-        <locationY>861</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <fields>
-            <name>t3</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;Record has updated, please refresh the page.&lt;/strong&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>false</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
     <start>
         <locationX>970</locationX>
         <locationY>48</locationY>
@@ -1522,12 +1894,32 @@
             <targetReference>Get_ITPT_Data</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
+    <variables>
+        <name>BannerWithStatusReport</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
     <variables>
         <name>CaseID</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>IsBanner</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
     </variables>
 </Flow>

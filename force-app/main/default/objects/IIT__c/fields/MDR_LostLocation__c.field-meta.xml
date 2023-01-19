@@ -3,10 +3,23 @@
     <fullName>MDR_LostLocation__c</fullName>
     <externalId>false</externalId>
     <label>MDR_LostLocation</label>
-    <length>255</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackTrending>false</trackTrending>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DOHMH Location</fullName>
+                <default>false</default>
+                <label>DOHMH Location</label>
+            </value>
+            <value>
+                <fullName>Non DOHMH Location</fullName>
+                <default>false</default>
+                <label>Non DOHMH Location</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
 </CustomField>

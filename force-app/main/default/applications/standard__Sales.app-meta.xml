@@ -21,4 +21,5 @@
     <tabs>ADM_BCR_Division_Approver__c</tabs>
     <tabs>ServiceRequest__c</tabs>
     <tabs>Application_Dashboard__c</tabs>
+    <tabs>AppConfig__c</tabs>
 </CustomApplication>

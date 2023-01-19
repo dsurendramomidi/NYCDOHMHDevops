@@ -12,9 +12,14 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Value1</fullName>
+                <fullName>Bring Your Own Device (BYOD)</fullName>
                 <default>false</default>
-                <label>Value1</label>
+                <label>Bring Your Own Device (BYOD)</label>
+            </value>
+            <value>
+                <fullName>DOHMH Device</fullName>
+                <default>false</default>
+                <label>DOHMH Device</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -3,8 +3,8 @@
     <actionCalls>
         <name>FW_Email_Action</name>
         <label>FW Email Action</label>
-        <locationX>1744</locationX>
-        <locationY>1910</locationY>
+        <locationX>2514</locationX>
+        <locationY>1334</locationY>
         <actionName>Case.FW_Default_Request_Update</actionName>
         <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -384,7 +384,6 @@
         <picklistField>ITPTSR_ContractRAG__c</picklistField>
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>Comments1n2</name>
         <dataType>String</dataType>
@@ -439,6 +438,18 @@
             <field>ITPTSR_CurrentStatus__c</field>
             <value>
                 <stringValue>Approved - Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_Overall_RAG__c</field>
+            <value>
+                <elementReference>ITPT_Data.ITPT_Overall_RAG__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_SDLC_Phase__c</field>
+            <value>
+                <elementReference>ITPT_Data.ITPT_SDLC_Phase__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1040,7 +1051,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>S1_Section2</name>
@@ -1169,7 +1179,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -1265,7 +1274,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -1394,7 +1402,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -1512,7 +1519,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -1532,6 +1538,7 @@
         <locationX>446</locationX>
         <locationY>1214</locationY>
         <connector>
+            <isGoTo>true</isGoTo>
             <targetReference>FW_Email_Action</targetReference>
         </connector>
         <flowName>FW_Approval_History</flowName>
@@ -1566,6 +1573,7 @@
         <locationX>1502</locationX>
         <locationY>1694</locationY>
         <connector>
+            <isGoTo>true</isGoTo>
             <targetReference>FW_Email_Action</targetReference>
         </connector>
         <flowName>FW_Approval_History</flowName>

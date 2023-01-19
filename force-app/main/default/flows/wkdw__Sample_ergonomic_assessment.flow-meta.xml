@@ -577,7 +577,7 @@
             <targetReference>GetEmployeeRecord</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>AttachmentNumber</name>
         <dataType>Number</dataType>

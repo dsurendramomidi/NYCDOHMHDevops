@@ -6,7 +6,6 @@
         <dataType>String</dataType>
     </constants>
     <description>TFS/DevOPS permission/Temporary Installer Right</description>
-    <environments>Default</environments>
     <interviewLabel>IIT SC {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT SC Data Services and Systems - TFS/DevOPS Access</label>
     <processMetadataValues>

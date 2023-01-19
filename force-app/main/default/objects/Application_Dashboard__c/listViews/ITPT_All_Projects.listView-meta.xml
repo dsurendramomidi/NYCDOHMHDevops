@@ -5,8 +5,9 @@
     <columns>ITPT_ProjectName_c__c</columns>
     <columns>ITPT_ProjectLead_User__c</columns>
     <columns>ITPT_ResponsibleDirector_User_c__c</columns>
-    <columns>ITPT_AccountableSeniorLeader_User_c__c</columns>
     <columns>Status__c</columns>
+    <columns>ITPT_OverallRAG__c</columns>
+    <columns>ITPT_SDLC__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Record_Type__c</field>

@@ -151,4 +151,112 @@
         <label>Rejected</label>
         <closed>true</closed>
     </standardValue>
+    <standardValue>
+        <fullName>Division Review</fullName>
+        <default>false</default>
+        <label>Division Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Project AC Review</fullName>
+        <default>false</default>
+        <label>IT Project AC Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Revision by Requester</fullName>
+        <default>false</default>
+        <label>Revision by Requester</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultation</fullName>
+        <default>false</default>
+        <label>Consultation</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Solution Director Review (From IT AC)</fullName>
+        <default>false</default>
+        <label>Solution Director Review (From IT AC)</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Communication Group Review</fullName>
+        <default>false</default>
+        <label>Communication Group Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Project Manager Review</fullName>
+        <default>false</default>
+        <label>Project Manager Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Solution Director Review (From PM Consultation)</fullName>
+        <default>false</default>
+        <label>Solution Director Review (From PM Consultation)</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Solution Director Review (TA Completed)</fullName>
+        <default>false</default>
+        <label>Solution Director Review (TA Completed)</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>ActionDesc</fullName>
+        <default>false</default>
+        <label>ActionDesc</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Project AC Approval</fullName>
+        <default>false</default>
+        <label>IT Project AC Approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Senior Staff Review</fullName>
+        <default>false</default>
+        <label>IT Senior Staff Review</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CIO Approval</fullName>
+        <default>false</default>
+        <label>CIO Approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CIO Approval ONLY</fullName>
+        <default>false</default>
+        <label>CIO Approval ONLY</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Division DC Approval</fullName>
+        <default>false</default>
+        <label>Division DC Approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Project Intake Request Complete</fullName>
+        <default>false</default>
+        <label>IT Project Intake Request Complete</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Project Intake Request Rejected/Canceled</fullName>
+        <default>false</default>
+        <label>IT Project Intake Request Rejected/Canceled</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IT Project AC Review for Mobile</fullName>
+        <default>false</default>
+        <label>IT Project AC Review for Mobile</label>
+        <closed>false</closed>
+    </standardValue>
 </StandardValueSet>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
-    <activeVersionNumber>3</activeVersionNumber>
+    <activeVersionNumber>6</activeVersionNumber>
+    <description>On case record creation, insert associated record into application dashboard.</description>
+    <masterLabel>FW_CASE_INSERT_APPLICATION_DASHBOARD</masterLabel>
 </FlowDefinition>

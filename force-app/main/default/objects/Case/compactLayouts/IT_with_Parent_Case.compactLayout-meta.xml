@@ -3,9 +3,7 @@
     <fullName>IT_with_Parent_Case</fullName>
     <fields>CaseNumber</fields>
     <fields>ParentId</fields>
-    <fields>ITPT_ProjectName__c</fields>
     <fields>Reference_Number__c</fields>
     <fields>Status</fields>
-    <fields>OwnerId</fields>
     <label>IT with Parent Case</label>
 </CompactLayout>

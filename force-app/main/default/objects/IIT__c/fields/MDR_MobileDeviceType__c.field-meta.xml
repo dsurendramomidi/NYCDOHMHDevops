@@ -22,9 +22,39 @@ Other</description>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Value1</fullName>
+                <fullName>iPhone (both device &amp; data plan)</fullName>
                 <default>false</default>
-                <label>Value1</label>
+                <label>iPhone (both device &amp; data plan)</label>
+            </value>
+            <value>
+                <fullName>iPad (data plan only)</fullName>
+                <default>false</default>
+                <label>iPad (data plan only)</label>
+            </value>
+            <value>
+                <fullName>Samsung Tablet (data plan only)</fullName>
+                <default>false</default>
+                <label>Samsung Tablet (data plan only)</label>
+            </value>
+            <value>
+                <fullName>CCEWIN</fullName>
+                <default>false</default>
+                <label>CCEWIN</label>
+            </value>
+            <value>
+                <fullName>Verizon Flip Phone (both device &amp; cell plan)</fullName>
+                <default>false</default>
+                <label>Verizon Flip Phone (both device &amp; cell plan)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>ISP AirCard (Both Device &amp; Data Plan)</fullName>
+                <default>false</default>
+                <label>ISP AirCard (Both Device &amp; Data Plan)</label>
             </value>
         </valueSetDefinition>
     </valueSet>

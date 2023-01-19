@@ -90,7 +90,7 @@
         <name>Check_User_RIghts</name>
         <label>Check_User_RIghts</label>
         <locationX>1091</locationX>
-        <locationY>440</locationY>
+        <locationY>588</locationY>
         <defaultConnector>
             <targetReference>s1</targetReference>
         </defaultConnector>
@@ -125,7 +125,32 @@
             <label>AllowEdit</label>
         </rules>
     </decisions>
-    <description>Adding line v1</description>
+    <decisions>
+        <name>CheckIsBanner</name>
+        <label>CheckIsBanner</label>
+        <locationX>1301</locationX>
+        <locationY>448</locationY>
+        <defaultConnector>
+            <targetReference>Check_User_RIghts</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>YesIsBanner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsBanner</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Parent_Case</targetReference>
+            </connector>
+            <label>YesIsBanner</label>
+        </rules>
+    </decisions>
+    <description>Add Banner</description>
     <dynamicChoiceSets>
         <name>CurrentStatusChoice</name>
         <dataType>Picklist</dataType>
@@ -142,7 +167,14 @@
         <picklistField>ITPTSR_ContractRAG__c</picklistField>
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
+    <dynamicChoiceSets>
+        <name>SDLC</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ITPT_SDLC_Phase__c</picklistField>
+        <picklistObject>IIT__c</picklistObject>
+    </dynamicChoiceSets>
     <formulas>
         <name>CASESAFEID_UserID</name>
         <dataType>String</dataType>
@@ -172,11 +204,11 @@
     <recordLookups>
         <name>Get_Case</name>
         <label>Get Case</label>
-        <locationX>1098</locationX>
-        <locationY>332</locationY>
+        <locationX>1101</locationX>
+        <locationY>299</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Check_User_RIghts</targetReference>
+            <targetReference>Get_Parent_Application_Dashboard</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -211,13 +243,55 @@
         <object>IIT__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>UpdateCase</name>
-        <label>UpdateCase</label>
-        <locationX>819</locationX>
-        <locationY>468</locationY>
+    <recordLookups>
+        <name>Get_Parent_Application_Dashboard</name>
+        <label>Get Parent Application Dashboard</label>
+        <locationX>1101</locationX>
+        <locationY>407</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_ITPTRS</targetReference>
+            <targetReference>CheckIsBanner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Case__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Case.ParentId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Application_Dashboard__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Parent_Case</name>
+        <label>Get Parent Case</label>
+        <locationX>1382</locationX>
+        <locationY>308</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ITPTSR_Banner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Case.ParentId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>UpdateChild</name>
+        <label>UpdateChild</label>
+        <locationX>818</locationX>
+        <locationY>561</locationY>
+        <connector>
+            <targetReference>UpdateParent</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -395,13 +469,130 @@
                 <elementReference>Vendor_RAG</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_Overall_RAG__c</field>
+            <value>
+                <elementReference>Overall_RAG</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_SDLC_Phase__c</field>
+            <value>
+                <elementReference>SDLC_Phase</elementReference>
+            </value>
+        </inputAssignments>
+        <object>IIT__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UpdateParent</name>
+        <label>UpdateParent</label>
+        <locationX>811</locationX>
+        <locationY>418</locationY>
+        <connector>
+            <targetReference>Get_ITPTRS</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Related_Case_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Case.ParentId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ITPT_Overall_RAG__c</field>
+            <value>
+                <elementReference>Overall_RAG</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_SDLC_Phase__c</field>
+            <value>
+                <elementReference>SDLC_Phase</elementReference>
+            </value>
+        </inputAssignments>
         <object>IIT__c</object>
     </recordUpdates>
     <screens>
+        <name>ITPTSR_Banner</name>
+        <label>ITPTSR Banner</label>
+        <locationX>1516</locationX>
+        <locationY>515</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ITPTSR_Banner_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>ITPTSR_Banner_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>bt1</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255))); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); font-size: 20px;&quot;&gt;Parent Reference Number&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;{!Get_Parent_Case.Related_Record_URL__c}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Get_Parent_Case.Reference_Number__c}&lt;/a&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ITPTSR_Banner_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>bt2</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px; font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255)));&quot;&gt;Reference Number&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{!Get_Case.Reference_Number__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ITPTSR_Banner_Section1_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>bt3</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255))); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;); font-size: 20px;&quot;&gt;Status&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;background-color: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundInput,rgb(255, 255, 255))); color: var(--slds-g-color-neutral-base-30, var(--lwc-colorTextWeak,rgb(68, 68, 68))); font-size: var(--lwc-fontSize3,0.8125rem); font-family: var(--lwc-fontFamily,-apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;);&quot;&gt;{!Get_Case.Status}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ITPTSR_Banner_Section1_Column4</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>s1</name>
         <label>s1</label>
-        <locationX>1339</locationX>
-        <locationY>522</locationY>
+        <locationX>1437</locationX>
+        <locationY>755</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -412,13 +603,8 @@
                 <name>s1_Section1_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>t1</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;Overall RAG&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>OverAllRAG1</name>
-                    <fieldText>&lt;p&gt;{!Get_ITPTRS.ITPT_Overall_RAG__c}&lt;/p&gt;</fieldText>
+                    <name>ProjectName</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Project Name&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_Parent_Application_Dashboard.ITPT_ProjectName_c__c}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -433,13 +619,8 @@
                 <name>s1_Section1_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>t2</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;SDLC Phase&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>SDLCPhase1</name>
-                    <fieldText>&lt;p&gt;{!Get_ITPTRS.ITPT_SDLC_Phase__c}&lt;/p&gt;</fieldText>
+                    <name>ProjectStartDate</name>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Project Start Date&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_Parent_Application_Dashboard.CreatedDate}&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -473,7 +654,75 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>s1_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>s1_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>t1</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;Overall RAG&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>OverAllRAG1</name>
+                    <fieldText>&lt;p&gt;{!Get_ITPTRS.ITPT_Overall_RAG__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s1_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>t2</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;SDLC Phase&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>SDLCPhase1</name>
+                    <fieldText>&lt;p&gt;{!Get_ITPTRS.ITPT_SDLC_Phase__c}&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s1_Section2_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s1_Section2_Column4</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>text</name>
@@ -491,10 +740,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>s1_Section2</name>
+            <name>s1_Section3</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section2_Column1</name>
+                <name>s1_Section3_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>ContractRAG</name>
@@ -510,7 +759,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section2_Column2</name>
+                <name>s1_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>ContractNotes1</name>
@@ -526,13 +775,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section3</name>
+            <name>s1_Section4</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section3_Column1</name>
+                <name>s1_Section4_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Line</name>
@@ -548,13 +796,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section4</name>
+            <name>s1_Section5</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section4_Column1</name>
+                <name>s1_Section5_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>VendorRAG</name>
@@ -570,7 +817,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section4_Column2</name>
+                <name>s1_Section5_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>VendorNotes</name>
@@ -586,13 +833,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section5</name>
+            <name>s1_Section6</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section5_Column1</name>
+                <name>s1_Section6_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>FundingRAG</name>
@@ -608,7 +854,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section5_Column2</name>
+                <name>s1_Section6_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>FundingNotes</name>
@@ -624,13 +870,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section6</name>
+            <name>s1_Section7</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section6_Column1</name>
+                <name>s1_Section7_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>StaffingRAG</name>
@@ -646,7 +891,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section6_Column2</name>
+                <name>s1_Section7_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>StaffingNotes</name>
@@ -662,13 +907,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section7</name>
+            <name>s1_Section8</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section7_Column1</name>
+                <name>s1_Section8_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>TechnicalRAG</name>
@@ -684,7 +928,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section7_Column2</name>
+                <name>s1_Section8_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>TechnicalNotes</name>
@@ -700,13 +944,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section8</name>
+            <name>s1_Section9</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section8_Column1</name>
+                <name>s1_Section9_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>CommunicationRAG</name>
@@ -722,7 +965,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section8_Column2</name>
+                <name>s1_Section9_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>CommunicationNotes</name>
@@ -738,13 +981,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section9</name>
+            <name>s1_Section10</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section9_Column1</name>
+                <name>s1_Section10_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>TimelineRAG</name>
@@ -760,7 +1002,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section9_Column2</name>
+                <name>s1_Section10_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>TimelineNotes</name>
@@ -776,13 +1018,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section10</name>
+            <name>s1_Section11</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section10_Column1</name>
+                <name>s1_Section11_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>CostRAG</name>
@@ -798,7 +1039,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section10_Column2</name>
+                <name>s1_Section11_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>CostNotes</name>
@@ -814,13 +1055,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section11</name>
+            <name>s1_Section12</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section11_Column1</name>
+                <name>s1_Section12_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>ScopeRAG</name>
@@ -836,7 +1076,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section11_Column2</name>
+                <name>s1_Section12_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>ScopeNotes</name>
@@ -852,13 +1092,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section12</name>
+            <name>s1_Section13</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section12_Column1</name>
+                <name>s1_Section13_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>QualityRAG</name>
@@ -874,7 +1113,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section12_Column2</name>
+                <name>s1_Section13_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>QualityNotes</name>
@@ -890,13 +1129,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s1_Section13</name>
+            <name>s1_Section14</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s1_Section13_Column1</name>
+                <name>s1_Section14_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>RiskRAG</name>
@@ -912,7 +1150,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s1_Section13_Column2</name>
+                <name>s1_Section14_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>RiskNotes</name>
@@ -928,7 +1166,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>false</showFooter>
         <showHeader>false</showHeader>
@@ -936,13 +1173,13 @@
     <screens>
         <name>s2</name>
         <label>s2</label>
-        <locationX>1007</locationX>
-        <locationY>639</locationY>
+        <locationX>995</locationX>
+        <locationY>768</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>UpdateCase</targetReference>
+            <targetReference>UpdateChild</targetReference>
         </connector>
         <fields>
             <name>s2_Section1</name>
@@ -951,8 +1188,79 @@
                 <name>s2_Section1_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
+                    <name>Overall_RAG</name>
+                    <choiceReferences>RAG</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPTRS.ITPT_Overall_RAG__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Overall RAG&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>SDLC_Phase</name>
+                    <choiceReferences>SDLC</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPTRS.ITPT_SDLC_Phase__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;SDLC Phase&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section1_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section1_Column4</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>s2_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>s2_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
                     <name>t6</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Project Status Details&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255); font-size: 20px;&quot;&gt;Project Status Details&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <fields>
@@ -1011,13 +1319,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>s2_Section2</name>
+            <name>s2_Section3</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s2_Section2_Column1</name>
+                <name>s2_Section3_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Upcoming_Milestones</name>
@@ -1037,7 +1344,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section2_Column2</name>
+                <name>s2_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Upcoming_Milestones_Date</name>
@@ -1058,7 +1365,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Link_to_Project_Schedule</name>
@@ -1075,10 +1381,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>s2_Section3</name>
+            <name>s2_Section4</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>s2_Section3_Column1</name>
+                <name>s2_Section4_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Contract_RAG</name>
@@ -1100,7 +1406,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>s2_Section3_Column2</name>
+                <name>s2_Section4_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Contract_Notes</name>
@@ -1108,65 +1414,6 @@
                         <stringValue>{!Get_ITPTRS.ITPTSR_ContractNotes__c}</stringValue>
                     </defaultValue>
                     <fieldText>&lt;b&gt;Contract Notes&lt;/b&gt;</fieldText>
-                    <fieldType>LargeTextArea</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>7</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>s2_Section3_Column3</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>2</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>s2_Section4</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>s2_Section4_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Vendor_RAG</name>
-                    <choiceReferences>RAG</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_VendorRAG__c</elementReference>
-                    </defaultValue>
-                    <fieldText>&lt;b&gt;Vendor RAG&lt;/b&gt;</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>s2_Section4_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Vendor_Notes</name>
-                    <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_VendorNotes__c}</stringValue>
-                    </defaultValue>
-                    <fieldText>&lt;b&gt;Vendor Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1190,7 +1437,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section5</name>
@@ -1199,13 +1445,13 @@
                 <name>s2_Section5_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Funding_RAG</name>
+                    <name>Vendor_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_FundingRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_VendorRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Funding RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Vendor RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1221,11 +1467,11 @@
                 <name>s2_Section5_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Funding_Notes</name>
+                    <name>Vendor_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_FundingNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_VendorNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Funding Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Vendor Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1249,7 +1495,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section6</name>
@@ -1258,13 +1503,13 @@
                 <name>s2_Section6_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Staffing_RAG</name>
+                    <name>Funding_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_StaffingRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_FundingRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Staffing RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Funding RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1280,11 +1525,11 @@
                 <name>s2_Section6_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Staffing_Notes</name>
+                    <name>Funding_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_StaffingNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_FundingNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Staffing Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Funding Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1308,7 +1553,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section7</name>
@@ -1317,13 +1561,13 @@
                 <name>s2_Section7_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Technical_RAG</name>
+                    <name>Staffing_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_TechnicalRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_StaffingRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Technical RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Staffing RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1339,11 +1583,11 @@
                 <name>s2_Section7_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Technical_Notes</name>
+                    <name>Staffing_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_TechnicalNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_StaffingNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Technical Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Staffing Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1367,7 +1611,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section8</name>
@@ -1376,13 +1619,13 @@
                 <name>s2_Section8_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Communication_RAG</name>
+                    <name>Technical_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_CommunicationRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_TechnicalRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Communication RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Technical RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1398,11 +1641,11 @@
                 <name>s2_Section8_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Communication_Notes</name>
+                    <name>Technical_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_CommunicationNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_TechnicalNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Communication Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Technical Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1426,7 +1669,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section9</name>
@@ -1435,13 +1677,13 @@
                 <name>s2_Section9_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Timeline_RAG</name>
+                    <name>Communication_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_TimelineRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_CommunicationRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Timeline RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Communication RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1457,11 +1699,11 @@
                 <name>s2_Section9_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Timeline_Notes</name>
+                    <name>Communication_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_TimelineNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_CommunicationNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Timeline Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Communication Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1485,7 +1727,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section10</name>
@@ -1494,13 +1735,13 @@
                 <name>s2_Section10_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Cost_RAG</name>
+                    <name>Timeline_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_CostRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_TimelineRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Cost RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Timeline RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1516,11 +1757,11 @@
                 <name>s2_Section10_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Cost_Notes</name>
+                    <name>Timeline_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_CostNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_TimelineNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Cost Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Timeline Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1544,7 +1785,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section11</name>
@@ -1553,13 +1793,13 @@
                 <name>s2_Section11_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Scope_RAG</name>
+                    <name>Cost_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_ScopeRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_CostRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Scope RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Cost RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1575,11 +1815,11 @@
                 <name>s2_Section11_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Scope_Notes</name>
+                    <name>Cost_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_ScopeNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_CostNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Scope Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Cost Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1603,7 +1843,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section12</name>
@@ -1612,13 +1851,13 @@
                 <name>s2_Section12_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Quality_RAG</name>
+                    <name>Scope_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_QualityRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_ScopeRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Quality RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Scope RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1634,11 +1873,11 @@
                 <name>s2_Section12_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Quality_Notes</name>
+                    <name>Scope_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_QualityNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_ScopeNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Quality Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Scope Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1662,7 +1901,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>s2_Section13</name>
@@ -1671,13 +1909,13 @@
                 <name>s2_Section13_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Risk_RAG</name>
+                    <name>Quality_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_ITPTRS.ITPTSR_RiskRAG__c</elementReference>
+                        <elementReference>Get_ITPTRS.ITPTSR_QualityRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Risk RAG&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Quality RAG&lt;/b&gt;</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1693,11 +1931,11 @@
                 <name>s2_Section13_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Risk_Notes</name>
+                    <name>Quality_Notes</name>
                     <defaultValue>
-                        <stringValue>{!Get_ITPTRS.ITPTSR_RiskNotes__c}</stringValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_QualityNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>&lt;b&gt;Risk Notes&lt;/b&gt;</fieldText>
+                    <fieldText>&lt;b&gt;Quality Notes&lt;/b&gt;</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1721,7 +1959,64 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>s2_Section14</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>s2_Section14_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Risk_RAG</name>
+                    <choiceReferences>RAG</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_ITPTRS.ITPTSR_RiskRAG__c</elementReference>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Risk RAG&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section14_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Risk_Notes</name>
+                    <defaultValue>
+                        <stringValue>{!Get_ITPTRS.ITPTSR_RiskNotes__c}</stringValue>
+                    </defaultValue>
+                    <fieldText>&lt;b&gt;Risk Notes&lt;/b&gt;</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>7</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>s2_Section14_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>2</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
         </fields>
         <nextOrFinishButtonLabel>Update</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -1734,12 +2029,22 @@
             <targetReference>Get_ITPTRS</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>CaseID</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>IsBanner</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
     </variables>
 </Flow>

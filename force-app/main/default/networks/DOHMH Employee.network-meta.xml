@@ -7,14 +7,12 @@
     <disableReputationRecordConversations>false</disableReputationRecordConversations>
     <emailSenderAddress>stalla@health.nyc.gov</emailSenderAddress>
     <emailSenderName>DOHMH Employee</emailSenderName>
-    <enableApexCDNCaching>false</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
     <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
     <enableGuestChatter>true</enableGuestChatter>
     <enableGuestFileAccess>true</enableGuestFileAccess>
     <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
-    <enableImageOptimizationCDN>true</enableImageOptimizationCDN>
     <enableInvitation>false</enableInvitation>
     <enableKnowledgeable>true</enableKnowledgeable>
     <enableMemberVisibility>false</enableMemberVisibility>
@@ -35,13 +33,13 @@
         <permissionSet>Employee_Concierge_User_Data_Access</permissionSet>
         <permissionSet>Employee_Knowledge_User</permissionSet>
         <permissionSet>Permission_Set_to_the_UsersObject</permissionSet>
-        <profile>admin</profile>
-        <profile>standardaul</profile>
-        <profile>employee user profile</profile>
-        <profile>employee system admin</profile>
-        <profile>employee service request</profile>
-        <profile>standard employee user profile</profile>
-        <profile>dohmh user employee profile</profile>
+        <profile>Admin</profile>
+        <profile>StandardAul</profile>
+        <profile>Employee User Profile</profile>
+        <profile>Employee System Admin</profile>
+        <profile>Employee Service Request</profile>
+        <profile>Standard Employee user Profile</profile>
+        <profile>DOHMH User Employee Profile</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>

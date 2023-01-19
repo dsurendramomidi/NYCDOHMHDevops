@@ -12,9 +12,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Value1</fullName>
+                <fullName>Apple Phone</fullName>
                 <default>false</default>
-                <label>Value1</label>
+                <label>Apple Phone</label>
+            </value>
+            <value>
+                <fullName>Android Phone</fullName>
+                <default>false</default>
+                <label>Android Phone</label>
+            </value>
+            <value>
+                <fullName>Tablet</fullName>
+                <default>false</default>
+                <label>Tablet</label>
             </value>
         </valueSetDefinition>
     </valueSet>

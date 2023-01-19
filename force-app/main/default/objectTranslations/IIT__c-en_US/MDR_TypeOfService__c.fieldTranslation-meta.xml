@@ -3,7 +3,15 @@
     <label></label>
     <name>MDR_TypeOfService__c</name>
     <picklistValues>
-        <masterLabel>Value1</masterLabel>
+        <masterLabel>Change in Features</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Replacement</masterLabel>
         <translation></translation>
     </picklistValues>
 </CustomFieldTranslation>

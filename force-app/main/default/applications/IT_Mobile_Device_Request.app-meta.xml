@@ -23,6 +23,7 @@
     <tabs>ADM_BCR_Division_Approver__c</tabs>
     <tabs>ServiceRequest__c</tabs>
     <tabs>Application_Dashboard__c</tabs>
+    <tabs>AppConfig__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>IT_Mobile_Device_Request_UtilityBar</utilityBar>
 </CustomApplication>

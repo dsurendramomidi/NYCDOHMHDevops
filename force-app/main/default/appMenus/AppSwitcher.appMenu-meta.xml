@@ -177,10 +177,6 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>Jake</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>User</name>
         <type>CustomApplication</type>
     </appMenuItems>
@@ -203,5 +199,9 @@
     <appMenuItems>
         <name>Private Community</name>
         <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>standard__Content</name>
+        <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>

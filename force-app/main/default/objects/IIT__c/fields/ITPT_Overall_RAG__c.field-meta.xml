@@ -12,19 +12,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>🟥 1 - High</fullName>
+                <fullName>🔴 1 - Red</fullName>
                 <default>false</default>
-                <label>🟥 1 - High</label>
+                <label>🔴 1 - Red</label>
             </value>
             <value>
-                <fullName>🟨 2- Medium</fullName>
+                <fullName>🟡 2 - Amber</fullName>
                 <default>false</default>
-                <label>🟨 2- Medium</label>
+                <label>🟡 2 - Amber</label>
             </value>
             <value>
-                <fullName>🟦 3 - Low</fullName>
+                <fullName>🟢 3 - Green</fullName>
                 <default>false</default>
-                <label>🟦 3 - Low</label>
+                <label>🟢 3 - Green</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -3,8 +3,8 @@
     <actionCalls>
         <name>AssignFileToCase</name>
         <label>AssignFileToCase</label>
-        <locationX>769</locationX>
-        <locationY>730</locationY>
+        <locationX>899</locationX>
+        <locationY>713</locationY>
         <actionName>FileUploadImprovedHelper</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -207,7 +207,6 @@
             <label>Show Blank Screen</label>
         </rules>
     </decisions>
-    <description>Making all field labels bold v1</description>
     <dynamicChoiceSets>
         <name>CurrentStatusChoice</name>
         <dataType>Picklist</dataType>
@@ -243,7 +242,14 @@
         <picklistField>ITPTSR_ContractRAG__c</picklistField>
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
+    <dynamicChoiceSets>
+        <name>SDLC</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ITPT_SDLC_Phase__c</picklistField>
+        <picklistObject>IIT__c</picklistObject>
+    </dynamicChoiceSets>
     <formulas>
         <name>APP_CustomApp_RecordData_To_CaseDescriptionSummary</name>
         <dataType>String</dataType>
@@ -278,10 +284,10 @@
     <recordCreates>
         <name>APP_Create_Record_In_Custom_App_Object</name>
         <label>APP Create Record In Custom App Object</label>
-        <locationX>770</locationX>
-        <locationY>814</locationY>
+        <locationX>818</locationX>
+        <locationY>816</locationY>
         <connector>
-            <targetReference>Get_Employe_ID</targetReference>
+            <targetReference>UpdateParent</targetReference>
         </connector>
         <faultConnector>
             <targetReference>FW_Rollback_AfterCaseUpdate</targetReference>
@@ -479,6 +485,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>ITPT_Overall_RAG__c</field>
+            <value>
+                <elementReference>Overall_RAG</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>ITPT_ProjectLead_User__c</field>
             <value>
                 <elementReference>Get_Parent_Data.ITPT_ProjectLead_User__c</elementReference>
@@ -488,6 +500,12 @@
             <field>ITPT_ResponsibleDirector_User__c</field>
             <value>
                 <elementReference>Get_Parent_Data.ITPT_ResponsibleDirector_User__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_SDLC_Phase__c</field>
+            <value>
+                <elementReference>SDLC_Phase</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -508,8 +526,8 @@
     <recordLookups>
         <name>Get_Employe_ID</name>
         <label>Get Employe ID</label>
-        <locationX>607</locationX>
-        <locationY>784</locationY>
+        <locationX>602</locationX>
+        <locationY>810</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>BtnValue</targetReference>
@@ -768,12 +786,42 @@
         </inputAssignments>
         <object>Case</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>UpdateParent</name>
+        <label>UpdateParent</label>
+        <locationX>710</locationX>
+        <locationY>753</locationY>
+        <connector>
+            <targetReference>Get_Employe_ID</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Related_Case_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CaseID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ITPT_Overall_RAG__c</field>
+            <value>
+                <elementReference>Overall_RAG</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_SDLC_Phase__c</field>
+            <value>
+                <elementReference>SDLC_Phase</elementReference>
+            </value>
+        </inputAssignments>
+        <object>IIT__c</object>
+    </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
         <name>APP_Request</name>
         <label>APP_Request</label>
-        <locationX>770</locationX>
-        <locationY>509</locationY>
+        <locationX>792</locationX>
+        <locationY>525</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -845,7 +893,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -856,6 +903,71 @@
                     </rightValue>
                 </conditions>
             </visibilityRule>
+        </fields>
+        <fields>
+            <name>APP_Request_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Overall_RAG</name>
+                    <choiceReferences>RAG</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;Overall RAG&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>SDLC_Phase</name>
+                    <choiceReferences>SDLC</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;SDLC Phase&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section2_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section2_Column4</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>text</name>
@@ -910,10 +1022,10 @@
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>APP_Request_Section2</name>
+            <name>APP_Request_Section3</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>APP_Request_Section2_Column1</name>
+                <name>APP_Request_Section3_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Upcoming_Milestones</name>
@@ -933,7 +1045,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section2_Column2</name>
+                <name>APP_Request_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Upcoming_Milestones_Date</name>
@@ -954,7 +1066,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Link_to_Project_Schedule</name>
@@ -972,10 +1083,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>APP_Request_Section3</name>
+            <name>APP_Request_Section4</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>APP_Request_Section3_Column1</name>
+                <name>APP_Request_Section4_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Contract_RAG</name>
@@ -997,7 +1108,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section3_Column2</name>
+                <name>APP_Request_Section4_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Contract_Notes1</name>
@@ -1005,65 +1116,6 @@
                         <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_ContractNotes__c}</stringValue>
                     </defaultValue>
                     <fieldText>Contract Notes</fieldText>
-                    <fieldType>LargeTextArea</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>APP_Request_Section3_Column3</name>
-                <fieldType>Region</fieldType>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>APP_Request_Section4</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>APP_Request_Section4_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Vendor_RAG</name>
-                    <choiceReferences>RAG</choiceReferences>
-                    <dataType>String</dataType>
-                    <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_VendorRAG__c</elementReference>
-                    </defaultValue>
-                    <fieldText>Vendor RAG</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>3</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>APP_Request_Section4_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Vendor_Notes1</name>
-                    <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_VendorNotes__c}</stringValue>
-                    </defaultValue>
-                    <fieldText>Vendor Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1087,7 +1139,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section5</name>
@@ -1096,13 +1147,13 @@
                 <name>APP_Request_Section5_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Staffing_RAG</name>
+                    <name>Vendor_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_StaffingRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_VendorRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Staffing RAG</fieldText>
+                    <fieldText>Vendor RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1118,11 +1169,11 @@
                 <name>APP_Request_Section5_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Staffing_Notes1</name>
+                    <name>Vendor_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_StaffingNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_VendorNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Staffing Notes</fieldText>
+                    <fieldText>Vendor Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1146,7 +1197,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section6</name>
@@ -1155,13 +1205,13 @@
                 <name>APP_Request_Section6_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Funding_RAG</name>
+                    <name>Staffing_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_FundingRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_StaffingRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Funding RAG</fieldText>
+                    <fieldText>Staffing RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1177,11 +1227,11 @@
                 <name>APP_Request_Section6_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Funding_Notes1</name>
+                    <name>Staffing_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_FundingNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_StaffingNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Funding Notes</fieldText>
+                    <fieldText>Staffing Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1205,7 +1255,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section7</name>
@@ -1214,13 +1263,13 @@
                 <name>APP_Request_Section7_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Technical_RAG</name>
+                    <name>Funding_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_TechnicalRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_FundingRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Technical RAG</fieldText>
+                    <fieldText>Funding RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1236,11 +1285,11 @@
                 <name>APP_Request_Section7_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Technical_Notes1</name>
+                    <name>Funding_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_TechnicalNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_FundingNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Technical Notes</fieldText>
+                    <fieldText>Funding Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1264,7 +1313,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section8</name>
@@ -1273,13 +1321,13 @@
                 <name>APP_Request_Section8_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Communication_RAG</name>
+                    <name>Technical_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_CommunicationRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_TechnicalRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Communication RAG</fieldText>
+                    <fieldText>Technical RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1295,11 +1343,11 @@
                 <name>APP_Request_Section8_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Communication_Notes1</name>
+                    <name>Technical_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_CommunicationNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_TechnicalNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Communication Notes</fieldText>
+                    <fieldText>Technical Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1323,7 +1371,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section9</name>
@@ -1332,13 +1379,13 @@
                 <name>APP_Request_Section9_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Timeline_RAG</name>
+                    <name>Communication_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_TimelineRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_CommunicationRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Timeline RAG</fieldText>
+                    <fieldText>Communication RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1354,11 +1401,11 @@
                 <name>APP_Request_Section9_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Timeline_Notes1</name>
+                    <name>Communication_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_TimelineNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_CommunicationNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Timeline Notes</fieldText>
+                    <fieldText>Communication Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1382,7 +1429,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section10</name>
@@ -1391,13 +1437,13 @@
                 <name>APP_Request_Section10_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Cost_RAG</name>
+                    <name>Timeline_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_CostRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_TimelineRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Cost RAG</fieldText>
+                    <fieldText>Timeline RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1413,11 +1459,11 @@
                 <name>APP_Request_Section10_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Cost_Notes1</name>
+                    <name>Timeline_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_CostNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_TimelineNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Cost Notes</fieldText>
+                    <fieldText>Timeline Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1441,7 +1487,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section11</name>
@@ -1450,13 +1495,13 @@
                 <name>APP_Request_Section11_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Scope_RAG</name>
+                    <name>Cost_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_ScopeRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_CostRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Scope RAG</fieldText>
+                    <fieldText>Cost RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1472,11 +1517,11 @@
                 <name>APP_Request_Section11_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Scope_Notes1</name>
+                    <name>Cost_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_ScopeNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_CostNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Scope Notes</fieldText>
+                    <fieldText>Cost Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1500,7 +1545,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section12</name>
@@ -1509,13 +1553,13 @@
                 <name>APP_Request_Section12_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Quality_RAG</name>
+                    <name>Scope_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_QualityRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_ScopeRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Quality RAG</fieldText>
+                    <fieldText>Scope RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1531,11 +1575,11 @@
                 <name>APP_Request_Section12_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Quality_Notes1</name>
+                    <name>Scope_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_QualityNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_ScopeNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Quality Notes</fieldText>
+                    <fieldText>Scope Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1559,7 +1603,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section13</name>
@@ -1568,13 +1611,13 @@
                 <name>APP_Request_Section13_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Risk_RAG</name>
+                    <name>Quality_RAG</name>
                     <choiceReferences>RAG</choiceReferences>
                     <dataType>String</dataType>
                     <defaultValue>
-                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_RiskRAG__c</elementReference>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_QualityRAG__c</elementReference>
                     </defaultValue>
-                    <fieldText>Risk RAG</fieldText>
+                    <fieldText>Quality RAG</fieldText>
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1590,11 +1633,11 @@
                 <name>APP_Request_Section13_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Risk_Notes1</name>
+                    <name>Quality_Notes1</name>
                     <defaultValue>
-                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_RiskNotes__c}</stringValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_QualityNotes__c}</stringValue>
                     </defaultValue>
-                    <fieldText>Risk Notes</fieldText>
+                    <fieldText>Quality Notes</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1618,7 +1661,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section14</name>
@@ -1626,6 +1668,17 @@
             <fields>
                 <name>APP_Request_Section14_Column1</name>
                 <fieldType>Region</fieldType>
+                <fields>
+                    <name>Risk_RAG</name>
+                    <choiceReferences>RAG</choiceReferences>
+                    <dataType>String</dataType>
+                    <defaultValue>
+                        <elementReference>Get_Latest_Status_Report_Data.ITPTSR_RiskRAG__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Risk RAG</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -1636,6 +1689,53 @@
             </fields>
             <fields>
                 <name>APP_Request_Section14_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Risk_Notes1</name>
+                    <defaultValue>
+                        <stringValue>{!Get_Latest_Status_Report_Data.ITPTSR_RiskNotes__c}</stringValue>
+                    </defaultValue>
+                    <fieldText>Risk Notes</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section14_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>APP_Request_Section15</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section15_Column1</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section15_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Contract_Notes</name>
@@ -1756,7 +1856,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section14_Column3</name>
+                <name>APP_Request_Section15_Column3</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -1767,7 +1867,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -1937,11 +2036,11 @@
             <targetReference>Get_Parent_Case_Status</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <name>Approval_History</name>
         <label>Approval History</label>
-        <locationX>636</locationX>
+        <locationX>635</locationX>
         <locationY>1086</locationY>
         <connector>
             <targetReference>FW_Email_Requester</targetReference>
@@ -1969,8 +2068,8 @@
     <subflows>
         <name>FW_Create_Case</name>
         <label>FW Create Case</label>
-        <locationX>767</locationX>
-        <locationY>633</locationY>
+        <locationX>850</locationX>
+        <locationY>619</locationY>
         <connector>
             <targetReference>AssignFileToCase</targetReference>
         </connector>

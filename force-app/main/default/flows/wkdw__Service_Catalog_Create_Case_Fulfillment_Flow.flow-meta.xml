@@ -353,7 +353,7 @@
             <targetReference>GET_CaseRecordType</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>AdditionalQuestions</name>
         <dataType>String</dataType>

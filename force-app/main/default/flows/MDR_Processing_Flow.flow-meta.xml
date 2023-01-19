@@ -56,8 +56,7 @@
             <label>Approved</label>
         </rules>
     </decisions>
-    <description>05/18/2022
-Adding condition to check the Actor ID=IT MDR Approvers, then only launch the flow</description>
+    <description>Updating object from IT MDR object to IIT object</description>
     <dynamicChoiceSets>
         <name>GetAllTecSysRelatedRecords</name>
         <collectionReference>getAllTecsysRecords</collectionReference>
@@ -155,7 +154,7 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>IT_Mobile_Device_Request__c</object>
+        <object>IIT__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
@@ -193,7 +192,7 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
             <field>UserName_Email_SF__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>get_Related_MDR.Requester_Email__c</elementReference>
+                <elementReference>get_Related_MDR.MDR_Requester_Email__c</elementReference>
             </value>
         </filters>
         <object>Tecsys_Asset__c</object>
@@ -353,7 +352,6 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>false</showFooter>
         <showHeader>true</showHeader>
@@ -449,7 +447,6 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Asset_ID_or_Serial_or_IMEI_No</name>
@@ -530,7 +527,6 @@ Adding condition to check the Actor ID=IT MDR Approvers, then only launch the fl
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>false</showFooter>

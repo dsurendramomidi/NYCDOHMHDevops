@@ -117,7 +117,6 @@
         </rules>
     </decisions>
     <description>This flow is Default sub flow which is used to call for all the flows.</description>
-    <environments>Default</environments>
     <interviewLabel>Sub Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Default Sub Flow</label>
     <processMetadataValues>
@@ -339,7 +338,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Installation_Issue_Section2</name>
@@ -356,7 +354,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Installation_Issue_Section3</name>
@@ -379,7 +376,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
@@ -456,7 +452,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>

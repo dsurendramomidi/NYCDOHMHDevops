@@ -95,7 +95,6 @@
         </outputAssignments>
         <valueField>UserID__c</valueField>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>APP_CustomApp_RecordData_To_CaseDescriptionSummary</name>
         <dataType>String</dataType>
@@ -412,7 +411,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Msg</name>
@@ -555,7 +553,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section3</name>
@@ -627,7 +624,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>msg2</name>

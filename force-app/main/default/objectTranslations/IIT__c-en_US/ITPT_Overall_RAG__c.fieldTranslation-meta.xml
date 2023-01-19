@@ -3,15 +3,15 @@
     <label></label>
     <name>ITPT_Overall_RAG__c</name>
     <picklistValues>
-        <masterLabel>🟥 1 - High</masterLabel>
+        <masterLabel>🔴 1 - Red</masterLabel>
         <translation></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>🟦 3 - Low</masterLabel>
+        <masterLabel>🟡 2 - Amber</masterLabel>
         <translation></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>🟨 2- Medium</masterLabel>
+        <masterLabel>🟢 3 - Green</masterLabel>
         <translation></translation>
     </picklistValues>
 </CustomFieldTranslation>

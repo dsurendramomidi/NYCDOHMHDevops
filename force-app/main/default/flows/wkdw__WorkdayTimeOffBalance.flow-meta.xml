@@ -311,7 +311,7 @@
             <targetReference>Get_Named_Credential</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>FaultString</name>
         <dataType>String</dataType>

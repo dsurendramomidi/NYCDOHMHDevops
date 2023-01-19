@@ -239,7 +239,6 @@
             <label>Stage 4 Step 1</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Orchestration Step 1 {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Orchestration Step 1</label>
     <processMetadataValues>

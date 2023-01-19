@@ -30,7 +30,6 @@
             <stringValue>111</stringValue>
         </value>
     </constants>
-    <environments>Default</environments>
     <interviewLabel>IIT SC Network, Voice and Connectivity - Internet Access {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT SC Network, Voice and Connectivity - Internet Access</label>
     <processMetadataValues>

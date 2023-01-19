@@ -29,7 +29,6 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <apiVersion>55.0</apiVersion>
-    <environments>Default</environments>
     <formulas>
         <name>Var_GetName</name>
         <dataType>String</dataType>

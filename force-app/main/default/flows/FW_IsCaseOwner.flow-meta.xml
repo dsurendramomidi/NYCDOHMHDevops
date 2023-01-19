@@ -80,7 +80,6 @@
             <label>Owner Is A Queue</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <formulas>
         <name>CASESAFEID_ID</name>
         <dataType>String</dataType>

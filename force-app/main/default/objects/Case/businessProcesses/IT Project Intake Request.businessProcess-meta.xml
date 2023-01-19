@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT Project Intake Request</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>ActionDesc</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CIO Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CIO Approval ONLY</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Canceled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Communication Group Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Consultation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Division DC Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Division Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IT Project AC Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IT Project AC Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IT Project AC Review for Mobile</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IT Project Intake Request Complete</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IT Project Intake Request Rejected%2FCanceled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IT Senior Staff Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Processing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Project Manager Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Requester Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Revision by Requester</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Solution Director Review %28From IT AC%29</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Solution Director Review %28From PM Consultation%29</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Solution Director Review %28TA Completed%29</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

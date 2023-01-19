@@ -107,7 +107,7 @@
             <assignToReference>nextApproverACDCId</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>getMDRName.Select_Your_Divisional_Approver_DC__r.Id</elementReference>
+                <elementReference>getMDRName.MDR_Divisional_Approver__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -387,9 +387,7 @@
             <label>Another User Type</label>
         </rules>
     </decisions>
-    <description>Adding REGEX to the Phone field to accept only numeric values on Screen Element
-v7: Getting MDR Case RecordType ID and assign it to the case record</description>
-    <environments>Default</environments>
+    <description>updating object from IT Mobile Device Request to IIT and updated the nextapproverID assignment</description>
     <formulas>
         <name>getEmployeeFullName</name>
         <dataType>String</dataType>
@@ -498,75 +496,99 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
             <targetReference>Roll_Back_to_Create_Records</targetReference>
         </faultConnector>
         <inputAssignments>
-            <field>Accept__c</field>
+            <field>MDR_AcceptDOHMHPolicy__c</field>
             <value>
                 <elementReference>SAFEGUARDING_DOHMH_ITASSETS</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Address__c</field>
+            <field>MDR_Address__c</field>
             <value>
                 <elementReference>Fetching_Myuser_Details_From_Employee.Work_Address__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Approval_Status__c</field>
+            <field>MDR_Approval_Status__c</field>
             <value>
                 <stringValue>Submitted for Approval</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Bureau__c</field>
+            <field>MDR_Bureau__c</field>
             <value>
                 <elementReference>Fetching_Myuser_Details_From_Employee.Bureau__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Completing_this_request_on_behalf_of__c</field>
+            <field>MDR_Completing_this_request_on_behalf_of__c</field>
             <value>
                 <elementReference>I_am_completing_this_request_on_behalf_of1</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Division__c</field>
+            <field>MDR_DeviceReplacementReason__c</field>
+            <value>
+                <elementReference>Reason_for_the_Replacement</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MDR_Division__c</field>
             <value>
                 <elementReference>Fetching_Myuser_Details_From_Employee.Division__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Employee_Name__c</field>
+            <field>MDR_Divisional_Approver__c</field>
+            <value>
+                <elementReference>EmployeeUserID.recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MDR_Employee_Name__c</field>
             <value>
                 <elementReference>Fetching_Myuser_Details_From_Employee.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Incident_Location__c</field>
+            <field>MDR_LostLocation__c</field>
             <value>
                 <elementReference>Incident_Location</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Mobile_Deivce_Ownership__c</field>
+            <field>MDR_MobileDeviceOwnershipType__c</field>
             <value>
                 <elementReference>Mobile_Device_Ownership</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Mobile_Phone_Number__c</field>
+            <field>MDR_MobileDeviceRequestType__c</field>
+            <value>
+                <elementReference>Type_of_request</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MDR_MobileDeviceType__c</field>
+            <value>
+                <elementReference>What_mobile_device_are_you_requesting</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MDR_MobilePhoneNumber__c</field>
             <value>
                 <elementReference>MobilePhoneNumber.value</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Reason_for_a_new_replacement_device__c</field>
+            <field>MDR_RequesterWorkUnit__c</field>
             <value>
-                <elementReference>Justification_for_a_new_or_replacement_device</elementReference>
+                <elementReference>Fetching_Myuser_Details_From_Employee.Work_Unit_Code__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Reason_for_the_Replacement__c</field>
+            <field>MDR_Requester_Email__c</field>
             <value>
-                <elementReference>Reason_for_the_Replacement</elementReference>
+                <elementReference>Fetching_Myuser_Details_From_Employee.Email</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -575,49 +597,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <elementReference>Get_case_Details.CaseNumber</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Related_Case_URL__c</field>
-            <value>
-                <elementReference>NewCaseLinkFormula</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Requester_Email__c</field>
-            <value>
-                <elementReference>Fetching_Myuser_Details_From_Employee.Email</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Requester_Work_Unit__c</field>
-            <value>
-                <elementReference>Fetching_Myuser_Details_From_Employee.Work_Unit__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Select_Your_Divisional_Approver_DC__c</field>
-            <value>
-                <elementReference>EmployeeUserID.recordId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Type_Of_Request__c</field>
-            <value>
-                <elementReference>Type_of_request</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>What_mobile_device_are_you_requesting__c</field>
-            <value>
-                <elementReference>What_mobile_device_are_you_requesting</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Work_Phone__c</field>
-            <value>
-                <elementReference>Fetching_Myuser_Details_From_Employee.Work_Phone__c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>IT_Mobile_Device_Request__c</object>
+        <object>IIT__c</object>
     </recordCreates>
     <recordLookups>
         <name>Fetching_Myuser_Details_From_Employee</name>
@@ -707,7 +687,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>IT_Mobile_Device_Request__c</object>
+        <object>IIT__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordRollbacks>
@@ -769,7 +749,7 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
         <inputAssignments>
             <field>MDR_Type_oF_Request__c</field>
             <value>
-                <elementReference>getMDRName.Type_Of_Request__c</elementReference>
+                <elementReference>getMDRName.MDR_MobileDeviceRequestType__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -986,7 +966,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -1082,7 +1061,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Mobile_Device_Request_Section2</name>
@@ -1179,7 +1157,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -1694,7 +1671,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Mobile_Device_Request_Section4</name>
@@ -1738,7 +1714,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>Mobile_Device_Request_Section5</name>
@@ -1801,7 +1776,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>
@@ -1877,7 +1851,6 @@ v7: Getting MDR Case RecordType ID and assign it to the case record</description
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
             <visibilityRule>
                 <conditionLogic>and</conditionLogic>
                 <conditions>

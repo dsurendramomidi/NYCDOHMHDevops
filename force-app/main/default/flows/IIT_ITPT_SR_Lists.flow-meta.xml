@@ -117,8 +117,6 @@
             <label>ShowStatusReport</label>
         </rules>
     </decisions>
-    <description>Updating the Status report History columns</description>
-    <environments>Default</environments>
     <interviewLabel>IIT ITPT RSLists {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT ITPT SR Lists</label>
     <processMetadataValues>
@@ -207,7 +205,7 @@
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Approved Status Report List</stringValue>
+                    <stringValue>Latest Approved Status Report</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -237,7 +235,7 @@
             <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;CreatedDate&quot;,&quot;guid&quot;:&quot;column-b2c6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:0,&quot;label&quot;:&quot;Created Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;guid&quot;:&quot;column-6fa3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Related_Record_URL__c&quot;,&quot;guid&quot;:&quot;column-78a1&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Status Report URL&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Related Record URL&quot;,&quot;type&quot;:&quot;url&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;CreatedDate&quot;,&quot;guid&quot;:&quot;column-b2c6&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:0,&quot;label&quot;:&quot;Created Date&quot;,&quot;type&quot;:&quot;customDateTime&quot;},{&quot;apiName&quot;:&quot;Status&quot;,&quot;guid&quot;:&quot;column-6fa3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:1,&quot;label&quot;:&quot;Status&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Related_Record_URL__c&quot;,&quot;guid&quot;:&quot;column-78a1&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Status Report URL&quot;,&quot;wrapText&quot;:false,&quot;order&quot;:2,&quot;label&quot;:&quot;Related Record URL&quot;,&quot;type&quot;:&quot;url&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -261,7 +259,7 @@
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Current Status Report</stringValue>
+                    <stringValue>Pending Status Report</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>

@@ -3,10 +3,13 @@
     <actionCalls>
         <name>X11</name>
         <label>1</label>
-        <locationX>1101</locationX>
-        <locationY>375</locationY>
+        <locationX>1075</locationX>
+        <locationY>377</locationY>
         <actionName>c:fsc_openUrl</actionName>
         <actionType>component</actionType>
+        <connector>
+            <targetReference>s</targetReference>
+        </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>mode</name>
@@ -23,7 +26,6 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <apiVersion>56.0</apiVersion>
-    <environments>Default</environments>
     <formulas>
         <name>RedirectURL</name>
         <dataType>String</dataType>
@@ -63,8 +65,8 @@
     <recordLookups>
         <name>GetCaseIdFromApplicationDashboard</name>
         <label>GetCaseIdFromApplicationDashboard</label>
-        <locationX>1129</locationX>
-        <locationY>196</locationY>
+        <locationX>1082</locationX>
+        <locationY>211</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>X11</targetReference>
@@ -81,16 +83,50 @@
         <object>Application_Dashboard__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <screens>
+        <name>s</name>
+        <label>s</label>
+        <locationX>1071</locationX>
+        <locationY>498</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>s2</name>
+        <label>s2</label>
+        <locationX>741</locationX>
+        <locationY>289</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>t1</name>
+            <fieldText>&lt;p&gt;{!$Api.Enterprise_Server_URL_260}&lt;/p&gt;&lt;p&gt;{!$Api.Enterprise_Server_URL_25}&lt;/p&gt;&lt;p&gt;{!$Api.Partner_Server_URL_260}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!name}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <start>
-        <locationX>970</locationX>
-        <locationY>48</locationY>
+        <locationX>703</locationX>
+        <locationY>61</locationY>
         <connector>
-            <targetReference>GetCaseIdFromApplicationDashboard</targetReference>
+            <targetReference>s2</targetReference>
         </connector>
     </start>
     <status>Active</status>
     <variables>
         <name>ADid</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>name</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>

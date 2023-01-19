@@ -68,7 +68,6 @@
             <label>Division Approval</label>
         </rules>
     </decisions>
-    <environments>Default</environments>
     <interviewLabel>Orchestration Demo {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Orchestration Master</label>
     <orchestratedStages>
@@ -114,7 +113,6 @@
             </inputParameters>
             <label>Step 1 of Stage 1</label>
             <requiresAsyncProcessing>false</requiresAsyncProcessing>
-            <stepSubtype>InteractiveStep</stepSubtype>
         </stageSteps>
     </orchestratedStages>
     <orchestratedStages>
@@ -160,7 +158,6 @@
             </inputParameters>
             <label>Step 1 of Stage 2</label>
             <requiresAsyncProcessing>false</requiresAsyncProcessing>
-            <stepSubtype>InteractiveStep</stepSubtype>
         </stageSteps>
     </orchestratedStages>
     <orchestratedStages>
@@ -206,7 +203,6 @@
             </inputParameters>
             <label>Step 1 of Stage 3</label>
             <requiresAsyncProcessing>false</requiresAsyncProcessing>
-            <stepSubtype>InteractiveStep</stepSubtype>
         </stageSteps>
     </orchestratedStages>
     <orchestratedStages>
@@ -252,7 +248,6 @@
             </inputParameters>
             <label>Step 1 of Stage 4</label>
             <requiresAsyncProcessing>false</requiresAsyncProcessing>
-            <stepSubtype>InteractiveStep</stepSubtype>
         </stageSteps>
     </orchestratedStages>
     <processMetadataValues>

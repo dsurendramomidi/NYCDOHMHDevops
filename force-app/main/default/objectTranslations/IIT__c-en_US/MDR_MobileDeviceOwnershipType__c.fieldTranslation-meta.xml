@@ -3,7 +3,11 @@
     <label></label>
     <name>MDR_MobileDeviceOwnershipType__c</name>
     <picklistValues>
-        <masterLabel>Value1</masterLabel>
+        <masterLabel>Bring Your Own Device (BYOD)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOHMH Device</masterLabel>
         <translation></translation>
     </picklistValues>
 </CustomFieldTranslation>

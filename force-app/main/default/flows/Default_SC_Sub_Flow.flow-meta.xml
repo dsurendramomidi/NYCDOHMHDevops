@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Redirecting_to_Case_Record_Page</name>
         <label>Redirecting to Case Record Page</label>
-        <locationX>182</locationX>
-        <locationY>1574</locationY>
+        <locationX>776</locationX>
+        <locationY>1622</locationY>
         <actionName>c:navigateTo</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -23,105 +23,6 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <apiVersion>55.0</apiVersion>
-    <assignments>
-        <name>Assign_Another_User_ID_Val</name>
-        <label>Assign Another User ID Val</label>
-        <locationX>50</locationX>
-        <locationY>398</locationY>
-        <assignmentItems>
-            <assignToReference>UserIdval</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>EmployeeIdLookup.recordId</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Fetching_Myuser_Details_From_Employee</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_User_ID_Val</name>
-        <label>Assign User ID Val</label>
-        <locationX>314</locationX>
-        <locationY>398</locationY>
-        <assignmentItems>
-            <assignToReference>UserIdval</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$User.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Fetching_Myuser_Details_From_Employee</targetReference>
-        </connector>
-    </assignments>
-    <choices>
-        <name>AnotherUser</name>
-        <choiceText>Another User</choiceText>
-        <dataType>String</dataType>
-        <value>
-            <stringValue>Another User</stringValue>
-        </value>
-    </choices>
-    <choices>
-        <name>Audio</name>
-        <choiceText>Audio</choiceText>
-        <dataType>String</dataType>
-    </choices>
-    <choices>
-        <name>Installation</name>
-        <choiceText>Installation</choiceText>
-        <dataType>String</dataType>
-    </choices>
-    <choices>
-        <name>My_self</name>
-        <choiceText>Myself</choiceText>
-        <dataType>String</dataType>
-        <value>
-            <stringValue>Myself</stringValue>
-        </value>
-    </choices>
-    <choices>
-        <name>Permissions</name>
-        <choiceText>Permissions</choiceText>
-        <dataType>String</dataType>
-    </choices>
-    <choices>
-        <name>Video</name>
-        <choiceText>Video</choiceText>
-        <dataType>String</dataType>
-    </choices>
-    <decisions>
-        <name>User_Type_Identifier</name>
-        <label>User Type Identifier</label>
-        <locationX>182</locationX>
-        <locationY>278</locationY>
-        <defaultConnector>
-            <targetReference>Assign_User_ID_Val</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Another_User_Type</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>I_am_completing_this_request_on_behalf_of</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>AnotherUser</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Assign_Another_User_ID_Val</targetReference>
-            </connector>
-            <label>Another User Type</label>
-        </rules>
-    </decisions>
-    <description>This flow is Default sub flow which is used to call for all the flows.
-
-Version 7 --This version is updated to &quot;Okay&quot; to &quot;Case details&quot; button label
-Version 8 -- Deleted the responseVar1 variable
-Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin to &quot;Employee Portal&quot; in case creation element.</description>
-    <environments>Default</environments>
     <interviewLabel>Default Sub Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Default SC Sub Flow</label>
     <processMetadataValues>
@@ -133,7 +34,7 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -146,8 +47,8 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
     <recordCreates>
         <name>Create_a_Case_for_Service_Catalog_Issue</name>
         <label>Create a Case for Service Catalog Issue</label>
-        <locationX>182</locationX>
-        <locationY>1214</locationY>
+        <locationX>774</locationX>
+        <locationY>1262</locationY>
         <assignRecordIdToReference>CaseRecordIDVar</assignRecordIdToReference>
         <connector>
             <targetReference>Get_Case_Number</targetReference>
@@ -209,31 +110,10 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
         <object>Case</object>
     </recordCreates>
     <recordLookups>
-        <name>Fetching_Myuser_Details_From_Employee</name>
-        <label>Fetching Myuser Details From Employee</label>
-        <locationX>182</locationX>
-        <locationY>614</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Installation_Issue</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>UserId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>UserIdval</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Employee</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Get_Case_Number</name>
         <label>Get Case Number</label>
-        <locationX>182</locationX>
-        <locationY>1334</locationY>
+        <locationX>776</locationX>
+        <locationY>1382</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Case_Confirmation</targetReference>
@@ -253,8 +133,8 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
     <recordLookups>
         <name>Get_Case_Record_Type</name>
         <label>Get Case Record Type</label>
-        <locationX>182</locationX>
-        <locationY>854</locationY>
+        <locationX>776</locationX>
+        <locationY>902</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Employee</targetReference>
@@ -281,8 +161,8 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
     <recordLookups>
         <name>Get_Employee</name>
         <label>Get Employee</label>
-        <locationX>182</locationX>
-        <locationY>974</locationY>
+        <locationX>776</locationX>
+        <locationY>1022</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Queue_Record_ID</targetReference>
@@ -302,8 +182,8 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
     <recordLookups>
         <name>Get_Queue_Record_ID</name>
         <label>Get Queue Record ID</label>
-        <locationX>182</locationX>
-        <locationY>1094</locationY>
+        <locationX>776</locationX>
+        <locationY>1142</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_a_Case_for_Service_Catalog_Issue</targetReference>
@@ -322,10 +202,93 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
     </recordLookups>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <screens>
+        <name>APP_Request</name>
+        <label>APP_Request</label>
+        <locationX>392</locationX>
+        <locationY>337</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>APP_Request_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>FW_OnBehalfOf_Name</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Requester Name:&amp;nbsp;&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!FW_OnBehalfOf.Employee.Name}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>FW_OnBehalfOf_Email</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Email: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!FW_OnBehalfOf.Employee.Email}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>FW_OnBehalfOf_WorkPhone</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Work Phone: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!FW_OnBehalfOf.Employee.WorkPhone}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>FW_OnBehalfOf_Work_Address</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Address: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!FW_OnBehalfOf.Employee.Work_Address__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>FW_Space</name>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>FW_OnBehalfOf_Division</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Division: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!FW_OnBehalfOf.Employee.Division__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>FW_OnBehalfOf_Bureau</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Bureau: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!FW_OnBehalfOf.Employee.Bureau__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>FW_OnBehalfOf_Work_Unit</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Work Unit: &lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!FW_OnBehalfOf.Employee.Work_Unit__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Description</name>
+            <fieldText>Description of Issue/Request</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>Case_Confirmation</name>
         <label>Case Confirmation</label>
-        <locationX>182</locationX>
-        <locationY>1454</locationY>
+        <locationX>776</locationX>
+        <locationY>1502</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -344,8 +307,8 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
     <screens>
         <name>Installation_Issue</name>
         <label>How can we help you?</label>
-        <locationX>182</locationX>
-        <locationY>734</locationY>
+        <locationX>776</locationX>
+        <locationY>782</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -357,58 +320,6 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
             <fieldType>RegionContainer</fieldType>
             <fields>
                 <name>Installation_Issue_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Employee_Full_Name</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;color: rgb(0, 0, 0);&quot;&gt;Name: {!Fetching_Myuser_Details_From_Employee.Name}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>GetEmployeeBureau</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Bureau: {!Fetching_Myuser_Details_From_Employee.Bureau__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>GetEmployeeDivision</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Division: {!Fetching_Myuser_Details_From_Employee.Division__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>RequesterEmail</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Requester Email: {!Fetching_Myuser_Details_From_Employee.Email}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>RequesterWorkUnit</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Requester Work Unit: {!Fetching_Myuser_Details_From_Employee.Work_Unit__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>WorkPhone</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Work Phone: {!Fetching_Myuser_Details_From_Employee.WorkPhone}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <fields>
-                    <name>Address</name>
-                    <fieldText>&lt;p&gt;&lt;strong&gt;Address: {!Fetching_Myuser_Details_From_Employee.Work_Address__c}&lt;/strong&gt;&lt;/p&gt;</fieldText>
-                    <fieldType>DisplayText</fieldType>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>12</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>Installation_Issue_Section2</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Installation_Issue_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>descriptionOfIssue</name>
@@ -425,97 +336,72 @@ Version 9 -- Save to Case.Description - descriptionOfIssue, Pointed Case Origin 
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
-    <screens>
-        <name>Installation_Issues</name>
-        <label>How can we help you?</label>
-        <locationX>182</locationX>
-        <locationY>158</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>User_Type_Identifier</targetReference>
-        </connector>
-        <fields>
-            <name>Installation_Issues_Section1</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>Installation_Issues_Section1_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>I_am_completing_this_request_on_behalf_of</name>
-                    <choiceReferences>My_self</choiceReferences>
-                    <choiceReferences>AnotherUser</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>I am completing this request on behalf of:</fieldText>
-                    <fieldType>RadioButtons</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <fields>
-                    <name>EmployeeIdLookup</name>
-                    <extensionName>flowruntime:lookup</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>fieldApiName</name>
-                        <value>
-                            <stringValue>UserId</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Select Employee</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>objectApiName</name>
-                        <value>
-                            <stringValue>Employee</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                    <visibilityRule>
-                        <conditionLogic>and</conditionLogic>
-                        <conditions>
-                            <leftValueReference>I_am_completing_this_request_on_behalf_of</leftValueReference>
-                            <operator>EqualTo</operator>
-                            <rightValue>
-                                <elementReference>AnotherUser</elementReference>
-                            </rightValue>
-                        </conditions>
-                    </visibilityRule>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>12</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
     <start>
-        <locationX>56</locationX>
-        <locationY>0</locationY>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
         <connector>
-            <targetReference>Installation_Issues</targetReference>
+            <targetReference>FW_OnBehalfOf</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
+    <subflows>
+        <name>FW_OnBehalfOf</name>
+        <label>FW OnBehalfOf</label>
+        <locationX>392</locationX>
+        <locationY>186</locationY>
+        <connector>
+            <targetReference>APP_Request</targetReference>
+        </connector>
+        <flowName>FW_On_Behalf_Of</flowName>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>APP_Application_type</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>APP_ApplicationURL</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>APP_Origin</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>APP_Record</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>APP_RecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>APP_Related_Object</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>CaseRecordIDVar</name>
         <dataType>String</dataType>

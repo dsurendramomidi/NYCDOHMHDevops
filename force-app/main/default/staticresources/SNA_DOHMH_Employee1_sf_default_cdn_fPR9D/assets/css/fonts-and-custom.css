@@ -144,4 +144,9 @@ font-family: 'HelveticaNeue';
 .forceHighlightsDesktopListRecordItem .slds-form-element__static {
     font-size: 18px !important;
 }
+
+/* Bold for all the input element label */
+.forceCommunityFlowCommunity .slds-form-element__label {
+    font-weight:bold;
+}
 :root { --dxp-c-section-columns-max-width: 1440px; }

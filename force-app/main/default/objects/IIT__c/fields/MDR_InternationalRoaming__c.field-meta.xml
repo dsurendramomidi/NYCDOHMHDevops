@@ -3,10 +3,23 @@
     <fullName>MDR_InternationalRoaming__c</fullName>
     <externalId>false</externalId>
     <label>MDR_InternationalRoaming</label>
-    <length>255</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackTrending>false</trackTrending>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Add</fullName>
+                <default>false</default>
+                <label>Add</label>
+            </value>
+            <value>
+                <fullName>Remove</fullName>
+                <default>false</default>
+                <label>Remove</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
 </CustomField>

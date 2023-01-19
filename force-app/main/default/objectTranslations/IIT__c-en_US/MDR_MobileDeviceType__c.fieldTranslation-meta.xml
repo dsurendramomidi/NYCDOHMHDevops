@@ -3,7 +3,31 @@
     <label></label>
     <name>MDR_MobileDeviceType__c</name>
     <picklistValues>
-        <masterLabel>Value1</masterLabel>
+        <masterLabel>CCEWIN</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ISP AirCard (Both Device &amp; Data Plan)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Samsung Tablet (data plan only)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verizon Flip Phone (both device &amp; cell plan)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iPad (data plan only)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iPhone (both device &amp; data plan)</masterLabel>
         <translation></translation>
     </picklistValues>
 </CustomFieldTranslation>

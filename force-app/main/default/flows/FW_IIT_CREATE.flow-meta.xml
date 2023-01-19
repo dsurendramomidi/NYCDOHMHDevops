@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
-    <environments>Default</environments>
+    <description>Adding a filter condition to not to consider MDR records</description>
     <interviewLabel>FW {!$Flow.CurrentDateTime}</interviewLabel>
     <label>FW_IIT_CREATE</label>
     <processMetadataValues>
@@ -45,14 +45,22 @@
         <object>Application_Dashboard__c</object>
     </recordUpdates>
     <start>
-        <locationX>970</locationX>
+        <locationX>971</locationX>
         <locationY>48</locationY>
         <connector>
             <targetReference>UpdateIIT_ID</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MDR_Requester_Email__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
         <object>IIT__c</object>
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>

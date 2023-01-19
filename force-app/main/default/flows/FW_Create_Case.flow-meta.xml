@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
-    <description>add related case url</description>
-    <environments>Default</environments>
+    <description>update related case url</description>
     <formulas>
         <name>FW_CASE_URL</name>
         <dataType>String</dataType>
-        <expression>LEFT({!$Api.Enterprise_Server_URL_260},FIND(&apos;/&apos;,{!$Api.Enterprise_Server_URL_260},9)) &amp; &apos;employees/s/case/&apos;</expression>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_260},FIND(&apos;/&apos;,{!$Api.Enterprise_Server_URL_260},9)) &amp; &apos;employees/s/case/&apos; &amp; {!FW_CaseRecordId} &amp;&apos;/detail&apos;</expression>
     </formulas>
     <formulas>
         <name>FW_ReferenceNoFormula</name>
@@ -46,11 +45,11 @@ IF(CONTAINS(UPPER({!$User.Email}), &quot;@HEALTH.NYC.GOV&quot;) ,&quot;-&quot; &
     <recordCreates>
         <name>FW_Create_Case</name>
         <label>FW Create Case</label>
-        <locationX>1112</locationX>
-        <locationY>510</locationY>
+        <locationX>1098</locationX>
+        <locationY>499</locationY>
         <assignRecordIdToReference>FW_CaseRecordId</assignRecordIdToReference>
         <connector>
-            <targetReference>FW_Get_Case_Details</targetReference>
+            <targetReference>Update_Case</targetReference>
         </connector>
         <inputAssignments>
             <field>Description</field>
@@ -117,8 +116,8 @@ IF(CONTAINS(UPPER({!$User.Email}), &quot;@HEALTH.NYC.GOV&quot;) ,&quot;-&quot; &
     <recordLookups>
         <name>FW_Get_Case_Details</name>
         <label>FW Get Case Details</label>
-        <locationX>1093</locationX>
-        <locationY>691</locationY>
+        <locationX>1110</locationX>
+        <locationY>837</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <filterLogic>and</filterLogic>
         <filters>
@@ -190,6 +189,30 @@ IF(CONTAINS(UPPER({!$User.Email}), &quot;@HEALTH.NYC.GOV&quot;) ,&quot;-&quot; &
         <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_Case</name>
+        <label>Update Case</label>
+        <locationX>1098</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>FW_Get_Case_Details</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>FW_CaseRecordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Related_Record_URL__c</field>
+            <value>
+                <elementReference>FW_CASE_URL</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
         <locationX>970</locationX>

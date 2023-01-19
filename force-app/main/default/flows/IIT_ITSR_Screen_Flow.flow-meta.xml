@@ -91,7 +91,6 @@
         <picklistObject>COM__c</picklistObject>
         <sortOrder>Asc</sortOrder>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>APP_CustomApp_RecordData_To_CaseDescriptionSummary</name>
         <dataType>String</dataType>
@@ -312,7 +311,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section2</name>
@@ -354,7 +352,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>

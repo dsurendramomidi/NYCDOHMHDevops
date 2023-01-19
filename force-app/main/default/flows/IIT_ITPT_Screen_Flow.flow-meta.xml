@@ -192,7 +192,6 @@
             <label>Submit</label>
         </rules>
     </decisions>
-    <description>Adding Overall RAG and SDLC Phase fields</description>
     <dynamicChoiceSets>
         <name>Division_Approver_List</name>
         <dataType>String</dataType>
@@ -218,6 +217,14 @@
         <displayField xsi:nil="true"/>
         <object xsi:nil="true"/>
         <picklistField>ITPT_Urgency__c</picklistField>
+        <picklistObject>IIT__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>PL_ProjectType</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ITPT_ProjectType__c</picklistField>
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
@@ -253,6 +260,14 @@
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
     <dynamicChoiceSets>
+        <name>SDLC</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>ITPT_SDLC_Phase__c</picklistField>
+        <picklistObject>IIT__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
         <name>StaffingRiskChoice</name>
         <dataType>Picklist</dataType>
         <displayField xsi:nil="true"/>
@@ -260,11 +275,20 @@
         <picklistField>ITPT_StaffingRisk__c</picklistField>
         <picklistObject>IIT__c</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>APP_CustomApp_RecordData_To_CaseDescriptionSummary</name>
         <dataType>String</dataType>
         <expression>&apos;test&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>F_AIDR_ID</name>
+        <dataType>String</dataType>
+        <expression>IF({!ProjectType}= &apos;System Project&apos;, {!AIDR_ID_R}, {!AIDR_ID})</expression>
+    </formulas>
+    <formulas>
+        <name>F_ITPIR</name>
+        <dataType>String</dataType>
+        <expression>IF({!ExistsInITPIR}={!Yes}, {!ITPIR_R}, {!ITPIR})</expression>
     </formulas>
     <interviewLabel>IIT ITPT Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>IIT ITPT Screen Flow</label>
@@ -307,7 +331,7 @@
         <inputAssignments>
             <field>ITPT_AIDR_ID__c</field>
             <value>
-                <elementReference>AIDR_ID</elementReference>
+                <elementReference>F_AIDR_ID</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -347,6 +371,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>ITPT_ExistsInITPIR__c</field>
+            <value>
+                <elementReference>ExistsInITPIR</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>ITPT_FundingRisk__c</field>
             <value>
                 <elementReference>Funding_Risk</elementReference>
@@ -355,7 +385,7 @@
         <inputAssignments>
             <field>ITPT_ITPIR__c</field>
             <value>
-                <elementReference>ITPIR</elementReference>
+                <elementReference>F_ITPIR</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -398,6 +428,12 @@
             <field>ITPT_ProjectName__c</field>
             <value>
                 <elementReference>Project_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ITPT_ProjectType__c</field>
+            <value>
+                <elementReference>ProjectType</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -687,7 +723,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>text1</name>
@@ -705,14 +740,7 @@
                     <dataType>String</dataType>
                     <fieldText>&lt;div&gt;&lt;b&gt;Project Name&lt;/b&gt;&lt;/div&gt;</fieldText>
                     <fieldType>InputField</fieldType>
-                    <isRequired>true</isRequired>
-                </fields>
-                <fields>
-                    <name>ProjectDivision</name>
-                    <choiceReferences>ProjectDivisionChoices</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>&lt;strong&gt;Project Division&lt;/strong&gt;</fieldText>
-                    <fieldType>DropdownBox</fieldType>
+                    <helpText>&lt;p&gt;Help Text Here&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Help Text Here&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</helpText>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -746,7 +774,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section3</name>
@@ -780,7 +807,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>APP_Request_Section4</name>
@@ -789,11 +815,12 @@
                 <name>APP_Request_Section4_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>AIDR_ID</name>
+                    <name>ProjectType</name>
+                    <choiceReferences>PL_ProjectType</choiceReferences>
                     <dataType>String</dataType>
-                    <fieldText>&lt;b&gt;AIDR ID&lt;/b&gt;</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
+                    <fieldText>&lt;b&gt;Type of Project&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -807,11 +834,13 @@
                 <name>APP_Request_Section4_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>ITPIR</name>
+                    <name>ExistsInITPIR</name>
+                    <choiceReferences>Yes</choiceReferences>
+                    <choiceReferences>No</choiceReferences>
                     <dataType>String</dataType>
-                    <fieldText>&lt;b&gt;ITPIR #&lt;/b&gt;</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
+                    <fieldText>&lt;b&gt;Does this project exists in ITPIR&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -844,7 +873,139 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>APP_Request_Section5</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section5_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>AIDR_ID</name>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;AIDR ID&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ProjectType</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <stringValue>System Project</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>AIDR_ID_R</name>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;AIDR ID&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ProjectType</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <stringValue>System Project</stringValue>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>Overall_RAG</name>
+                    <choiceReferences>RAG</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;Overall RAG&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section5_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ITPIR</name>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;ITPIR #&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ExistsInITPIR</leftValueReference>
+                            <operator>NotEqualTo</operator>
+                            <rightValue>
+                                <elementReference>Yes</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>ITPIR_R</name>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;ITPIR #&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>ExistsInITPIR</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <elementReference>Yes</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <fields>
+                    <name>SDLC_Phase</name>
+                    <choiceReferences>SDLC</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;SDLC Phase&lt;/b&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section5_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section5_Column4</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
         </fields>
         <fields>
             <name>test2</name>
@@ -852,10 +1013,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>APP_Request_Section5</name>
+            <name>APP_Request_Section6</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>APP_Request_Section5_Column1</name>
+                <name>APP_Request_Section6_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Project_Lead</name>
@@ -895,6 +1056,52 @@
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section6_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ProjectDivision</name>
+                    <choiceReferences>ProjectDivisionChoices</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;strong&gt;Project Division&lt;/strong&gt;</fieldText>
+                    <fieldType>DropdownBox</fieldType>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section6_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>APP_Request_Section7</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section7_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
                     <name>Responsible_Drector</name>
                     <extensionName>flowruntime:lookup</extensionName>
@@ -933,6 +1140,51 @@
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section7_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Business_Sponsor</name>
+                    <dataType>String</dataType>
+                    <fieldText>&lt;b&gt;Business Sponsor&lt;/b&gt;</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>APP_Request_Section7_Column3</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>APP_Request_Section8</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>APP_Request_Section8_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
                     <name>Accountable_Senior_Leader</name>
                     <extensionName>flowruntime:lookup</extensionName>
@@ -980,19 +1232,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section5_Column2</name>
+                <name>APP_Request_Section8_Column2</name>
                 <fieldType>Region</fieldType>
-                <fields>
-                    <name>Business_Sponsor</name>
-                    <dataType>String</dataType>
-                    <fieldText>Business Sponsor</fieldText>
-                    <fieldType>InputField</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
                 <fields>
                     <name>Vendor_Name</name>
                     <dataType>String</dataType>
-                    <fieldText>Vendor Name</fieldText>
+                    <fieldText>&lt;b&gt;Vendor Name&lt;/b&gt;</fieldText>
                     <fieldType>InputField</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
@@ -1005,7 +1250,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section5_Column3</name>
+                <name>APP_Request_Section8_Column3</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -1016,59 +1261,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
-        </fields>
-        <fields>
-            <name>APP_Request_Section6</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>APP_Request_Section6_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>Overall_RAG</name>
-                    <choiceReferences>high1</choiceReferences>
-                    <choiceReferences>medium2</choiceReferences>
-                    <choiceReferences>Low3</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>&lt;b&gt;Overall RAG&lt;/b&gt;</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>APP_Request_Section6_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>SDLC_Phase</name>
-                    <choiceReferences>planning</choiceReferences>
-                    <choiceReferences>Analysis</choiceReferences>
-                    <choiceReferences>Design</choiceReferences>
-                    <choiceReferences>Development</choiceReferences>
-                    <choiceReferences>Testing</choiceReferences>
-                    <choiceReferences>Implementation</choiceReferences>
-                    <choiceReferences>Maintenance</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>&lt;b&gt;SDLC Phase&lt;/b&gt;</fieldText>
-                    <fieldType>DropdownBox</fieldType>
-                    <isRequired>false</isRequired>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>test3</name>
@@ -1076,10 +1268,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>APP_Request_Section7</name>
+            <name>APP_Request_Section9</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>APP_Request_Section7_Column1</name>
+                <name>APP_Request_Section9_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>PriorityScore</name>
@@ -1115,7 +1307,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section7_Column2</name>
+                <name>APP_Request_Section9_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>RiskScore</name>
@@ -1151,13 +1343,12 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>APP_Request_Section8</name>
+            <name>APP_Request_Section10</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>APP_Request_Section8_Column1</name>
+                <name>APP_Request_Section10_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Division_Priority</name>
@@ -1192,7 +1383,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section8_Column2</name>
+                <name>APP_Request_Section10_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Urgency</name>
@@ -1219,7 +1410,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section8_Column3</name>
+                <name>APP_Request_Section10_Column3</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Staffing_Risk</name>
@@ -1254,7 +1445,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>APP_Request_Section8_Column4</name>
+                <name>APP_Request_Section10_Column4</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Vendor_Risk</name>
@@ -1289,7 +1480,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>bottom</name>

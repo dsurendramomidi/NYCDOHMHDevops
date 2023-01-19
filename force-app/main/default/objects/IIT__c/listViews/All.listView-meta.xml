@@ -12,6 +12,7 @@
     <columns>ATR_CancellationComments__c</columns>
     <columns>SECA_DivisionGroup__c</columns>
     <columns>SECA_DivisionalApprover__c</columns>
+    <columns>CREATED_DATE</columns>
     <filterScope>Everything</filterScope>
     <label>All Records</label>
 </ListView>

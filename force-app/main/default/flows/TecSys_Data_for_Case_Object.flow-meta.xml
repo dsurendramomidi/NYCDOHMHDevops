@@ -203,6 +203,26 @@
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
         </fields>
+        <fields>
+            <name>GoogleRecaptchaV2</name>
+            <extensionName>c:googleRecaptcha</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>siteKey</name>
+                <value>
+                    <stringValue>6LdBpOAfAAAAAENXPy7p1gaWFlERh1QVNYa2Z2ae</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>secretKey</name>
+                <value>
+                    <stringValue>6LdBpOAfAAAAAEKmPMkZ-6NjS1EGQ2rw24HRIu-l</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
@@ -230,7 +250,7 @@
             <targetReference>Get_Case_Record_ID</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>GetCaseRecordID</name>
         <dataType>String</dataType>

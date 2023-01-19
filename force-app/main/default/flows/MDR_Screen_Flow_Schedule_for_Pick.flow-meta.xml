@@ -56,7 +56,6 @@
 case status = &quot;Awaiting Device Pickup&quot;
 type=&quot;MDR Request&quot;
 Owner=&quot;IT_MDR_Approvers&quot;</description>
-    <environments>Default</environments>
     <formulas>
         <name>MDRScheduleCloseDate</name>
         <dataType>Date</dataType>

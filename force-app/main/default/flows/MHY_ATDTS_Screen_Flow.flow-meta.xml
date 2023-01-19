@@ -67,7 +67,11 @@
         <picklistField>ATDTS_ActivationStatus__c</picklistField>
         <picklistObject>MHY__c</picklistObject>
     </dynamicChoiceSets>
-    <environments>Default</environments>
+    <formulas>
+        <name>APP_CaseDescription</name>
+        <dataType>String</dataType>
+        <expression>&quot;Device Name: &quot; +{!DeviceName}&amp;BR()</expression>
+    </formulas>
     <interviewLabel>Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>MHY ATDTS Screen Flow</label>
     <processMetadataValues>
@@ -258,7 +262,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>ActivationStatus</name>
@@ -371,6 +374,12 @@
             <name>APP_Application_type</name>
             <value>
                 <elementReference>APP_Application_type</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>APP_CaseDescription</name>
+            <value>
+                <elementReference>APP_CaseDescription</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

@@ -100,7 +100,6 @@
         <picklistObject>COM__c</picklistObject>
         <sortOrder>Asc</sortOrder>
     </dynamicChoiceSets>
-    <environments>Default</environments>
     <formulas>
         <name>getEmployeeFullName</name>
         <dataType>String</dataType>
@@ -510,7 +509,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -587,7 +585,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
             <name>PTR_Request_Section2</name>
@@ -674,7 +671,6 @@
                 <isRequired>false</isRequired>
             </fields>
             <isRequired>false</isRequired>
-            <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>

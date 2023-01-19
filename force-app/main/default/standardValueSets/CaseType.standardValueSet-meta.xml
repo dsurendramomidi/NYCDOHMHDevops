@@ -412,9 +412,9 @@
         <label>Informatics Management System (IMS)</label>
     </standardValue>
     <standardValue>
-        <fullName>IT Project Request</fullName>
+        <fullName>IT Project Intake Request</fullName>
         <default>false</default>
-        <label>IT Project Request</label>
+        <label>IT Project Intake Request</label>
     </standardValue>
     <standardValue>
         <fullName>IT Purchase Request</fullName>

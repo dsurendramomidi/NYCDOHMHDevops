@@ -3,7 +3,15 @@
     <label></label>
     <name>MDR_BYOD_PhoneType__c</name>
     <picklistValues>
-        <masterLabel>Value1</masterLabel>
+        <masterLabel>Android Phone</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apple Phone</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tablet</masterLabel>
         <translation></translation>
     </picklistValues>
 </CustomFieldTranslation>

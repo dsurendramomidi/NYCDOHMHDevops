@@ -83,6 +83,10 @@
                 <behavior>Readonly</behavior>
                 <field>User_Is_ProjectLead__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PreviousStatus__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -152,6 +156,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Comments__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ConsultationQuestion__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
