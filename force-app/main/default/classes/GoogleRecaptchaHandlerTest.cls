@@ -28,4 +28,4 @@ global with sharing class GoogleRecaptchaHandlerTest {
                 return response;
             }
         }
-}
+} 
