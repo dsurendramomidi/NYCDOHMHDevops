@@ -63,20 +63,12 @@
         <default>false</default>
     </values>
     <values>
-        <fullName>New</fullName>
-        <default>true</default>
-    </values>
-    <values>
-        <fullName>Processing</fullName>
-        <default>false</default>
-    </values>
-    <values>
         <fullName>Project Manager Review</fullName>
         <default>false</default>
     </values>
     <values>
         <fullName>Requester Review</fullName>
-        <default>false</default>
+        <default>true</default>
     </values>
     <values>
         <fullName>Revision by Requester</fullName>
