@@ -34,5 +34,4 @@ public with sharing class GoogleRecaptchaHandler {
         
         return false;
     }
-    
 }
