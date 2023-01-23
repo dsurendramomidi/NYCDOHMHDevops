@@ -2,7 +2,7 @@
 public with sharing class GetProcessInstanceDataTest {
 
    
-   
+    
     public static void setup() {
         //create a record
         // Insert an account
